@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generame - Ciò che conta è dentro di te</title>
+    <meta name="description" content="Generame: cosmetici e integratori epigenetici Made in Italy. Rigenerare, riequilibrare, rivitalizzare. Accompagniamo il tempo con cura e scienza dal 2009.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Generame - Ciò che conta è dentro di te">
+    <meta property="og:description" content="Cosmetici e integratori epigenetici Made in Italy. Accompagniamo il tempo con cura e scienza dal 2009.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://generame.com">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Homepage-specific styles */
+        .hero {
+            min-height: 85vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            padding: var(--space-2xl) var(--space-xl);
+            max-width: var(--max-width);
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .hero__content {
+            max-width: 560px;
+        }
+
+        .hero__title {
+            margin-bottom: var(--space-md);
+        }
+
+        .hero__subtitle {
+            font-size: 18px;
+            color: var(--color-charcoal);
+            margin-bottom: var(--space-lg);
+            max-width: 480px;
+        }
+
+        .hero__image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero__image img {
+            max-width: 500px;
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        /* Goals Section */
+        .goals {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-md);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .goal-card {
+            padding: var(--space-lg);
+            text-align: center;
+            border: 1px solid var(--color-sand);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .goal-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+        }
+
+        .goal-card__icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto var(--space-md);
+            color: var(--color-accent);
+        }
+
+        .goal-card__title {
+            font-family: var(--font-display);
+            font-size: 20px;
+            margin-bottom: var(--space-xs);
+        }
+
+        .goal-card__text {
+            font-size: 14px;
+            color: var(--color-stone);
+        }
+
+        /* Featured Products */
+        .featured-products {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-xl);
+            max-width: var(--max-width-narrow);
+            margin: 0 auto;
+        }
+
+        .featured-product {
+            text-align: center;
+        }
+
+        .featured-product__image {
+            aspect-ratio: 1;
+            margin-bottom: var(--space-md);
+            overflow: hidden;
+        }
+
+        .featured-product__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .featured-product:hover .featured-product__image img {
+            transform: scale(1.03);
+        }
+
+        .featured-product__category {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-xs);
+        }
+
+        .featured-product__title {
+            font-family: var(--font-display);
+            font-size: 28px;
+            margin-bottom: var(--space-xs);
+        }
+
+        .featured-product__price {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+
+        .featured-product__price-new {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 500;
+        }
+
+        .featured-product__price-old {
+            font-size: 18px;
+            color: var(--color-stone);
+            text-decoration: line-through;
+        }
+
+        .featured-product__badge {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-left: var(--space-xs);
+        }
+
+        /* Approach Section */
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .approach-item {
+            text-align: center;
+            padding: var(--space-lg);
+        }
+
+        .approach-item__number {
+            font-family: var(--font-display);
+            font-size: 48px;
+            color: var(--color-accent-light);
+            margin-bottom: var(--space-sm);
+        }
+
+        .approach-item__title {
+            font-family: var(--font-display);
+            font-size: 22px;
+            margin-bottom: var(--space-sm);
+        }
+
+        .approach-item__text {
+            font-size: 15px;
+            color: var(--color-charcoal);
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+        }
+
+        .cta-section .btn {
+            margin-top: var(--space-lg);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                min-height: auto;
+                padding: var(--space-xl) var(--space-lg);
+            }
+
+            .hero__content {
+                max-width: 100%;
+            }
+
+            .hero__subtitle {
+                max-width: 100%;
+            }
+
+            .hero__image {
+                order: -1;
+            }
+
+            .hero__image img {
+                max-width: 400px;
+            }
+
+            .goals {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .goals {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-products {
+                grid-template-columns: 1fr;
+            }
+
+            .hero__image img {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Spedizione gratuita in Italia · <span>Made in Italy dal 2009</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="/" class="logo">GENERAME</a>
+        <ul class="nav-menu">
+            <li><a href="/chi-siamo/">Chi siamo</a></li>
+            <li><a href="/scienza/">Scienza</a></li>
+            <li><a href="/categoria-prodotto/cosmetici/">Cosmetici</a></li>
+            <li><a href="/categoria-prodotto/integratori-alimentari/">Integratori</a></li>
+            <li><a href="/contatti/">Contatti</a></li>
+        </ul>
+        <div class="nav-trust">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+            </svg>
+            <span>4.7/5 Trustpilot</span>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__content">
+            <p class="eyebrow">Scienza Epigenetica Italiana</p>
+            <h1 class="hero__title">Ciò che conta è <em>dentro di te</em>.</h1>
+            <p class="hero__subtitle">Dal 2009 sviluppiamo cosmetici e integratori che parlano ai meccanismi profondi del tuo corpo. Non combattiamo il tempo: lo accompagniamo con cura e scienza.</p>
+            <a href="#obiettivi" class="btn btn--primary">Scopri il tuo obiettivo</a>
+        </div>
+        <div class="hero__image">
+            <img src="images/d-cream.jpg" alt="Generame D-Cream - Crema viso epigenetica">
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-bar__content">
+            <div class="trust-bar__item">
+                <svg class="trust-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+                <span>10+ anni di ricerca</span>
+            </div>
+            <div class="trust-bar__item">
+                <svg class="trust-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                </svg>
+                <span>Produzione italiana</span>
+            </div>
+            <div class="trust-bar__item">
+                <svg class="trust-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+                <span>Ingredienti brevettati</span>
+            </div>
+            <div class="trust-bar__item">
+                <svg class="trust-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="1" y="3" width="15" height="13"/>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                    <circle cx="5.5" cy="18.5" r="2.5"/>
+                    <circle cx="18.5" cy="18.5" r="2.5"/>
+                </svg>
+                <span>Spedizione gratuita</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Goals Section -->
+    <section class="section" id="obiettivi">
+        <div class="section-header">
+            <p class="eyebrow">Qual è il tuo obiettivo?</p>
+            <h2>Scegli il percorso più adatto a te</h2>
+            <p class="subtitle">Ogni persona è unica. I nostri prodotti sono progettati per rispondere a obiettivi specifici, supportati dalla scienza epigenetica.</p>
+        </div>
+
+        <div class="goals">
+            <a href="/categoria-prodotto/energia-vitalita/" class="goal-card">
+                <svg class="goal-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                <h3 class="goal-card__title">Energia e Vitalità</h3>
+                <p class="goal-card__text">Rivitalizza corpo e mente in modo naturale</p>
+            </a>
+
+            <a href="/categoria-prodotto/pelle-meravigliosa/" class="goal-card">
+                <svg class="goal-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <h3 class="goal-card__title">Pelle Meravigliosa</h3>
+                <p class="goal-card__text">Rigenera e riequilibra la pelle in profondità</p>
+            </a>
+
+            <a href="/categoria-prodotto/controllo-peso/" class="goal-card">
+                <svg class="goal-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                </svg>
+                <h3 class="goal-card__title">Equilibrio del Peso</h3>
+                <p class="goal-card__text">Riequilibra il metabolismo in armonia col corpo</p>
+            </a>
+
+            <a href="/categoria-prodotto/sport-performance/" class="goal-card">
+                <svg class="goal-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/>
+                </svg>
+                <h3 class="goal-card__title">Sport e Performance</h3>
+                <p class="goal-card__text">Rigenera e ottimizza il recupero atletico</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section section--sand">
+        <div class="section-header">
+            <p class="eyebrow">I nostri bestseller</p>
+            <h2>Creme viso epigenetiche</h2>
+            <p class="subtitle">Formula esclusiva con ingredienti brevettati che rigenerano la pelle in profondità.</p>
+        </div>
+
+        <div class="featured-products">
+            <a href="/prodotto/d-cream/" class="featured-product">
+                <div class="featured-product__image">
+                    <img src="images/d-cream.jpg" alt="D-Cream - Crema Giorno">
+                </div>
+                <p class="featured-product__category">Crema Giorno</p>
+                <h3 class="featured-product__title">D-Cream</h3>
+                <p style="font-size: 14px; color: var(--color-stone); margin-bottom: var(--space-sm);">Crema viso riparatrice con azione antipollution</p>
+                <div class="featured-product__price">
+                    <span class="featured-product__price-new">96€</span>
+                </div>
+                <span class="btn btn--primary btn--small">Scopri</span>
+            </a>
+
+            <a href="/prodotto/n-cream/" class="featured-product">
+                <div class="featured-product__image">
+                    <img src="images/n-cream.jpg" alt="N-Cream - Crema Notte">
+                </div>
+                <p class="featured-product__category">Crema Notte</p>
+                <h3 class="featured-product__title">N-Cream</h3>
+                <p style="font-size: 14px; color: var(--color-stone); margin-bottom: var(--space-sm);">Crema viso ridensificante e rigenerante notturna</p>
+                <div class="featured-product__price">
+                    <span class="featured-product__price-new">114€</span>
+                </div>
+                <span class="btn btn--primary btn--small">Scopri</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="section">
+        <div class="section-header">
+            <p class="eyebrow">Il nostro approccio</p>
+            <h2>Rigenerare. Riequilibrare. Rivitalizzare.</h2>
+            <p class="subtitle">Mentre altri investono in marketing, noi investiamo in ricerca. Accompagniamo il tempo con cura e scienza.</p>
+        </div>
+
+        <div class="approach-grid">
+            <div class="approach-item">
+                <p class="approach-item__number">10+</p>
+                <h3 class="approach-item__title">Anni di ricerca</h3>
+                <p class="approach-item__text">Nati nel 2009 in Area Science Park, uno dei principali parchi scientifici europei. La scienza è nel nostro DNA.</p>
+            </div>
+
+            <div class="approach-item">
+                <p class="approach-item__number">1</p>
+                <h3 class="approach-item__title">Metodo brevettato</h3>
+                <p class="approach-item__text">Unico al mondo, combina genetica individuale ed epigenetica. Testato su 200 persone per 2 anni.</p>
+            </div>
+
+            <div class="approach-item">
+                <p class="approach-item__number">100%</p>
+                <h3 class="approach-item__title">Made in Italy</h3>
+                <p class="approach-item__text">Laboratori italiani con standard farmaceutici. Nessuna delocalizzazione, nessun compromesso sulla qualità.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section--dark cta-section">
+        <div class="section-header">
+            <p class="eyebrow">La nostra ricerca</p>
+            <h2>La scienza che accompagna il tempo</h2>
+            <p class="subtitle" style="color: rgba(255,255,255,0.7);">Scopri come l'epigenetica ci permette di rigenerare, riequilibrare e rivitalizzare il corpo in armonia con la sua natura.</p>
+        </div>
+        <a href="/scienza/" class="btn btn--light">Scopri di più</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__content">
+            <div class="footer__links">
+                <a href="/chi-siamo/">Chi siamo</a>
+                <a href="/scienza/">Scienza</a>
+                <a href="/contatti/">Contatti</a>
+                <a href="/privacy-informativa-sito/">Privacy</a>
+                <a href="mailto:info@generame.com">info@generame.com</a>
+            </div>
+            <p class="footer__copy">© 2025 Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
