@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo - Generame</title>
+    <meta name="description" content="Generame nasce nel 2009 in Area Science Park. Scopri la storia, i fondatori e la missione di un'azienda che accompagna il tempo con scienza e cura.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Chi Siamo - Generame">
+    <meta property="og:description" content="La storia di Generame: dal 2009 sviluppiamo cosmetici e integratori epigenetici Made in Italy.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://generame.com/chi-siamo/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* Chi Siamo specific styles */
+        .page-hero {
+            padding: var(--space-3xl) var(--space-xl) var(--space-2xl);
+            text-align: center;
+            max-width: var(--max-width-text);
+            margin: 0 auto;
+        }
+
+        .page-hero__title {
+            margin-bottom: var(--space-md);
+        }
+
+        .page-hero__subtitle {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+        }
+
+        /* Story Section */
+        .story {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            max-width: var(--max-width);
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .story__content {
+            max-width: 520px;
+        }
+
+        .story__text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+        }
+
+        .story__text p {
+            margin-bottom: var(--space-md);
+        }
+
+        .story__image {
+            aspect-ratio: 4/3;
+            background: var(--color-sand);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-stone);
+            font-size: 14px;
+            overflow: hidden;
+        }
+
+        .story__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Mission */
+        .mission-box {
+            max-width: var(--max-width-narrow);
+            margin: 0 auto;
+            text-align: center;
+            padding: var(--space-2xl);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .mission-box__quote {
+            font-family: var(--font-display);
+            font-size: clamp(24px, 3vw, 32px);
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: var(--space-md);
+        }
+
+        .mission-box__author {
+            font-size: 14px;
+            color: var(--color-accent-light);
+            letter-spacing: 1px;
+        }
+
+        /* Founders */
+        .founders {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-xl);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .founder {
+            text-align: center;
+        }
+
+        .founder__image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: var(--color-sand);
+            margin: 0 auto var(--space-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 48px;
+            color: var(--color-stone);
+            overflow: hidden;
+        }
+
+        .founder__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .founder__name {
+            font-family: var(--font-display);
+            font-size: 24px;
+            margin-bottom: var(--space-xs);
+        }
+
+        .founder__role {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-sm);
+        }
+
+        .founder__bio {
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--color-charcoal);
+        }
+
+        .founder__credentials {
+            margin-top: var(--space-sm);
+            padding-top: var(--space-sm);
+            border-top: 1px solid var(--color-sand);
+            font-size: 13px;
+            color: var(--color-stone);
+            line-height: 1.6;
+        }
+
+        /* Timeline */
+        .timeline {
+            max-width: var(--max-width-narrow);
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: var(--color-sand);
+            transform: translateX(-50%);
+        }
+
+        .timeline__item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+            position: relative;
+        }
+
+        .timeline__item::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline__year {
+            text-align: right;
+            font-family: var(--font-display);
+            font-size: 32px;
+            color: var(--color-accent);
+        }
+
+        .timeline__content h4 {
+            font-family: var(--font-display);
+            font-size: 20px;
+            margin-bottom: var(--space-xs);
+        }
+
+        .timeline__content p {
+            font-size: 14px;
+            color: var(--color-stone);
+            line-height: 1.6;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-lg);
+            max-width: var(--max-width);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat__number {
+            font-family: var(--font-display);
+            font-size: 48px;
+            color: var(--color-accent-light);
+            margin-bottom: var(--space-xs);
+        }
+
+        .stat__label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Press / Parlano di noi */
+        .press-section {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .press-video {
+            max-width: 800px;
+            margin: 0 auto var(--space-2xl);
+        }
+
+        .press-video__wrapper {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            background: var(--color-deep);
+        }
+
+        .press-video__wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .press-video__caption {
+            margin-top: var(--space-sm);
+            font-size: 14px;
+            color: var(--color-stone);
+            text-align: center;
+        }
+
+        .press-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-xl);
+            flex-wrap: wrap;
+        }
+
+        .press-logos img {
+            max-height: 80px;
+            width: auto;
+            mix-blend-mode: multiply;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .press-logos img:hover {
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .story {
+                grid-template-columns: 1fr;
+            }
+
+            .story__image {
+                order: -1;
+            }
+
+            .founders {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline__item {
+                grid-template-columns: 1fr;
+                padding-left: 50px;
+            }
+
+            .timeline__item::after {
+                left: 20px;
+            }
+
+            .timeline__year {
+                text-align: left;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Spedizione gratuita in Italia · <span>Made in Italy dal 2009</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="/" class="logo">GENERAME</a>
+        <ul class="nav-menu">
+            <li><a href="/chi-siamo/">Chi siamo</a></li>
+            <li><a href="/scienza/">Scienza</a></li>
+            <li><a href="/categoria-prodotto/cosmetici/">Cosmetici</a></li>
+            <li><a href="/categoria-prodotto/integratori-alimentari/">Integratori</a></li>
+            <li><a href="/contatti/">Contatti</a></li>
+        </ul>
+        <div class="nav-trust">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+            </svg>
+            <span>4.7/5 Trustpilot</span>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <p class="eyebrow">La nostra storia</p>
+        <h1 class="page-hero__title">Accompagnare il tempo con <em>scienza e cura</em></h1>
+        <p class="page-hero__subtitle">Dal 2009 crediamo che ciò che conta sia dentro di noi. La nostra missione è sviluppare prodotti che rigenerano, riequilibrano e rivitalizzano il corpo, rispettando la sua natura.</p>
+    </section>
+
+    <!-- Story Section -->
+    <section class="section">
+        <div class="story">
+            <div class="story__content">
+                <p class="eyebrow">Le origini</p>
+                <h2 class="mb-md">Nati dalla ricerca, guidati dalla scienza</h2>
+                <div class="story__text">
+                    <p>Generame nasce nel 2009 all'interno di <strong>Area Science Park</strong>, uno dei principali parchi scientifici europei. Non siamo nati da un'intuizione di marketing, ma da anni di ricerca accademica sulla genetica e l'epigenetica.</p>
+                    <p>Facciamo parte di <strong>G&life S.r.l.</strong>, oggi inserita nel gruppo Biovalley S.p.A., realtà focalizzata su aziende BioHighTech che sviluppano soluzioni innovative per il benessere.</p>
+                    <p>La nostra sede è a Trieste, città di confine dove la tradizione scientifica mitteleuropea incontra l'eccellenza italiana nella ricerca.</p>
+                </div>
+            </div>
+            <div class="story__image">
+                <img src="../images/area_science_park.jpg" alt="Area Science Park, Trieste">
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="section section--dark">
+        <div class="mission-box">
+            <p class="mission-box__quote">"Non vogliamo combattere il tempo. Vogliamo accompagnarlo, con la cura che deriva dalla conoscenza e la scienza che rispetta la natura."</p>
+            <p class="mission-box__author">— La filosofia Generame</p>
+        </div>
+    </section>
+
+    <!-- Founders -->
+    <section class="section">
+        <div class="section-header">
+            <p class="eyebrow">Il team</p>
+            <h2>Scienza e visione</h2>
+            <p class="subtitle">Percorsi complementari uniti dalla stessa missione: portare la ricerca genetica nella vita quotidiana.</p>
+        </div>
+
+        <div class="founders">
+            <div class="founder">
+                <div class="founder__image">
+                    <img src="../images/paolo-gasparini.jpg" alt="Paolo Gasparini" onerror="this.style.display='none'; this.parentElement.innerHTML='PG';">
+                </div>
+                <p class="founder__role">Fondatore</p>
+                <h3 class="founder__name">Paolo Gasparini</h3>
+                <p class="founder__bio">Medico e ricercatore, ha dedicato la sua carriera allo studio della genetica umana e alle sue applicazioni per il benessere delle persone.</p>
+                <p class="founder__credentials">
+                    Presidente della Società Italiana di Genetica Umana · Professore di Genetica Medica all'Università di Trieste · Esperto ISS per la terapia genomica · 300+ pubblicazioni peer-reviewed · Premio Gran Prix Ippocrate 2011
+                </p>
+            </div>
+
+            <div class="founder">
+                <div class="founder__image">
+                    <img src="../images/francesco-menegoni.jpg" alt="Francesco Menegoni" onerror="this.style.display='none'; this.parentElement.innerHTML='FM';">
+                </div>
+                <p class="founder__role">Amministratore Delegato</p>
+                <h3 class="founder__name">Francesco Menegoni</h3>
+                <p class="founder__bio">Ingegnere biomedico con esperienza al Politecnico di Milano, unisce competenze scientifiche e imprenditoriali per tradurre la ricerca in prodotti concreti.</p>
+                <p class="founder__credentials">
+                    PhD in Ingegneria Biomedica · Esperto di Innovazione presso il Dipartimento trasformazione digitale della Presidenza del Consiglio dei Ministri (2020)
+                </p>
+            </div>
+
+            <div class="founder">
+                <div class="founder__image">
+                    <img src="../images/francesca-spazzali.jpg" alt="Francesca Spazzali" onerror="this.style.display='none'; this.parentElement.innerHTML='FS';">
+                </div>
+                <p class="founder__role">Genomica Funzionale</p>
+                <h3 class="founder__name">Francesca Spazzali</h3>
+                <p class="founder__bio">Biologa con master in genomica funzionale, unisce competenze scientifiche e di business development.</p>
+                <p class="founder__credentials">
+                    BSc in Biologia · MSc in Genomica Funzionale · Vincitrice Premio Call 4 Ideas "Migliori idee innovative nelle scienze della vita" (2025)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parlano di noi -->
+    <section class="section section--sand">
+        <div class="section-header">
+            <p class="eyebrow">Parlano di noi</p>
+            <h2>Scienza riconosciuta, non solo marketing</h2>
+            <p class="subtitle">La nostra ricerca ha attirato l'attenzione di media autorevoli e istituzioni scientifiche.</p>
+        </div>
+
+        <div class="press-section">
+            <div class="press-video">
+                <div class="press-video__wrapper">
+                    <iframe
+                        class="press-video__iframe"
+                        frameborder="0"
+                        allowfullscreen
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        title="Generame in televisione"
+                        src="https://www.youtube.com/embed/NMtoi4QTNWw?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https://generame.com">
+                    </iframe>
+                </div>
+                <p class="press-video__caption">Il nostro approccio alla genetica raccontato da Piero Angela su SuperQuark</p>
+            </div>
+
+            <div class="press-logos">
+                <img src="../images/stampa-1.jpg" alt="Rassegna stampa Generame">
+                <img src="../images/stampa-2.jpg" alt="Rassegna stampa Generame">
+                <img src="../images/stampa-3.jpg" alt="Rassegna stampa Generame">
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section">
+        <div class="section-header">
+            <p class="eyebrow">Il nostro percorso</p>
+            <h2>Una storia di ricerca e innovazione</h2>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline__item">
+                <div class="timeline__year">2009</div>
+                <div class="timeline__content">
+                    <h4>La fondazione</h4>
+                    <p>Generame nasce in Area Science Park, Trieste. Inizia la ricerca sul rapporto tra genetica individuale e benessere.</p>
+                </div>
+            </div>
+
+            <div class="timeline__item">
+                <div class="timeline__year">2010</div>
+                <div class="timeline__content">
+                    <h4>Progetto NutriHeart</h4>
+                    <p>Avvio del progetto europeo EU POR-FESR sulla nutrizione personalizzata basata sul profilo genetico.</p>
+                </div>
+            </div>
+
+            <div class="timeline__item">
+                <div class="timeline__year">2014</div>
+                <div class="timeline__content">
+                    <h4>Il metodo brevettato</h4>
+                    <p>Presentazione all'European Human Genetics Conference del nostro metodo unico, testato su 200 persone per 2 anni.</p>
+                </div>
+            </div>
+
+            <div class="timeline__item">
+                <div class="timeline__year">2017</div>
+                <div class="timeline__content">
+                    <h4>Linea cosmetica epigenetica</h4>
+                    <p>Lancio di D-Cream e N-Cream, le prime creme viso che applicano i principi della ricerca epigenetica alla skincare.</p>
+                </div>
+            </div>
+
+            <div class="timeline__item">
+                <div class="timeline__year">2025</div>
+                <div class="timeline__content">
+                    <h4>Premio Call 4 Ideas FVG</h4>
+                    <p>Vincitori della II edizione con il "Premio alle migliori idee innovative nel settore scienze della vita".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section section--dark">
+        <div class="stats">
+            <div class="stat">
+                <p class="stat__number">15+</p>
+                <p class="stat__label">Anni di ricerca</p>
+            </div>
+            <div class="stat">
+                <p class="stat__number">1</p>
+                <p class="stat__label">Metodo brevettato</p>
+            </div>
+            <div class="stat">
+                <p class="stat__number">9+</p>
+                <p class="stat__label">Premi e riconoscimenti</p>
+            </div>
+            <div class="stat">
+                <p class="stat__number">100%</p>
+                <p class="stat__label">Made in Italy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section text-center">
+        <div class="section-header">
+            <p class="eyebrow">Scopri di più</p>
+            <h2>La scienza dietro i nostri prodotti</h2>
+            <p class="subtitle">Approfondisci l'approccio epigenetico che guida ogni nostra formulazione.</p>
+        </div>
+        <a href="/scienza/" class="btn btn--primary">Scopri la ricerca</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__content">
+            <div class="footer__links">
+                <a href="/chi-siamo/">Chi siamo</a>
+                <a href="/scienza/">Scienza</a>
+                <a href="/contatti/">Contatti</a>
+                <a href="/privacy-informativa-sito/">Privacy</a>
+                <a href="mailto:info@generame.com">info@generame.com</a>
+            </div>
+            <p class="footer__copy">© 2009-2025 Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+            </script>
+</body>
+</html>
