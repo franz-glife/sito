@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharp - Tonico Fisico e Mentale | Generame</title>
+    <meta name="description" content="Sharp: integratore con RodioX2 brevettato per concentrazione, focus e resistenza allo stress. Rhodiola Rosea biotech 10x più efficace. Made in Italy.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sharp - Tonico Fisico e Mentale | Generame">
+    <meta property="og:description" content="Integratore biotech per concentrazione e resistenza allo stress con RodioX2 brevettato.">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://generame.com/prodotto/sharp/">
+    <meta property="product:price:amount" content="45">
+    <meta property="product:price:currency" content="EUR">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        /* Product page styles */
+        .product-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--space-2xl) var(--space-xl);
+            align-items: start;
+        }
+
+        .product-hero__image {
+            position: sticky;
+            top: 100px;
+        }
+
+        .product-hero__image img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            background: var(--color-sand);
+        }
+
+        .product-hero__content {
+            padding-top: var(--space-md);
+        }
+
+        .product-hero__category {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-sm);
+        }
+
+        .product-hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(42px, 5vw, 56px);
+            margin-bottom: var(--space-md);
+            color: var(--color-deep);
+        }
+
+        .product-hero__subtitle {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+            margin-bottom: var(--space-lg);
+        }
+
+        .product-hero__price {
+            font-family: var(--font-display);
+            font-size: 42px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-xs);
+        }
+
+        .product-hero__format {
+            font-size: 14px;
+            color: var(--color-stone);
+            margin-bottom: var(--space-lg);
+        }
+
+        .product-hero__cta {
+            display: inline-block;
+            background: var(--color-deep);
+            color: var(--color-cream);
+            padding: 20px 48px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-deep);
+            margin-bottom: var(--space-md);
+        }
+
+        .product-hero__cta:hover {
+            background: transparent;
+            color: var(--color-deep);
+        }
+
+        .product-hero__guarantee {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--color-stone);
+        }
+
+        .product-hero__guarantee svg {
+            color: var(--color-success);
+        }
+
+        /* Simple but powerful section */
+        .simple-powerful {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .simple-powerful h2 {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 4vw, 48px);
+            color: var(--color-deep);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .simple-powerful__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            align-items: stretch;
+        }
+
+        .simple-powerful__image {
+            background: var(--color-sand);
+        }
+
+        .simple-powerful__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .simple-powerful__timeline {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-left: var(--space-xl);
+        }
+
+        .simple-powerful__timeline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: var(--color-accent);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: var(--space-xl);
+            flex: 1;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: calc(-1 * var(--space-xl) + 1px);
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: var(--color-accent);
+            border-radius: 50%;
+        }
+
+        .timeline-item__title {
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-sm);
+        }
+
+        .timeline-item__text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--color-charcoal);
+        }
+
+        /* Product badges bar */
+        .product-badges {
+            background: var(--color-cream);
+            border-top: 1px solid var(--color-sand);
+            border-bottom: 1px solid var(--color-sand);
+            padding: var(--space-xl) var(--space-xl);
+        }
+
+        .product-badges__grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+
+        .product-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: var(--space-sm);
+        }
+
+        .product-badge__icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-badge__icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--color-charcoal);
+            stroke-width: 1;
+            fill: none;
+        }
+
+        .product-badge__label {
+            font-size: 12px;
+            color: var(--color-charcoal);
+            line-height: 1.4;
+            max-width: 100px;
+        }
+
+        /* Rhodiola section */
+        .rhodiola-section {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .rhodiola-intro {
+            max-width: 900px;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .rhodiola-intro h2 {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 4vw, 48px);
+            color: var(--color-deep);
+            margin-bottom: var(--space-lg);
+        }
+
+        .rhodiola-intro p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+        }
+
+        .rhodiola-benefits {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2xl);
+            margin: var(--space-xl) 0;
+            flex-wrap: wrap;
+        }
+
+        .rhodiola-benefits__label {
+            font-size: 14px;
+            color: var(--color-stone);
+            padding-right: var(--space-lg);
+            border-right: 1px solid var(--color-sand);
+            line-height: 1.4;
+        }
+
+        .rhodiola-benefits__list {
+            display: flex;
+            gap: var(--space-xl);
+            flex-wrap: wrap;
+        }
+
+        .rhodiola-benefit {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+            color: var(--color-charcoal);
+        }
+
+        .rhodiola-benefit svg {
+            width: 20px;
+            height: 20px;
+            color: var(--color-charcoal);
+        }
+
+        .rhodiola-images {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--space-md);
+            margin-top: var(--space-2xl);
+        }
+
+        .rhodiola-images__left {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .rhodiola-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .rhodiola-images__main {
+            aspect-ratio: 4/3;
+        }
+
+        .rhodiola-note {
+            font-size: 14px;
+            color: var(--color-stone);
+            margin-top: var(--space-lg);
+            line-height: 1.6;
+        }
+
+        .rhodiola-research {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: var(--space-2xl);
+            margin-top: var(--space-2xl);
+            padding-top: var(--space-2xl);
+            border-top: 1px solid var(--color-sand);
+            align-items: center;
+        }
+
+        .rhodiola-research__image {
+            background: var(--color-sand);
+            aspect-ratio: 1;
+        }
+
+        .rhodiola-research__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .rhodiola-research__content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+            margin-bottom: var(--space-md);
+        }
+
+        .rhodiola-research__highlight {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--color-deep);
+        }
+
+        .rhodiola-research__highlight strong {
+            font-weight: 600;
+        }
+
+        /* Did you know section */
+        .did-you-know {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--space-3xl) var(--space-xl);
+            align-items: center;
+        }
+
+        .did-you-know__content {
+            padding-right: var(--space-2xl);
+        }
+
+        .did-you-know__label {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-md);
+            font-weight: 500;
+        }
+
+        .did-you-know__text {
+            font-family: var(--font-display);
+            font-size: clamp(24px, 3vw, 32px);
+            line-height: 1.5;
+            color: var(--color-deep);
+        }
+
+        .did-you-know__image {
+            position: relative;
+        }
+
+        .did-you-know__image img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            background: var(--color-sand);
+        }
+
+        /* Science section */
+        .science-section {
+            background: var(--color-sand);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .science-section__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .science-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 4vw, 48px);
+            color: var(--color-deep);
+            margin-bottom: var(--space-lg);
+        }
+
+        .science-section__intro {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+            max-width: 900px;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .publications-label {
+            font-size: 14px;
+            color: var(--color-charcoal);
+            margin-bottom: var(--space-lg);
+        }
+
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+        }
+
+        .publication-card {
+            background: transparent;
+            padding: var(--space-lg);
+            border-left: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .publication-card__title {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-md);
+            line-height: 1.4;
+        }
+
+        .publication-card__desc {
+            font-size: 14px;
+            color: var(--color-charcoal);
+            line-height: 1.7;
+            margin-bottom: var(--space-lg);
+        }
+
+        .publication-card__meta {
+            display: flex;
+            gap: var(--space-xl);
+            margin-bottom: var(--space-md);
+        }
+
+        .publication-card__stat {
+            font-size: 13px;
+            color: var(--color-stone);
+        }
+
+        .publication-card__stat span {
+            display: block;
+            font-weight: 600;
+            color: var(--color-deep);
+            font-size: 16px;
+        }
+
+        .publication-card__link {
+            font-size: 13px;
+            color: var(--color-deep);
+            text-decoration: underline;
+        }
+
+        /* RodioX10 section */
+        .rodiox10-section {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .rodiox10-header {
+            margin-bottom: var(--space-2xl);
+        }
+
+        .rodiox10-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 4vw, 48px);
+            color: var(--color-deep);
+            margin-bottom: var(--space-xs);
+        }
+
+        .rodiox10-header__subtitle {
+            font-size: 24px;
+            color: var(--color-charcoal);
+        }
+
+        .rodiox10-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            margin-bottom: var(--space-2xl);
+            align-items: center;
+        }
+
+        .rodiox10-graphic {
+            background: var(--color-sand);
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rodiox10-graphic__number {
+            font-family: var(--font-display);
+            font-size: 180px;
+            font-weight: 600;
+            color: var(--color-deep);
+            line-height: 1;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .rodiox10-graphic__x {
+            font-size: 100px;
+            color: var(--color-accent);
+        }
+
+        .rodiox10-desc {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+        }
+
+        .rodiox10-desc strong {
+            font-weight: 600;
+        }
+
+        .rodiox10-process {
+            margin-top: var(--space-2xl);
+            text-align: center;
+        }
+
+        .rodiox10-process img {
+            max-width: 100%;
+            height: auto;
+            mix-blend-mode: multiply;
+        }
+
+        /* How to use */
+        .how-to-use {
+            max-width: var(--max-width-narrow);
+            margin: 0 auto;
+            padding: var(--space-3xl) var(--space-xl);
+            text-align: center;
+        }
+
+        .dosage-box {
+            background: var(--color-sand);
+            padding: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+
+        .dosage-box__number {
+            font-family: var(--font-display);
+            font-size: 64px;
+            color: var(--color-accent);
+            line-height: 1;
+        }
+
+        .dosage-box__text {
+            font-size: 18px;
+            color: var(--color-charcoal);
+            margin-top: var(--space-sm);
+        }
+
+        .dosage-box__note {
+            font-size: 14px;
+            color: var(--color-stone);
+            margin-top: var(--space-md);
+        }
+
+        /* Certifications */
+        .certifications {
+            background: var(--color-sand);
+            padding: var(--space-2xl) var(--space-xl);
+        }
+
+        .certifications__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: var(--space-2xl);
+            flex-wrap: wrap;
+        }
+
+        .certification {
+            text-align: center;
+        }
+
+        .certification__label {
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--color-stone);
+            margin-bottom: var(--space-xs);
+        }
+
+        .certification__value {
+            font-family: var(--font-display);
+            font-size: 18px;
+            color: var(--color-deep);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .product-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .product-hero__image {
+                position: static;
+            }
+
+            .simple-powerful__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .rhodiola-images {
+                grid-template-columns: 1fr;
+            }
+
+            .rhodiola-research {
+                grid-template-columns: 1fr;
+            }
+
+            .did-you-know {
+                grid-template-columns: 1fr;
+            }
+
+            .did-you-know__content {
+                padding-right: 0;
+            }
+
+            .publications-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .rodiox10-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .rodiox10-research {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-badges__grid {
+                justify-content: center;
+            }
+
+            .rhodiola-benefits {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .rhodiola-benefits__label {
+                border-right: none;
+                border-bottom: 1px solid var(--color-sand);
+                padding-right: 0;
+                padding-bottom: var(--space-sm);
+                margin-bottom: var(--space-sm);
+            }
+
+            .process-steps {
+                justify-content: center;
+            }
+
+            .certifications__content {
+                flex-direction: column;
+                align-items: center;
+                gap: var(--space-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Spedizione gratuita in Italia · <span>Made in Italy dal 2009</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="/" class="logo">GENERAME</a>
+        <ul class="nav-menu">
+            <li><a href="/chi-siamo/">Chi siamo</a></li>
+            <li><a href="/scienza/">Scienza</a></li>
+            <li><a href="/categoria-prodotto/cosmetici/">Cosmetici</a></li>
+            <li><a href="/categoria-prodotto/integratori-alimentari/">Integratori</a></li>
+            <li><a href="/contatti/">Contatti</a></li>
+        </ul>
+        <div class="nav-trust">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+            </svg>
+            <span>4.7/5 Trustpilot</span>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Product Hero -->
+    <section class="product-hero">
+        <div class="product-hero__image">
+            <img src="../../images/sharp.jpg" alt="Sharp - Tonico fisico e mentale Generame">
+        </div>
+
+        <div class="product-hero__content">
+            <p class="product-hero__category">Energia e focus</p>
+            <h1 class="product-hero__title">Sharp</h1>
+            <p class="product-hero__subtitle">Tonico fisico e mentale per chi affronta sfide quotidiane. Migliora concentrazione, focus e resistenza allo stress con RodioX2, estratto brevettato di Rhodiola Rosea.</p>
+
+            <p class="product-hero__price">€45</p>
+            <p class="product-hero__format">30 capsule · 1 mese di trattamento</p>
+
+            <a href="#acquista" class="product-hero__cta">Acquista ora</a>
+
+            <p class="product-hero__guarantee">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Spedizione gratuita · Soddisfatti o rimborsati
+            </p>
+        </div>
+    </section>
+
+    <!-- Simple but Powerful -->
+    <section class="simple-powerful">
+        <h2>Semplice ma potente</h2>
+        <div class="simple-powerful__grid">
+            <div class="simple-powerful__image">
+                <img src="../../images/sharp-capsules.jpg" alt="Capsule Sharp" onerror="this.style.background='linear-gradient(135deg, #E8E2D9 0%, #D4CFC5 100%)';this.style.aspectRatio='1';this.alt=''">
+            </div>
+            <div class="simple-powerful__timeline">
+                <div class="timeline-item">
+                    <h3 class="timeline-item__title">Multitasking</h3>
+                    <p class="timeline-item__text">L'obiettivo di Sharp è uno: che tu sia un manager che deve gestire scadenze, una mamma, uno studente o un professionista, Sharp ti dà la spinta necessaria per affrontare le sfide quotidiane.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="timeline-item__title">Tangibile</h3>
+                    <p class="timeline-item__text">L'effetto di Sharp si sente immediatamente e migliora con il passare dei giorni. Concentrazione, focus, serenità ed energia: se questi sono i tuoi obiettivi, Sharp fa per te.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="timeline-item__title">Ispirato dall'epigenetica</h3>
+                    <p class="timeline-item__text">Studiamo l'influenza reciproca tra geni e ambiente da più di 10 anni. Vogliamo offrire soluzioni con un approccio completamente nuovo, basato sugli studi epigenetici.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Badges -->
+    <section class="product-badges">
+        <div class="product-badges__grid">
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M16 8c0-2 2-4 4-4h8c2 0 4 2 4 4v4h-16v-4z"/>
+                        <circle cx="24" cy="28" r="8"/>
+                        <path d="M20 28h8M24 24v8"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Uso orale</span>
+            </div>
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M24 4c-6 8-12 14-12 22 0 6.6 5.4 12 12 12s12-5.4 12-12c0-8-6-14-12-22z"/>
+                        <path d="M20 28c0 2.2 1.8 4 4 4"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Vegano</span>
+            </div>
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="16"/>
+                        <path d="M24 12v24"/>
+                        <path d="M16 20l16 8"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Senza lattosio</span>
+            </div>
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="20" cy="20" r="8"/>
+                        <circle cx="28" cy="28" r="8"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Senza allergeni principali</span>
+            </div>
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M24 4l-4 12h-8l8 6-4 12 8-6 8 6-4-12 8-6h-8z"/>
+                        <ellipse cx="24" cy="36" rx="12" ry="6"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Formulato e confezionato in Italia</span>
+            </div>
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M24 8v32M16 24h16M8 16h8M32 16h8M8 32h8M32 32h8"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Senza prescrizione</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rhodiola Section -->
+    <section class="rhodiola-section">
+        <div class="rhodiola-intro">
+            <h2>Rhodiola: l'Energia della Natura</h2>
+            <p>La Rhodiola Rosea è una pianta adattogena: aiuta l'organismo a combattere ogni forma di stress. Ha una ricca storia sia nella cultura siberiana che nella Medicina Tradizionale Cinese. Più recentemente, negli Stati Uniti sono state condotte ricerche, inclusi studi su soggetti umani, che hanno mostrato risultati simili e coerenti.</p>
+        </div>
+
+        <div class="rhodiola-benefits">
+            <span class="rhodiola-benefits__label">Benefici naturali<br>della Rhodiola Rosea</span>
+            <div class="rhodiola-benefits__list">
+                <div class="rhodiola-benefit">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                    Salute mentale
+                </div>
+                <div class="rhodiola-benefit">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                    Concentrazione
+                </div>
+                <div class="rhodiola-benefit">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                    Serenità
+                </div>
+                <div class="rhodiola-benefit">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                    Energia
+                </div>
+            </div>
+        </div>
+
+        <p class="rhodiola-note">La Rhodiola cresce in alta montagna, in luoghi rocciosi o pascoli. Si trova nelle Alpi francesi, nei Pirenei e nei Vosgi, in tutte le Alpi dall'Italia alla Svizzera, in Germania, Svezia, Finlandia, Norvegia, Irlanda, Islanda e Nord America.</p>
+
+        <div class="rhodiola-research">
+            <div class="rhodiola-research__image">
+                <img src="../../images/cellulareT98G.jpg" alt="Analisi cellulare T98G">
+            </div>
+            <div class="rhodiola-research__content">
+                <p>Per identificare i pathway molecolari interessati dalla Rhodiola per la regolazione delle risposte cellulari, è stata analizzata la linea cellulare di neuroblastoma T98G.</p>
+                <p class="rhodiola-research__highlight">Vengono regolati positivamente ben <strong>1062 geni</strong>, dei quali una parte significativa è correlata alla gestione dell'ansia e del nervosismo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Did You Know -->
+    <section class="did-you-know">
+        <div class="did-you-know__content">
+            <p class="did-you-know__label">Lo sapevi?</p>
+            <p class="did-you-know__text">La Rhodiola, un favorito dei cosmonauti, è stata studiata ampiamente nell'Unione Sovietica per i suoi benefici nel sostenere la resistenza durante lo stress prolungato.</p>
+        </div>
+        <div class="did-you-know__image">
+            <img src="../../images/cosmonauta.jpg" alt="Cosmonauta sovietico" onerror="this.style.background='var(--color-sand)';this.style.aspectRatio='4/3';this.alt=''">
+        </div>
+    </section>
+
+    <!-- Science Section -->
+    <section class="science-section">
+        <div class="science-section__content">
+            <h2>La scienza fa la differenza</h2>
+            <p class="science-section__intro">L'approccio Generame permette di gestire meglio gli aspetti del benessere legati al passare del tempo. L'invecchiamento non riguarda solo la pelle, ma l'intero organismo. L'invecchiamento non va combattuto, ma accompagnato nel modo migliore possibile.</p>
+
+            <p class="publications-label">Pubblicazioni scientifiche</p>
+
+            <div class="publications-grid">
+                <div class="publication-card">
+                    <p class="publication-card__title">Supporto a stress e umore</p>
+                    <p class="publication-card__desc">Studi recenti suggeriscono che la Rhodiola può aiutare ad alleviare lo stress occasionale e promuovere sensazioni di benessere. Sono necessarie ulteriori ricerche, ma i risultati iniziali pongono una base positiva.</p>
+                    <div class="publication-card__meta">
+                        <div class="publication-card__stat">
+                            Numero studi
+                            <span>12</span>
+                        </div>
+                        <div class="publication-card__stat">
+                            Anno
+                            <span>2010-2023</span>
+                        </div>
+                    </div>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=rhodiola+rosea+stress" target="_blank" rel="noopener" class="publication-card__link">Approfondisci</a>
+                </div>
+                <div class="publication-card">
+                    <p class="publication-card__title">Performance cognitive</p>
+                    <p class="publication-card__desc">La ricerca indica potenziali benefici della Rhodiola per la funzione cognitiva, inclusi memoria e concentrazione. Gli studi mostrano miglioramenti significativi nelle prestazioni mentali.</p>
+                    <div class="publication-card__meta">
+                        <div class="publication-card__stat">
+                            Numero studi
+                            <span>8</span>
+                        </div>
+                        <div class="publication-card__stat">
+                            Anno
+                            <span>2015-2022</span>
+                        </div>
+                    </div>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=rhodiola+cognitive+performance&filter=years.2015-2026" target="_blank" rel="noopener" class="publication-card__link">Approfondisci</a>
+                </div>
+                <div class="publication-card">
+                    <p class="publication-card__title">Resistenza fisica</p>
+                    <p class="publication-card__desc">Studi su atleti e soggetti attivi dimostrano che la Rhodiola può supportare la resistenza fisica e ridurre la percezione della fatica durante l'esercizio prolungato.</p>
+                    <div class="publication-card__meta">
+                        <div class="publication-card__stat">
+                            Numero studi
+                            <span>6</span>
+                        </div>
+                        <div class="publication-card__stat">
+                            Anno
+                            <span>2012-2021</span>
+                        </div>
+                    </div>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=rhodiola+rosea+physical&filter=years.2015-2026" target="_blank" rel="noopener" class="publication-card__link">Approfondisci</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RodioX10 Section -->
+    <section class="rodiox10-section">
+        <div class="rodiox10-header">
+            <h2>RODIO-X10®</h2>
+            <p class="rodiox10-header__subtitle">Unire natura e tecnologia</p>
+        </div>
+
+        <div class="rodiox10-hero">
+            <div class="rodiox10-graphic">
+                <span class="rodiox10-graphic__number">10<span class="rodiox10-graphic__x">x</span></span>
+            </div>
+            <div class="rodiox10-desc">
+                <p>Sharp non contiene normale Rhodiola Rosea, bensì l'ingrediente biotech esclusivo e registrato <strong>Rodio-X10®</strong> che, grazie ad una lavorazione totalmente priva di solventi, permette di migliorare le performance della Rhodiola di circa <strong>10 volte</strong>.</p>
+            </div>
+        </div>
+
+        <div class="rodiox10-process">
+            <img src="../../images/process-section-image.png" alt="Processo biotech: Principi attivi + Biocatalizzatori + Carrier → Mix → Interazione e riduzione particelle">
+        </div>
+    </section>
+
+    <!-- How to Use -->
+    <section class="how-to-use">
+        <div class="section-header">
+            <p class="eyebrow">Modo d'uso</p>
+            <h2>Semplicità quotidiana</h2>
+            <p class="subtitle">Un gesto semplice per affrontare al meglio le sfide di ogni giorno.</p>
+        </div>
+
+        <div class="dosage-box">
+            <p class="dosage-box__number">1</p>
+            <p class="dosage-box__text">capsula al giorno</p>
+            <p class="dosage-box__note">Assumere secondo le proprie necessità, preferibilmente al mattino con un bicchiere d'acqua.</p>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications">
+        <div class="certifications__content">
+            <div class="certification">
+                <p class="certification__label">Notifica Ministero</p>
+                <p class="certification__value">Codice 129009</p>
+            </div>
+            <div class="certification">
+                <p class="certification__label">Formato</p>
+                <p class="certification__value">30 capsule vegetali</p>
+            </div>
+            <div class="certification">
+                <p class="certification__label">Produzione</p>
+                <p class="certification__value">100% Made in Italy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section--dark text-center" id="acquista">
+        <div class="section-header">
+            <p class="eyebrow" style="color: var(--color-accent-light);">Inizia oggi</p>
+            <h2 style="color: var(--color-cream);">Affronta le sfide con Sharp</h2>
+            <p class="subtitle" style="color: rgba(255,255,255,0.7);">Sharp a €45. Spedizione gratuita in Italia.</p>
+        </div>
+        <a href="#" class="btn btn--light">Acquista Sharp</a>
+        <div style="display: flex; justify-content: center; gap: var(--space-lg); margin-top: var(--space-lg); flex-wrap: wrap;">
+            <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(255,255,255,0.7);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-light)" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Spedizione gratuita
+            </span>
+            <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(255,255,255,0.7);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-light)" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Notificato Min. Salute
+            </span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__content">
+            <div class="footer__links">
+                <a href="/chi-siamo/">Chi siamo</a>
+                <a href="/scienza/">Scienza</a>
+                <a href="/contatti/">Contatti</a>
+                <a href="/privacy-informativa-sito/">Privacy</a>
+                <a href="mailto:info@generame.com">info@generame.com</a>
+            </div>
+            <p class="footer__copy">© 2009-2025 Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
