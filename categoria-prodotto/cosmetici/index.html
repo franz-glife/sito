@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmetici Epigenetici - Generame</title>
+    <meta name="description" content="Creme viso epigenetiche Generame: D-Cream per il giorno, N-Cream per la notte. Formulazioni brevettate per rigenerare la pelle in profondità.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cosmetici Epigenetici - Generame">
+    <meta property="og:description" content="Creme viso epigenetiche per rigenerare la pelle in profondità.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://generame.com/categoria-prodotto/cosmetici/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        /* Category page specific styles */
+        .page-hero {
+            padding: var(--space-3xl) var(--space-xl) var(--space-2xl);
+            text-align: center;
+            max-width: var(--max-width-text);
+            margin: 0 auto;
+        }
+
+        .page-hero__title {
+            margin-bottom: var(--space-md);
+        }
+
+        .page-hero__subtitle {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+        }
+
+        /* Products grid - preview cards */
+        .products-preview {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--space-xl) var(--space-2xl);
+        }
+
+        .products-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-xl);
+        }
+
+        .product-preview {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .product-preview__image {
+            aspect-ratio: 1;
+            overflow: hidden;
+            margin-bottom: var(--space-md);
+            background: var(--color-sand);
+        }
+
+        .product-preview__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .product-preview:hover .product-preview__image img {
+            transform: scale(1.05);
+        }
+
+        .product-preview__content {
+            padding: 0 var(--space-sm);
+        }
+
+        .product-preview__type {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-xs);
+        }
+
+        .product-preview__title {
+            font-family: var(--font-display);
+            font-size: 32px;
+            margin-bottom: var(--space-sm);
+            color: var(--color-deep);
+        }
+
+        .product-preview__desc {
+            font-size: 15px;
+            color: var(--color-charcoal);
+            line-height: 1.7;
+            margin-bottom: var(--space-md);
+        }
+
+        .product-preview__price {
+            font-family: var(--font-display);
+            font-size: 28px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-md);
+        }
+
+        .product-preview__cta {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            border-bottom: 1px solid var(--color-accent);
+            padding-bottom: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .product-preview:hover .product-preview__cta {
+            color: var(--color-deep);
+            border-color: var(--color-deep);
+        }
+
+        /* Products Detail - dark section matching landing */
+        .products-detail {
+            background: var(--color-deep);
+            color: var(--color-cream);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .products-detail-grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+        }
+
+        .product-detail-card {
+            padding: var(--space-xl);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .product-detail-card__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--space-lg);
+        }
+
+        .product-detail-card__title {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 400;
+            color: var(--color-cream);
+        }
+
+        .product-detail-card__type {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-accent-light);
+            padding: 8px 16px;
+            border: 1px solid var(--color-accent-light);
+        }
+
+        .product-detail-card__desc {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+            opacity: 0.8;
+        }
+
+        .ingredient {
+            padding: var(--space-md) 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .ingredient:last-child {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .ingredient__name {
+            font-weight: 500;
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: var(--color-accent-light);
+        }
+
+        .ingredient__benefit {
+            font-size: 14px;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        .ingredient__stat {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            padding: 2px 8px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+
+        .product-detail-card__footer {
+            margin-top: var(--space-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-detail-card__price {
+            font-family: var(--font-display);
+            font-size: 28px;
+            color: var(--color-cream);
+        }
+
+        .product-detail-card__btn {
+            display: inline-block;
+            background: var(--color-cream);
+            color: var(--color-deep);
+            padding: 14px 28px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-cream);
+        }
+
+        .product-detail-card__btn:hover {
+            background: transparent;
+            color: var(--color-cream);
+        }
+
+        /* Reviews section */
+        .reviews {
+            padding: var(--space-3xl) var(--space-xl);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .reviews__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: var(--space-xl);
+        }
+
+        .trustpilot-badge {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-lg);
+            background: white;
+            border: 1px solid var(--color-sand);
+        }
+
+        .trustpilot-badge__score {
+            font-family: var(--font-display);
+            font-size: 36px;
+            font-weight: 500;
+            color: var(--color-deep);
+        }
+
+        .trustpilot-badge__info {
+            font-size: 13px;
+            color: var(--color-charcoal);
+        }
+
+        .trustpilot-badge__stars {
+            color: #00b67a;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        .reviews__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+        }
+
+        /* Benefits bar */
+        .benefits-bar {
+            background: var(--color-sand);
+            padding: var(--space-lg) var(--space-xl);
+        }
+
+        .benefits-bar__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-xl);
+            flex-wrap: wrap;
+        }
+
+        .benefits-bar__item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--color-charcoal);
+        }
+
+        .benefits-bar__icon {
+            width: 24px;
+            height: 24px;
+            color: var(--color-accent);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .products-preview-grid,
+            .products-detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews__header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--space-md);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-preview__title,
+            .product-detail-card__title {
+                font-size: 26px;
+            }
+
+            .benefits-bar__content {
+                flex-direction: column;
+                gap: var(--space-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Spedizione gratuita in Italia · <span>Made in Italy dal 2009</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="/" class="logo">GENERAME</a>
+        <ul class="nav-menu">
+            <li><a href="/chi-siamo/">Chi siamo</a></li>
+            <li><a href="/scienza/">Scienza</a></li>
+            <li><a href="/categoria-prodotto/cosmetici/">Cosmetici</a></li>
+            <li><a href="/categoria-prodotto/integratori-alimentari/">Integratori</a></li>
+            <li><a href="/contatti/">Contatti</a></li>
+        </ul>
+        <div class="nav-trust">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+            </svg>
+            <span>4.7/5 Trustpilot</span>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <p class="eyebrow">Skincare epigenetica</p>
+        <h1 class="page-hero__title">Creme viso <em>epigenetiche</em></h1>
+        <p class="page-hero__subtitle">Due formulazioni complementari che comunicano con i meccanismi profondi della tua pelle. Di giorno proteggi, di notte rigeneri.</p>
+    </section>
+
+    <!-- Products Preview Grid -->
+    <section class="products-preview">
+        <div class="products-preview-grid">
+            <!-- D-Cream -->
+            <a href="/prodotto/d-cream/" class="product-preview">
+                <div class="product-preview__image">
+                    <img src="../../images/d-cream.jpg" alt="D-Cream - Crema giorno epigenetica" loading="lazy">
+                </div>
+                <div class="product-preview__content">
+                    <p class="product-preview__type">Crema giorno</p>
+                    <h2 class="product-preview__title">D-Cream</h2>
+                    <p class="product-preview__desc">Texture leggera e vellutata che si assorbe velocemente. Scudo protettivo contro inquinamento e stress ambientale.</p>
+                    <p class="product-preview__price">€96</p>
+                    <span class="product-preview__cta">Scopri di più</span>
+                </div>
+            </a>
+
+            <!-- N-Cream -->
+            <a href="/prodotto/n-cream/" class="product-preview">
+                <div class="product-preview__image">
+                    <img src="../../images/n-cream.jpg" alt="N-Cream - Crema notte epigenetica" loading="lazy">
+                </div>
+                <div class="product-preview__content">
+                    <p class="product-preview__type">Crema notte</p>
+                    <h2 class="product-preview__title">N-Cream</h2>
+                    <p class="product-preview__desc">Texture ricca e avvolgente con azione nutriente e restitutiva. Riparazione profonda durante il riposo notturno.</p>
+                    <p class="product-preview__price">€114</p>
+                    <span class="product-preview__cta">Scopri di più</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Benefits Bar -->
+    <section class="benefits-bar">
+        <div class="benefits-bar__content">
+            <div class="benefits-bar__item">
+                <svg class="benefits-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+                <span>Ingredienti brevettati</span>
+            </div>
+            <div class="benefits-bar__item">
+                <svg class="benefits-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>100% Made in Italy</span>
+            </div>
+            <div class="benefits-bar__item">
+                <svg class="benefits-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+                <span>Zero petrolati e parabeni</span>
+            </div>
+            <div class="benefits-bar__item">
+                <svg class="benefits-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>15+ anni di ricerca</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Detail Section (Dark) -->
+    <section class="products-detail">
+        <div class="section-header mb-xl">
+            <p class="eyebrow" style="color: var(--color-accent-light);">Le formule</p>
+            <h2 style="color: var(--color-cream);">Ingredienti attivi brevettati</h2>
+            <p class="subtitle" style="color: rgba(255,255,255,0.7);">Ogni principio attivo è selezionato per la sua capacità dimostrata di comunicare con i meccanismi cellulari.</p>
+        </div>
+
+        <div class="products-detail-grid">
+            <!-- D-Cream Detail -->
+            <div class="product-detail-card">
+                <div class="product-detail-card__header">
+                    <h3 class="product-detail-card__title">D-Cream</h3>
+                    <span class="product-detail-card__type">Giorno</span>
+                </div>
+                <p class="product-detail-card__desc">Texture leggera e vellutata che si assorbe velocemente. Offre comfort e protezione per tutto il giorno senza appesantire.</p>
+
+                <div class="ingredient">
+                    <p class="ingredient__name">Licopene Bioliquefatto</p>
+                    <p class="ingredient__benefit">Tecnologia brevettata. Scudo protettivo contro inquinamento e stress ambientale urbano.</p>
+                </div>
+                <div class="ingredient">
+                    <p class="ingredient__name">SOD (Superossido Dismutasi)</p>
+                    <p class="ingredient__benefit">Antiossidante presente naturalmente nel corpo. Migliora visibilmente la texture, anche nella zona perioculare.</p>
+                </div>
+                <div class="ingredient">
+                    <p class="ingredient__name">SIG1 Peptide</p>
+                    <p class="ingredient__benefit">Peptide biomimetico che attiva 15+ geni nei fibroblasti.</p>
+                    <span class="ingredient__stat">+40% densità · -27% rughe</span>
+                </div>
+
+                <div class="product-detail-card__footer">
+                    <span class="product-detail-card__price">€96</span>
+                    <a href="/prodotto/d-cream/" class="product-detail-card__btn">Scopri D-Cream</a>
+                </div>
+            </div>
+
+            <!-- N-Cream Detail -->
+            <div class="product-detail-card">
+                <div class="product-detail-card__header">
+                    <h3 class="product-detail-card__title">N-Cream</h3>
+                    <span class="product-detail-card__type">Notte</span>
+                </div>
+                <p class="product-detail-card__desc">Texture ricca e avvolgente con azione nutriente e restitutiva. Ideale per chi cerca comfort e riparazione profonda durante il riposo.</p>
+
+                <div class="ingredient">
+                    <p class="ingredient__name">Fico d'India Biotech</p>
+                    <p class="ingredient__benefit">Da fichi 100% italiani con trattamento enzimatico esclusivo per massima biodisponibilità.</p>
+                </div>
+                <div class="ingredient">
+                    <p class="ingredient__name">Bioattivo da Lievito</p>
+                    <p class="ingredient__benefit">Aumenta l'ossigenazione cutanea con forte azione rivitalizzante notturna.</p>
+                </div>
+                <div class="ingredient">
+                    <p class="ingredient__name">Matrichine</p>
+                    <p class="ingredient__benefit">Ingrediente brevettato testato su modello SkinEthic.</p>
+                    <span class="ingredient__stat">Stimola 20 geni di rigenerazione</span>
+                </div>
+
+                <div class="product-detail-card__footer">
+                    <span class="product-detail-card__price">€114</span>
+                    <a href="/prodotto/n-cream/" class="product-detail-card__btn">Scopri N-Cream</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="reviews__header">
+            <div>
+                <p class="eyebrow">Cosa dicono di noi</p>
+                <h2>Recensioni verificate</h2>
+            </div>
+            <div class="trustpilot-badge">
+                <div>
+                    <div class="trustpilot-badge__stars">★★★★★</div>
+                    <p class="trustpilot-badge__info">Trustpilot</p>
+                </div>
+                <div>
+                    <div class="trustpilot-badge__score">4.7</div>
+                    <p class="trustpilot-badge__info">57 recensioni</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews__grid">
+            <div class="review-card">
+                <div class="review-card__stars">★★★★★</div>
+                <p class="review-card__text">"Da quando ho iniziato ad usare la crema giorno e la crema notte ho notato che la pelle del viso rimane sempre ben idratata e levigata a differenza di tante altre creme. Finalmente ho trovato le creme giuste!"</p>
+                <div class="review-card__author">
+                    <div class="review-card__avatar">VM</div>
+                    <div>
+                        <p class="review-card__name">Valentina M.</p>
+                        <p class="review-card__date">Aprile 2022</p>
+                        <p class="review-card__verified">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            Acquisto verificato
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-card__stars">★★★★★</div>
+                <p class="review-card__text">"L'azienda è veramente professionale sia nella precisione commerciale, nella qualità del prodotto e nella continua ricerca di ottimizzare i risultati. Prodotto innovativo."</p>
+                <div class="review-card__author">
+                    <div class="review-card__avatar">CF</div>
+                    <div>
+                        <p class="review-card__name">Carla F.</p>
+                        <p class="review-card__date">Marzo 2024</p>
+                        <p class="review-card__verified">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            Acquisto verificato
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-card__stars">★★★★★</div>
+                <p class="review-card__text">"Mi sono trovata molto bene con le creme, non ungono per niente, sono ottime antirughe, le ho consigliate anche al mio marito. Sono ottime anche in periodo estivo."</p>
+                <div class="review-card__author">
+                    <div class="review-card__avatar">G</div>
+                    <div>
+                        <p class="review-card__name">Giulia</p>
+                        <p class="review-card__date">2022</p>
+                        <p class="review-card__verified">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            Acquisto verificato
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section--dark text-center">
+        <div class="section-header">
+            <p class="eyebrow" style="color: var(--color-accent-light);">Approccio completo</p>
+            <h2 style="color: var(--color-cream);">Il benessere parte da dentro</h2>
+            <p class="subtitle" style="color: rgba(255,255,255,0.7);">Scopri anche i nostri integratori epigenetici per un approccio olistico alla rigenerazione.</p>
+        </div>
+        <a href="/categoria-prodotto/integratori-alimentari/" class="btn btn--light">Scopri gli integratori</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__content">
+            <div class="footer__links">
+                <a href="/chi-siamo/">Chi siamo</a>
+                <a href="/scienza/">Scienza</a>
+                <a href="/contatti/">Contatti</a>
+                <a href="/privacy-informativa-sito/">Privacy</a>
+                <a href="mailto:info@generame.com">info@generame.com</a>
+            </div>
+            <p class="footer__copy">© 2009-2025 Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
