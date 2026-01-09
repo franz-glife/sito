@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move3 - Mobilità Articolare | Generame</title>
+    <meta name="description" content="Move3: integratore biotech con BosweX2 per articolazioni flessibili e cartilagine sana. Formula con MSM, Acido Ialuronico e Vitamina C. Made in Italy.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Move3 - Mobilità Articolare | Generame">
+    <meta property="og:description" content="Integratore biotech per articolazioni flessibili e cartilagine sana.">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://generame.com/prodotto/move3/">
+    <meta property="product:price:amount" content="24.80">
+    <meta property="product:price:currency" content="EUR">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        /* Product page styles */
+        .product-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--space-2xl) var(--space-xl);
+            align-items: start;
+        }
+
+        .product-hero__image {
+            position: sticky;
+            top: 100px;
+        }
+
+        .product-hero__image img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            background: var(--color-sand);
+        }
+
+        .product-hero__content {
+            padding-top: var(--space-md);
+        }
+
+        .product-hero__category {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-sm);
+        }
+
+        .product-hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(42px, 5vw, 56px);
+            margin-bottom: var(--space-md);
+            color: var(--color-deep);
+        }
+
+        .product-hero__subtitle {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+            margin-bottom: var(--space-lg);
+        }
+
+        .product-hero__price {
+            font-family: var(--font-display);
+            font-size: 42px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-xs);
+        }
+
+        .product-hero__format {
+            font-size: 14px;
+            color: var(--color-stone);
+            margin-bottom: var(--space-lg);
+        }
+
+        .product-hero__cta {
+            display: inline-block;
+            background: var(--color-deep);
+            color: var(--color-cream);
+            padding: 20px 48px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-deep);
+            margin-bottom: var(--space-md);
+        }
+
+        .product-hero__cta:hover {
+            background: transparent;
+            color: var(--color-deep);
+        }
+
+        .product-hero__guarantee {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--color-stone);
+        }
+
+        .product-hero__guarantee svg {
+            color: var(--color-success);
+        }
+
+        /* Product badges bar */
+        .product-badges {
+            background: var(--color-cream);
+            border-top: 1px solid var(--color-sand);
+            border-bottom: 1px solid var(--color-sand);
+            padding: var(--space-lg) var(--space-xl);
+        }
+
+        .product-badges__grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+
+        .product-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: var(--space-xs);
+        }
+
+        .product-badge__icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-badge__icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--color-charcoal);
+            stroke-width: 1;
+            fill: none;
+        }
+
+        .product-badge__label {
+            font-size: 11px;
+            color: var(--color-charcoal);
+            line-height: 1.4;
+            max-width: 90px;
+        }
+
+        /* Ingredients section */
+        .ingredients {
+            background: var(--color-deep);
+            color: var(--color-cream);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .ingredients__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .ingredient-highlight {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            margin-top: var(--space-xl);
+            align-items: center;
+        }
+
+        .ingredient-highlight__content h3 {
+            font-family: var(--font-display);
+            font-size: 32px;
+            color: var(--color-cream);
+            margin-bottom: var(--space-xs);
+        }
+
+        .ingredient-highlight__tag {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: var(--space-md);
+        }
+
+        .ingredient-highlight__desc {
+            font-size: 16px;
+            line-height: 1.8;
+            opacity: 0.85;
+            margin-bottom: var(--space-lg);
+        }
+
+        .ingredient-highlight__stat {
+            font-family: var(--font-display);
+            font-size: 48px;
+            color: var(--color-accent-light);
+            line-height: 1;
+        }
+
+        .ingredient-highlight__stat-label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            margin-top: var(--space-xs);
+        }
+
+        .ingredients__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-2xl);
+            padding-top: var(--space-2xl);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .ingredient-card {
+            padding: var(--space-md);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .ingredient-card__name {
+            font-family: var(--font-display);
+            font-size: 20px;
+            color: var(--color-cream);
+            margin-bottom: var(--space-xs);
+        }
+
+        .ingredient-card__benefit {
+            font-size: 14px;
+            line-height: 1.7;
+            opacity: 0.8;
+        }
+
+        /* Benefits section */
+        .benefits {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .benefits__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: var(--space-lg);
+        }
+
+        .benefit-card__icon {
+            width: 64px;
+            height: 64px;
+            background: var(--color-sand);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-md);
+        }
+
+        .benefit-card__icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--color-accent);
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .benefit-card h3 {
+            font-family: var(--font-display);
+            font-size: 22px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-sm);
+        }
+
+        .benefit-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--color-charcoal);
+        }
+
+        /* How to use */
+        .how-to-use {
+            background: var(--color-sand);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .how-to-use__content {
+            max-width: var(--max-width-narrow);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .dosage-box {
+            background: var(--color-cream);
+            padding: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+
+        .dosage-box__number {
+            font-family: var(--font-display);
+            font-size: 64px;
+            color: var(--color-accent);
+            line-height: 1;
+        }
+
+        .dosage-box__text {
+            font-size: 18px;
+            color: var(--color-charcoal);
+            margin-top: var(--space-sm);
+        }
+
+        .dosage-box__note {
+            font-size: 14px;
+            color: var(--color-stone);
+            margin-top: var(--space-md);
+        }
+
+        /* Certifications */
+        .certifications {
+            background: var(--color-cream);
+            padding: var(--space-2xl) var(--space-xl);
+            border-top: 1px solid var(--color-sand);
+        }
+
+        .certifications__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: var(--space-2xl);
+            flex-wrap: wrap;
+        }
+
+        .certification {
+            text-align: center;
+        }
+
+        .certification__label {
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--color-stone);
+            margin-bottom: var(--space-xs);
+        }
+
+        .certification__value {
+            font-family: var(--font-display);
+            font-size: 18px;
+            color: var(--color-deep);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .product-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .product-hero__image {
+                position: static;
+            }
+
+            .ingredient-highlight {
+                grid-template-columns: 1fr;
+            }
+
+            .ingredients__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-badges__grid {
+                gap: var(--space-md);
+            }
+
+            .certifications__content {
+                flex-direction: column;
+                align-items: center;
+                gap: var(--space-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Spedizione gratuita in Italia · <span>Made in Italy dal 2009</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="/" class="logo">GENERAME</a>
+        <ul class="nav-menu">
+            <li><a href="/chi-siamo/">Chi siamo</a></li>
+            <li><a href="/scienza/">Scienza</a></li>
+            <li><a href="/categoria-prodotto/cosmetici/">Cosmetici</a></li>
+            <li><a href="/categoria-prodotto/integratori-alimentari/">Integratori</a></li>
+            <li><a href="/contatti/">Contatti</a></li>
+        </ul>
+        <div class="nav-trust">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+            </svg>
+            <span>4.7/5 Trustpilot</span>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Product Hero -->
+    <section class="product-hero">
+        <div class="product-hero__image">
+            <img src="../../images/move3.jpg" alt="Move3 - Integratore mobilità articolare Generame">
+        </div>
+
+        <div class="product-hero__content">
+            <p class="product-hero__category">Mobilità articolare</p>
+            <h1 class="product-hero__title">Move3</h1>
+            <p class="product-hero__subtitle">Integratore biotech per articolazioni flessibili e cartilagine sana. Formula avanzata con BosweX2®, MSM e Acido Ialuronico per ritrovare libertà di movimento.</p>
+
+            <p class="product-hero__price">€24,80</p>
+            <p class="product-hero__format">60 capsule · 1 mese di trattamento</p>
+
+            <a href="#acquista" class="product-hero__cta">Acquista ora</a>
+
+            <p class="product-hero__guarantee">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Spedizione gratuita · Soddisfatti o rimborsati
+            </p>
+        </div>
+    </section>
+
+    <!-- Product Badges -->
+    <section class="product-badges">
+        <div class="product-badges__grid">
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M16 8c0-2 2-4 4-4h8c2 0 4 2 4 4v4h-16v-4z"/>
+                        <circle cx="24" cy="28" r="8"/>
+                        <path d="M20 28h8M24 24v8"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Uso orale</span>
+            </div>
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M24 4c-6 8-12 14-12 22 0 6.6 5.4 12 12 12s12-5.4 12-12c0-8-6-14-12-22z"/>
+                        <path d="M20 28c0 2.2 1.8 4 4 4"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Vegano</span>
+            </div>
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="16"/>
+                        <path d="M18 24h12"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Senza glutine</span>
+            </div>
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M24 4l-4 12h-8l8 6-4 12 8-6 8 6-4-12 8-6h-8z"/>
+                        <ellipse cx="24" cy="36" rx="12" ry="6"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Made in Italy</span>
+            </div>
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M24 8v32M16 24h16M8 16h8M32 16h8M8 32h8M32 32h8"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Senza prescrizione</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section class="ingredients">
+        <div class="ingredients__content">
+            <div class="section-header">
+                <p class="eyebrow" style="color: var(--color-accent-light);">Ingrediente chiave</p>
+                <h2 style="color: var(--color-cream);">BosweX2®: Boswellia potenziata</h2>
+            </div>
+
+            <div class="ingredient-highlight">
+                <div class="ingredient-highlight__content">
+                    <h3>BosweX2®</h3>
+                    <span class="ingredient-highlight__tag">Estratto brevettato</span>
+                    <p class="ingredient-highlight__desc">Estratto biotech esclusivo di Boswellia serrata ottenuto con tecnologia priva di solventi. La solubilità aumentata di 50 volte permette un assorbimento superiore e un'azione più efficace sulle articolazioni.</p>
+                    <p class="ingredient-highlight__desc">La ricerca mostra che la Boswellia regola l'espressione di 113 geni associati a infiammazione, apoptosi e degradazione del collagene.</p>
+                    <div class="ingredient-highlight__stat">113</div>
+                    <p class="ingredient-highlight__stat-label">geni regolati positivamente</p>
+                </div>
+                <div class="ingredient-highlight__image" style="background: var(--color-sand); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-family: var(--font-display); font-size: 120px; color: var(--color-accent);">50x</span>
+                </div>
+            </div>
+
+            <div class="ingredients__grid">
+                <div class="ingredient-card">
+                    <h3 class="ingredient-card__name">MSM</h3>
+                    <p class="ingredient-card__benefit">Zolfo organico biodisponibile che supporta la formazione di collagene, fondamentale per cartilagine e tessuti connettivi.</p>
+                </div>
+                <div class="ingredient-card">
+                    <h3 class="ingredient-card__name">Acido Ialuronico</h3>
+                    <p class="ingredient-card__benefit">Componente naturale del liquido sinoviale. Supporta la lubrificazione articolare e il comfort durante il movimento.</p>
+                </div>
+                <div class="ingredient-card">
+                    <h3 class="ingredient-card__name">Vitamina C</h3>
+                    <p class="ingredient-card__benefit">Contribuisce alla normale formazione del collagene per la funzione delle cartilagini.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="section-header text-center">
+            <p class="eyebrow">Benefici</p>
+            <h2>Libertà di movimento</h2>
+            <p class="subtitle">Move3 supporta la salute articolare per una vita attiva senza limitazioni.</p>
+        </div>
+
+        <div class="benefits__grid">
+            <div class="benefit-card">
+                <div class="benefit-card__icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                </div>
+                <h3>Flessibilità</h3>
+                <p>Supporta la mobilità articolare per movimenti fluidi e senza rigidità.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-card__icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <h3>Protezione</h3>
+                <p>BosweX2® contrasta i processi infiammatori che danneggiano le articolazioni.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-card__icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                </div>
+                <h3>Comfort</h3>
+                <p>L'acido ialuronico supporta la lubrificazione naturale delle articolazioni.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use -->
+    <section class="how-to-use">
+        <div class="how-to-use__content">
+            <div class="section-header">
+                <p class="eyebrow">Modo d'uso</p>
+                <h2>Semplicità quotidiana</h2>
+                <p class="subtitle">Un gesto semplice per prenderti cura delle tue articolazioni ogni giorno.</p>
+            </div>
+
+            <div class="dosage-box">
+                <p class="dosage-box__number">2</p>
+                <p class="dosage-box__text">capsule al giorno</p>
+                <p class="dosage-box__note">Assumere preferibilmente al mattino a stomaco pieno. Un flacone dura 1 mese.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications">
+        <div class="certifications__content">
+            <div class="certification">
+                <p class="certification__label">Notifica Ministero</p>
+                <p class="certification__value">Codice 164847</p>
+            </div>
+            <div class="certification">
+                <p class="certification__label">Formato</p>
+                <p class="certification__value">60 capsule da 580mg</p>
+            </div>
+            <div class="certification">
+                <p class="certification__label">Produzione</p>
+                <p class="certification__value">100% Made in Italy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section--dark text-center" id="acquista">
+        <div class="section-header">
+            <p class="eyebrow" style="color: var(--color-accent-light);">Inizia oggi</p>
+            <h2 style="color: var(--color-cream);">Ritrova la libertà di movimento</h2>
+            <p class="subtitle" style="color: rgba(255,255,255,0.7);">Move3 a €24,80. Spedizione gratuita in Italia.</p>
+        </div>
+        <a href="#" class="btn btn--light">Acquista Move3</a>
+        <div style="display: flex; justify-content: center; gap: var(--space-lg); margin-top: var(--space-lg); flex-wrap: wrap;">
+            <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(255,255,255,0.7);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-light)" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Spedizione gratuita
+            </span>
+            <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(255,255,255,0.7);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-light)" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Notificato Min. Salute
+            </span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__content">
+            <div class="footer__links">
+                <a href="/chi-siamo/">Chi siamo</a>
+                <a href="/scienza/">Scienza</a>
+                <a href="/contatti/">Contatti</a>
+                <a href="/privacy-informativa-sito/">Privacy</a>
+                <a href="mailto:info@generame.com">info@generame.com</a>
+            </div>
+            <p class="footer__copy">© 2009-2025 Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
