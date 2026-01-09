@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Scienza - Generame</title>
+    <meta name="description" content="L'approccio epigenetico di Generame: 15 anni di ricerca per rigenerare, riequilibrare e rivitalizzare. Scopri la scienza che accompagna il tempo.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="La Scienza - Generame">
+    <meta property="og:description" content="L'approccio epigenetico di Generame: ricerca italiana per il benessere profondo.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://generame.com/scienza/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* Scienza page specific styles */
+        .page-hero {
+            padding: var(--space-3xl) var(--space-xl) var(--space-2xl);
+            text-align: center;
+            max-width: var(--max-width-text);
+            margin: 0 auto;
+        }
+
+        .page-hero__title {
+            margin-bottom: var(--space-md);
+        }
+
+        .page-hero__subtitle {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+        }
+
+        /* Epigenetics explanation */
+        .epigenetics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            max-width: var(--max-width);
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .epigenetics__content h2 {
+            margin-bottom: var(--space-md);
+        }
+
+        .epigenetics__text {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .epigenetics__text p {
+            margin-bottom: var(--space-md);
+        }
+
+        .epigenetics__visual {
+            background: var(--color-sand);
+            padding: var(--space-xl);
+            text-align: center;
+        }
+
+        .epigenetics__diagram {
+            font-family: var(--font-display);
+            font-size: 20px;
+            line-height: 2;
+        }
+
+        .epigenetics__diagram strong {
+            color: var(--color-accent);
+        }
+
+        /* Pillars */
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .pillar {
+            padding: var(--space-xl);
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+
+        .pillar__icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto var(--space-md);
+            color: var(--color-accent-light);
+        }
+
+        .pillar__title {
+            font-family: var(--font-display);
+            font-size: 24px;
+            color: var(--color-cream);
+            margin-bottom: var(--space-sm);
+        }
+
+        .pillar__text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Research Projects */
+        .projects {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .project {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: var(--space-lg);
+            padding: var(--space-lg) 0;
+            border-bottom: 1px solid var(--color-sand);
+        }
+
+        .project:last-child {
+            border-bottom: none;
+        }
+
+        .project__years {
+            font-family: var(--font-display);
+            font-size: 18px;
+            color: var(--color-accent);
+        }
+
+        .project__tag {
+            display: inline-block;
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: var(--color-sand);
+            padding: 4px 8px;
+            margin-top: var(--space-xs);
+        }
+
+        .project__title {
+            font-family: var(--font-display);
+            font-size: 22px;
+            margin-bottom: var(--space-xs);
+        }
+
+        .project__description {
+            font-size: 15px;
+            color: var(--color-stone);
+            line-height: 1.6;
+        }
+
+        /* Patent */
+        .patent {
+            max-width: var(--max-width-narrow);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .patent__box {
+            background: white;
+            border: 1px solid var(--color-sand);
+            padding: var(--space-xl);
+            margin-top: var(--space-lg);
+        }
+
+        .patent__number {
+            font-family: var(--font-display);
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: var(--color-accent);
+            margin-bottom: var(--space-sm);
+        }
+
+        .patent__title {
+            font-family: var(--font-display);
+            font-size: 24px;
+            margin-bottom: var(--space-md);
+        }
+
+        .patent__text {
+            font-size: 15px;
+            color: var(--color-charcoal);
+            line-height: 1.7;
+        }
+
+        /* Awards Timeline */
+        .awards-timeline {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            position: relative;
+            padding: 180px 0;
+        }
+
+        .awards-timeline__line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--color-accent);
+            transform: translateY(-50%);
+        }
+
+        .awards-timeline__items {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            height: 0;
+        }
+
+        .awards-timeline__item {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            max-width: 160px;
+        }
+
+        /* Odd items (1, 3, 5, 7) go ABOVE the line */
+        .awards-timeline__item:nth-child(odd) .awards-timeline__content {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+        }
+
+        /* Even items (2, 4, 6, 8) go BELOW the line */
+        .awards-timeline__item:nth-child(even) .awards-timeline__content {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+        }
+
+        .awards-timeline__dot {
+            width: 14px;
+            height: 14px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .awards-timeline__year {
+            font-family: var(--font-display);
+            font-size: 22px;
+            color: var(--color-accent);
+            margin-bottom: 4px;
+        }
+
+        .awards-timeline__text {
+            font-size: 13px;
+            line-height: 1.5;
+            color: var(--color-charcoal);
+        }
+
+        .awards-timeline__text strong {
+            color: var(--color-deep);
+        }
+
+        .awards-timeline__text em {
+            font-style: italic;
+        }
+
+        /* Mobile timeline */
+        .awards-timeline-mobile {
+            display: none;
+        }
+
+        .awards-mobile-item {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: var(--space-md);
+            padding: var(--space-md) 0;
+            border-bottom: 1px solid var(--color-sand);
+        }
+
+        .awards-mobile-item:last-child {
+            border-bottom: none;
+        }
+
+        .awards-mobile-item__year {
+            font-family: var(--font-display);
+            font-size: 22px;
+            color: var(--color-accent);
+        }
+
+        .awards-mobile-item__text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--color-charcoal);
+        }
+
+        .awards-mobile-item__text strong {
+            color: var(--color-deep);
+        }
+
+        /* Approach */
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .approach-item {
+            padding: var(--space-lg);
+            border: 1px solid var(--color-sand);
+        }
+
+        .approach-item__title {
+            font-family: var(--font-display);
+            font-size: 22px;
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .approach-item__title svg {
+            width: 24px;
+            height: 24px;
+            color: var(--color-accent);
+        }
+
+        .approach-item__text {
+            font-size: 15px;
+            color: var(--color-charcoal);
+            line-height: 1.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .epigenetics {
+                grid-template-columns: 1fr;
+            }
+
+            .epigenetics__visual {
+                order: -1;
+            }
+
+            .pillars {
+                grid-template-columns: 1fr;
+            }
+
+            .project {
+                grid-template-columns: 1fr;
+                gap: var(--space-sm);
+            }
+
+            .awards-timeline {
+                display: none;
+            }
+
+            .awards-timeline-mobile {
+                display: block;
+                max-width: var(--max-width-narrow);
+                margin: 0 auto;
+            }
+
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Spedizione gratuita in Italia · <span>Made in Italy dal 2009</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="/" class="logo">GENERAME</a>
+        <ul class="nav-menu">
+            <li><a href="/chi-siamo/">Chi siamo</a></li>
+            <li><a href="/scienza/">Scienza</a></li>
+            <li><a href="/categoria-prodotto/cosmetici/">Cosmetici</a></li>
+            <li><a href="/categoria-prodotto/integratori-alimentari/">Integratori</a></li>
+            <li><a href="/contatti/">Contatti</a></li>
+        </ul>
+        <div class="nav-trust">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+            </svg>
+            <span>4.7/5 Trustpilot</span>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <p class="eyebrow">Il nostro approccio</p>
+        <h1 class="page-hero__title">Sostanza, non <em>parole</em></h1>
+        <p class="page-hero__subtitle">Da oltre 15 anni studiamo i meccanismi profondi che regolano il benessere del corpo. Non promesse di marketing, ma ricerca applicata per rigenerare, riequilibrare e rivitalizzare.</p>
+    </section>
+
+    <!-- Epigenetics Explanation -->
+    <section class="section">
+        <div class="epigenetics">
+            <div class="epigenetics__content">
+                <p class="eyebrow">La base scientifica</p>
+                <h2>Cos'è l'epigenetica?</h2>
+                <div class="epigenetics__text">
+                    <p>Il DNA è il libretto di istruzioni del tuo corpo. Ma non tutte le istruzioni vengono lette allo stesso modo: <strong>l'epigenetica</strong> studia come l'ambiente, lo stile di vita e ciò che applichiamo sulla pelle possono influenzare quali geni vengono "accesi" o "spenti".</p>
+                    <p>Questo significa che possiamo <em>dialogare</em> con le nostre cellule. Non per fermare il tempo, ma per accompagnarlo nel modo migliore, aiutando la pelle e il corpo a esprimere il loro potenziale di rigenerazione naturale.</p>
+                    <p>I nostri prodotti sono formulati per comunicare con questi meccanismi profondi, usando ingredienti che la ricerca ha dimostrato capaci di influenzare positivamente l'espressione genica.</p>
+                </div>
+            </div>
+            <div class="epigenetics__visual">
+                <div class="epigenetics__diagram">
+                    <strong>DNA</strong> = Le istruzioni<br>
+                    <strong>Epigenetica</strong> = Come vengono lette<br>
+                    <strong>Generame</strong> = Aiuta a leggerle meglio
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Pillars -->
+    <section class="section section--dark">
+        <div class="section-header">
+            <p class="eyebrow" style="color: var(--color-accent-light);">I nostri pilastri</p>
+            <h2 style="color: var(--color-cream);">Rigenerare. Riequilibrare. Rivitalizzare.</h2>
+            <p class="subtitle" style="color: rgba(255,255,255,0.7);">Tre parole che guidano ogni nostra formulazione.</p>
+        </div>
+
+        <div class="pillars">
+            <div class="pillar">
+                <svg class="pillar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+                <h3 class="pillar__title">Evidenze scientifiche</h3>
+                <p class="pillar__text">Monitoriamo costantemente la letteratura scientifica su epigenetica e processi di rigenerazione cellulare. Ogni ingrediente è selezionato sulla base di studi peer-reviewed.</p>
+            </div>
+
+            <div class="pillar">
+                <svg class="pillar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                </svg>
+                <h3 class="pillar__title">Tecnologia avanzata</h3>
+                <p class="pillar__text">Utilizziamo processi produttivi innovativi, come la bioliquefazione senza solventi, per massimizzare la biodisponibilità dei principi attivi.</p>
+            </div>
+
+            <div class="pillar">
+                <svg class="pillar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+                <h3 class="pillar__title">Approccio olistico</h3>
+                <p class="pillar__text">Consideriamo l'organismo nella sua interezza. Per questo offriamo sia cosmetici che integratori: il benessere parte da dentro e si riflette fuori.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Projects -->
+    <section class="section">
+        <div class="section-header">
+            <p class="eyebrow">Attività scientifica</p>
+            <h2>Progetti di ricerca</h2>
+            <p class="subtitle">La nostra storia è fatta di collaborazioni con enti di ricerca e progetti finanziati a livello europeo e nazionale.</p>
+        </div>
+
+        <div class="projects">
+            <div class="project">
+                <div>
+                    <p class="project__years">2010 — 2014</p>
+                    <span class="project__tag">EU POR-FESR</span>
+                </div>
+                <div>
+                    <h3 class="project__title">Progetto NutriHeart</h3>
+                    <p class="project__description">Studio sulla nutrizione personalizzata basata sul profilo genetico individuale, con focus sulla prevenzione cardiovascolare.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <div>
+                    <p class="project__years">2014 — 2016</p>
+                    <span class="project__tag">EU ACTION</span>
+                </div>
+                <div>
+                    <h3 class="project__title">ChipME: DTC Testing Europe</h3>
+                    <p class="project__description">Progetto europeo sui test genetici diretti al consumatore e le implicazioni per la salute pubblica.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <div>
+                    <p class="project__years">2014 — 2015</p>
+                    <span class="project__tag">Italia</span>
+                </div>
+                <div>
+                    <h3 class="project__title">DNA and Sport Performance</h3>
+                    <p class="project__description">Ricerca sul rapporto tra varianti genetiche individuali e ottimizzazione della performance sportiva.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <div>
+                    <p class="project__years">2017 — 2018</p>
+                    <span class="project__tag">Italia</span>
+                </div>
+                <div>
+                    <h3 class="project__title">Genetics, Nutrition and Skin Care</h3>
+                    <p class="project__description">Studio sull'interazione tra genetica, nutrizione e salute della pelle: le basi scientifiche delle nostre creme epigenetiche.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patent -->
+    <section class="section section--sand">
+        <div class="patent">
+            <p class="eyebrow">Proprietà intellettuale</p>
+            <h2>Il metodo brevettato</h2>
+            <p class="subtitle">Siamo l'unica azienda al mondo con un metodo brevettato che combina genetica individuale ed epigenetica per la formulazione di prodotti personalizzati.</p>
+
+            <div class="patent__box">
+                <p class="patent__number">Presentato all'European Human Genetics Conference 2014</p>
+                <h3 class="patent__title">Metodo integrato genetica-epigenetica</h3>
+                <p class="patent__text">Il nostro metodo combina l'analisi del profilo genetico individuale con le misure antropometriche e lo stato di salute. Testato per 2 anni su 200 persone, rappresenta un approccio unico nel panorama della nutrigenomica e della cosmesi personalizzata.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Timeline -->
+    <section class="section section--sand">
+        <div class="section-header">
+            <p class="eyebrow">Riconoscimenti</p>
+            <h2>Premi e traguardi</h2>
+            <p class="subtitle">Una storia di riconoscimenti che testimoniano il valore della nostra ricerca.</p>
+        </div>
+
+        <!-- Desktop Timeline -->
+        <div class="awards-timeline">
+            <div class="awards-timeline__line"></div>
+            <div class="awards-timeline__items">
+                <div class="awards-timeline__item">
+                    <div class="awards-timeline__content">
+                        <p class="awards-timeline__year">2010</p>
+                        <p class="awards-timeline__text">Selezionata tra le 18 startup migliori in Italia da <strong>Confindustria e Unicredit</strong></p>
+                    </div>
+                    <div class="awards-timeline__dot"></div>
+                </div>
+                <div class="awards-timeline__item">
+                    <div class="awards-timeline__content">
+                        <p class="awards-timeline__year">2013</p>
+                        <p class="awards-timeline__text">Premiata come la <strong>migliore startup dei Parchi Scientifici e Tecnologici</strong> in Italia</p>
+                    </div>
+                    <div class="awards-timeline__dot"></div>
+                </div>
+                <div class="awards-timeline__item">
+                    <div class="awards-timeline__content">
+                        <p class="awards-timeline__year">2014</p>
+                        <p class="awards-timeline__text">Vince il <strong>premio NutriGold nel NutriMI</strong> per il progetto LacteaseDNA</p>
+                    </div>
+                    <div class="awards-timeline__dot"></div>
+                </div>
+                <div class="awards-timeline__item">
+                    <div class="awards-timeline__content">
+                        <p class="awards-timeline__year">2015</p>
+                        <p class="awards-timeline__text">Finalista dalla <strong>Fondazione Everis</strong> (Italia e Internazionale) a Madrid</p>
+                    </div>
+                    <div class="awards-timeline__dot"></div>
+                </div>
+                <div class="awards-timeline__item">
+                    <div class="awards-timeline__content">
+                        <p class="awards-timeline__year">2017</p>
+                        <p class="awards-timeline__text">Pubblica su rivista scientifica <em>"Lactase non-persistent genotype distribution in Italy"</em></p>
+                    </div>
+                    <div class="awards-timeline__dot"></div>
+                </div>
+                <div class="awards-timeline__item">
+                    <div class="awards-timeline__content">
+                        <p class="awards-timeline__year">2025</p>
+                        <p class="awards-timeline__text"><strong>Premio Call 4 Ideas FVG</strong> — II Edizione, scienze della vita</p>
+                    </div>
+                    <div class="awards-timeline__dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Timeline -->
+        <div class="awards-timeline-mobile">
+            <div class="awards-mobile-item">
+                <p class="awards-mobile-item__year">2010</p>
+                <p class="awards-mobile-item__text">Selezionata tra le 18 startup migliori in Italia da <strong>Confindustria e Unicredit</strong></p>
+            </div>
+            <div class="awards-mobile-item">
+                <p class="awards-mobile-item__year">2013</p>
+                <p class="awards-mobile-item__text">Premiata come la <strong>migliore startup dei Parchi Scientifici e Tecnologici</strong> in Italia</p>
+            </div>
+            <div class="awards-mobile-item">
+                <p class="awards-mobile-item__year">2014</p>
+                <p class="awards-mobile-item__text">Vince il <strong>premio NutriGold nel NutriMI</strong> per il progetto LacteaseDNA</p>
+            </div>
+            <div class="awards-mobile-item">
+                <p class="awards-mobile-item__year">2015</p>
+                <p class="awards-mobile-item__text">Finalista dalla <strong>Fondazione Everis</strong> (Italia e Internazionale) a Madrid</p>
+            </div>
+            <div class="awards-mobile-item">
+                <p class="awards-mobile-item__year">2017</p>
+                <p class="awards-mobile-item__text">Pubblica su rivista scientifica <em>"Lactase non-persistent genotype distribution in Italy"</em></p>
+            </div>
+            <div class="awards-mobile-item">
+                <p class="awards-mobile-item__year">2025</p>
+                <p class="awards-mobile-item__text"><strong>Premio Call 4 Ideas FVG</strong> — II Edizione, scienze della vita</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="section">
+        <div class="section-header">
+            <p class="eyebrow">Le nostre formulazioni</p>
+            <h2>Come selezioniamo gli ingredienti</h2>
+            <p class="subtitle">Ogni principio attivo è scelto per la sua capacità dimostrata di interagire positivamente con i meccanismi cellulari.</p>
+        </div>
+
+        <div class="approach-grid">
+            <div class="approach-item">
+                <h3 class="approach-item__title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Efficacia documentata
+                </h3>
+                <p class="approach-item__text">Selezioniamo solo ingredienti con studi clinici che ne dimostrano l'efficacia. Niente claim di marketing senza basi scientifiche.</p>
+            </div>
+
+            <div class="approach-item">
+                <h3 class="approach-item__title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                    Biodisponibilità massima
+                </h3>
+                <p class="approach-item__text">Utilizziamo tecnologie come la bioliquefazione per garantire che i principi attivi raggiungano effettivamente le cellule target.</p>
+            </div>
+
+            <div class="approach-item">
+                <h3 class="approach-item__title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Origine tracciabile
+                </h3>
+                <p class="approach-item__text">Privilegiamo ingredienti italiani e europei, con filiera controllata. Sappiamo esattamente da dove viene ogni componente.</p>
+            </div>
+
+            <div class="approach-item">
+                <h3 class="approach-item__title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                    Formula pulita
+                </h3>
+                <p class="approach-item__text">Zero petrolati, zero parabeni, zero ingredienti di riempimento. Solo ciò che serve davvero per ottenere risultati.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--dark text-center">
+        <div class="section-header">
+            <p class="eyebrow" style="color: var(--color-accent-light);">Scopri i prodotti</p>
+            <h2 style="color: var(--color-cream);">La scienza applicata al benessere</h2>
+            <p class="subtitle" style="color: rgba(255,255,255,0.7);">Esplora la nostra linea di cosmetici e integratori epigenetici.</p>
+        </div>
+        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+            <a href="/categoria-prodotto/cosmetici/" class="btn btn--light">Cosmetici</a>
+            <a href="/categoria-prodotto/integratori-alimentari/" class="btn btn--secondary" style="border-color: var(--color-cream); color: var(--color-cream);">Integratori</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__content">
+            <div class="footer__links">
+                <a href="/chi-siamo/">Chi siamo</a>
+                <a href="/scienza/">Scienza</a>
+                <a href="/contatti/">Contatti</a>
+                <a href="/privacy-informativa-sito/">Privacy</a>
+                <a href="mailto:info@generame.com">info@generame.com</a>
+            </div>
+            <p class="footer__copy">© 2009-2025 Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
