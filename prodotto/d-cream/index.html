@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Cream - Crema Giorno Epigenetica | Generame</title>
+    <meta name="description" content="D-Cream: crema giorno epigenetica con Licopene Bioliquefatto, SOD e SIG1 Peptide. Protezione quotidiana e rigenerazione cellulare. Made in Italy.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="D-Cream - Crema Giorno Epigenetica | Generame">
+    <meta property="og:description" content="Crema giorno con ingredienti brevettati per proteggere e rigenerare la pelle.">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://generame.com/prodotto/d-cream/">
+    <meta property="product:price:amount" content="96">
+    <meta property="product:price:currency" content="EUR">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        /* Product page specific styles */
+
+        /* Hero product */
+        .product-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--space-2xl) var(--space-xl);
+            align-items: start;
+        }
+
+        .product-hero__image {
+            position: sticky;
+            top: 100px;
+        }
+
+        .product-hero__image img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            background: var(--color-sand);
+        }
+
+        .product-hero__badge {
+            position: absolute;
+            top: var(--space-md);
+            left: var(--space-md);
+            background: var(--color-cream);
+            border: 1px solid var(--color-sand);
+            padding: 8px 16px;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .product-hero__content {
+            padding-top: var(--space-md);
+        }
+
+        .product-hero__type {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-sm);
+        }
+
+        .product-hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(42px, 5vw, 56px);
+            margin-bottom: var(--space-md);
+            color: var(--color-deep);
+        }
+
+        .product-hero__subtitle {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+            margin-bottom: var(--space-lg);
+        }
+
+        .product-hero__price {
+            font-family: var(--font-display);
+            font-size: 42px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-lg);
+        }
+
+        .product-hero__cta {
+            display: inline-block;
+            background: var(--color-deep);
+            color: var(--color-cream);
+            padding: 20px 48px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-deep);
+            margin-bottom: var(--space-md);
+        }
+
+        .product-hero__cta:hover {
+            background: transparent;
+            color: var(--color-deep);
+        }
+
+        .product-hero__guarantee {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--color-stone);
+        }
+
+        .product-hero__guarantee svg {
+            color: var(--color-success);
+        }
+
+        /* Trust badges */
+        .trust-badges {
+            display: flex;
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+            padding-top: var(--space-lg);
+            border-top: 1px solid var(--color-sand);
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--color-charcoal);
+        }
+
+        .trust-badge svg {
+            width: 20px;
+            height: 20px;
+            color: var(--color-accent);
+        }
+
+        /* Ingredients section */
+        .ingredients {
+            background: var(--color-deep);
+            color: var(--color-cream);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .ingredients__grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+        }
+
+        .ingredient-card {
+            padding: var(--space-lg);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .ingredient-card__name {
+            font-family: var(--font-display);
+            font-size: 24px;
+            color: var(--color-cream);
+            margin-bottom: var(--space-sm);
+        }
+
+        .ingredient-card__benefit {
+            font-size: 15px;
+            line-height: 1.7;
+            opacity: 0.8;
+            margin-bottom: var(--space-md);
+        }
+
+        .ingredient-card__stat {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* How to use */
+        .how-to-use {
+            max-width: var(--max-width-narrow);
+            margin: 0 auto;
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .how-to-use__steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step__number {
+            width: 48px;
+            height: 48px;
+            border: 2px solid var(--color-deep);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 20px;
+            margin: 0 auto var(--space-md);
+        }
+
+        .step__title {
+            font-weight: 500;
+            margin-bottom: var(--space-xs);
+            color: var(--color-deep);
+        }
+
+        .step__text {
+            font-size: 14px;
+            color: var(--color-charcoal);
+            line-height: 1.6;
+        }
+
+        /* Reviews */
+        .reviews {
+            background: var(--color-sand);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .reviews__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .reviews__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: var(--space-xl);
+        }
+
+        .reviews__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+        }
+
+        .trustpilot-badge {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-lg);
+            background: white;
+            border: 1px solid var(--color-sand);
+        }
+
+        .trustpilot-badge__score {
+            font-family: var(--font-display);
+            font-size: 36px;
+            font-weight: 500;
+            color: var(--color-deep);
+        }
+
+        .trustpilot-badge__info {
+            font-size: 13px;
+            color: var(--color-charcoal);
+        }
+
+        .trustpilot-badge__stars {
+            color: #00b67a;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        /* Related product */
+        .related {
+            max-width: var(--max-width-narrow);
+            margin: 0 auto;
+            padding: var(--space-3xl) var(--space-xl);
+            text-align: center;
+        }
+
+        .related__product {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-lg);
+            text-decoration: none;
+            color: inherit;
+            padding: var(--space-lg);
+            border: 1px solid var(--color-sand);
+            margin-top: var(--space-xl);
+            transition: border-color 0.3s ease;
+        }
+
+        .related__product:hover {
+            border-color: var(--color-accent);
+        }
+
+        .related__product-image {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            background: var(--color-sand);
+        }
+
+        .related__product-content {
+            text-align: left;
+        }
+
+        .related__product-type {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 4px;
+        }
+
+        .related__product-title {
+            font-family: var(--font-display);
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+
+        .related__product-price {
+            font-family: var(--font-display);
+            font-size: 20px;
+            color: var(--color-deep);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .product-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .product-hero__image {
+                position: static;
+            }
+
+            .ingredients__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .how-to-use__steps {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews__header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--space-md);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .trust-badges {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+
+            .related__product {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .related__product-content {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Spedizione gratuita in Italia · <span>Made in Italy dal 2009</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="/" class="logo">GENERAME</a>
+        <ul class="nav-menu">
+            <li><a href="/chi-siamo/">Chi siamo</a></li>
+            <li><a href="/scienza/">Scienza</a></li>
+            <li><a href="/categoria-prodotto/cosmetici/">Cosmetici</a></li>
+            <li><a href="/categoria-prodotto/integratori-alimentari/">Integratori</a></li>
+            <li><a href="/contatti/">Contatti</a></li>
+        </ul>
+        <div class="nav-trust">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+            </svg>
+            <span>4.7/5 Trustpilot</span>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Product Hero -->
+    <section class="product-hero">
+        <div class="product-hero__image">
+            <img src="../../images/d-cream.jpg" alt="D-Cream - Crema Giorno Epigenetica Generame">
+            <span class="product-hero__badge">Made in Italy</span>
+        </div>
+
+        <div class="product-hero__content">
+            <p class="product-hero__type">Crema giorno</p>
+            <h1 class="product-hero__title">D-Cream</h1>
+            <p class="product-hero__subtitle">La crema giorno che protegge e prepara la pelle ad affrontare lo stress quotidiano. Texture leggera e vellutata che si assorbe velocemente, offrendo comfort per tutto il giorno.</p>
+
+            <p class="product-hero__price">€96</p>
+
+            <a href="#acquista" class="product-hero__cta">Acquista ora</a>
+
+            <p class="product-hero__guarantee">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Spedizione gratuita · Soddisfatta o rimborsata
+            </p>
+
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
+                    Ingredienti brevettati
+                </div>
+                <div class="trust-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                    Zero petrolati e parabeni
+                </div>
+                <div class="trust-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    15+ anni di ricerca
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section class="ingredients">
+        <div class="section-header mb-xl">
+            <p class="eyebrow" style="color: var(--color-accent-light);">Principi attivi</p>
+            <h2 style="color: var(--color-cream);">Ingredienti che comunicano con le tue cellule</h2>
+            <p class="subtitle" style="color: rgba(255,255,255,0.7);">Ogni componente è selezionato per la sua capacità di dialogare con i meccanismi profondi della pelle.</p>
+        </div>
+
+        <div class="ingredients__grid">
+            <div class="ingredient-card">
+                <h3 class="ingredient-card__name">Licopene Bioliquefatto</h3>
+                <p class="ingredient-card__benefit">Tecnologia brevettata che rende il licopene altamente biodisponibile. Crea uno scudo protettivo contro inquinamento, raggi UV e stress ambientale urbano.</p>
+                <span class="ingredient-card__stat">Tecnologia brevettata</span>
+            </div>
+
+            <div class="ingredient-card">
+                <h3 class="ingredient-card__name">SOD (Superossido Dismutasi)</h3>
+                <p class="ingredient-card__benefit">Potente antiossidante presente naturalmente nel corpo. Migliora visibilmente la texture della pelle, con risultati evidenti anche nella delicata zona perioculare.</p>
+                <span class="ingredient-card__stat">Antiossidante naturale</span>
+            </div>
+
+            <div class="ingredient-card">
+                <h3 class="ingredient-card__name">SIG1 Peptide</h3>
+                <p class="ingredient-card__benefit">Peptide biomimetico che attiva oltre 15 geni nei fibroblasti, stimolando la produzione naturale di collagene ed elastina.</p>
+                <span class="ingredient-card__stat">+40% densità · -27% rughe</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use -->
+    <section class="how-to-use">
+        <div class="section-header">
+            <p class="eyebrow">Come usare</p>
+            <h2>Il rituale del mattino</h2>
+            <p class="subtitle">Tre semplici passi per iniziare la giornata con la giusta protezione.</p>
+        </div>
+
+        <div class="how-to-use__steps">
+            <div class="step">
+                <div class="step__number">1</div>
+                <h4 class="step__title">Detergi</h4>
+                <p class="step__text">Inizia con il viso pulito e leggermente umido per favorire l'assorbimento.</p>
+            </div>
+            <div class="step">
+                <div class="step__number">2</div>
+                <h4 class="step__title">Applica</h4>
+                <p class="step__text">Preleva una piccola quantità e distribuisci con movimenti delicati dal centro verso l'esterno.</p>
+            </div>
+            <div class="step">
+                <div class="step__number">3</div>
+                <h4 class="step__title">Proteggi</h4>
+                <p class="step__text">Lascia assorbire completamente. La texture leggera permette di applicare subito il trucco.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+        <div class="reviews__content">
+            <div class="reviews__header">
+                <div>
+                    <p class="eyebrow">Cosa dicono di noi</p>
+                    <h2>Recensioni verificate</h2>
+                </div>
+                <div class="trustpilot-badge">
+                    <div>
+                        <div class="trustpilot-badge__stars">★★★★★</div>
+                        <p class="trustpilot-badge__info">Trustpilot</p>
+                    </div>
+                    <div>
+                        <div class="trustpilot-badge__score">4.7</div>
+                        <p class="trustpilot-badge__info">57 recensioni</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews__grid">
+                <div class="review-card">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Da quando ho iniziato ad usare la crema giorno e la crema notte ho notato che la pelle del viso rimane sempre ben idratata e levigata a differenza di tante altre creme."</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">VM</div>
+                        <div>
+                            <p class="review-card__name">Valentina M.</p>
+                            <p class="review-card__date">Aprile 2022</p>
+                            <p class="review-card__verified">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                Acquisto verificato
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"L'azienda è veramente professionale sia nella precisione commerciale, nella qualità del prodotto e nella continua ricerca di ottimizzare i risultati."</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">CF</div>
+                        <div>
+                            <p class="review-card__name">Carla F.</p>
+                            <p class="review-card__date">Marzo 2024</p>
+                            <p class="review-card__verified">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                Acquisto verificato
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Mi sono trovata molto bene con le creme, non ungono per niente, sono ottime antirughe. Sono ottime anche in periodo estivo."</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">G</div>
+                        <div>
+                            <p class="review-card__name">Giulia</p>
+                            <p class="review-card__date">2022</p>
+                            <p class="review-card__verified">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                Acquisto verificato
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Product -->
+    <section class="related">
+        <p class="eyebrow">Completa la routine</p>
+        <h2>Di notte, rigenera</h2>
+        <p class="subtitle">D-Cream protegge di giorno, N-Cream rigenera di notte. Insieme, un approccio completo alla skincare epigenetica.</p>
+
+        <a href="/prodotto/n-cream/" class="related__product">
+            <img src="../../images/n-cream.jpg" alt="N-Cream" class="related__product-image">
+            <div class="related__product-content">
+                <p class="related__product-type">Crema notte</p>
+                <h3 class="related__product-title">N-Cream</h3>
+                <p class="related__product-price">€114</p>
+            </div>
+        </a>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section section--dark text-center" id="acquista">
+        <div class="section-header">
+            <p class="eyebrow" style="color: var(--color-accent-light);">Inizia oggi</p>
+            <h2 style="color: var(--color-cream);">La tua crema giorno epigenetica</h2>
+            <p class="subtitle" style="color: rgba(255,255,255,0.7);">D-Cream a €96. Spedizione gratuita in Italia. Soddisfatta o rimborsata.</p>
+        </div>
+        <a href="#" class="btn btn--light">Acquista D-Cream</a>
+        <div style="display: flex; justify-content: center; gap: var(--space-lg); margin-top: var(--space-lg); flex-wrap: wrap;">
+            <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(255,255,255,0.7);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-light)" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Spedizione gratuita
+            </span>
+            <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(255,255,255,0.7);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-light)" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                100% Made in Italy
+            </span>
+            <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(255,255,255,0.7);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-light)" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Soddisfatta o rimborsata
+            </span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__content">
+            <div class="footer__links">
+                <a href="/chi-siamo/">Chi siamo</a>
+                <a href="/scienza/">Scienza</a>
+                <a href="/contatti/">Contatti</a>
+                <a href="/privacy-informativa-sito/">Privacy</a>
+                <a href="mailto:info@generame.com">info@generame.com</a>
+            </div>
+            <p class="footer__copy">© 2009-2025 Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
