@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derma Renew MSM - Pelle e Articolazioni | Generame</title>
+    <meta name="description" content="Derma Renew MSM: integratore biotech con BosweX2, MSM, Acido Ialuronico e Vitamina C per pelle radiosa e articolazioni flessibili. Made in Italy.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Derma Renew MSM - Pelle e Articolazioni | Generame">
+    <meta property="og:description" content="Integratore biotech per rigenerare la radiosità della pelle e la mobilità articolare.">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://generame.com/prodotto/derma-renew/">
+    <meta property="product:price:amount" content="54">
+    <meta property="product:price:currency" content="EUR">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        /* Product page styles */
+        .product-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--space-2xl) var(--space-xl);
+            align-items: start;
+        }
+
+        .product-hero__image {
+            position: sticky;
+            top: 100px;
+        }
+
+        .product-hero__image img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            background: var(--color-sand);
+        }
+
+        .product-hero__content {
+            padding-top: var(--space-md);
+        }
+
+        .product-hero__category {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-sm);
+        }
+
+        .product-hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(42px, 5vw, 56px);
+            margin-bottom: var(--space-md);
+            color: var(--color-deep);
+        }
+
+        .product-hero__subtitle {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+            margin-bottom: var(--space-lg);
+        }
+
+        .product-hero__price {
+            font-family: var(--font-display);
+            font-size: 42px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-xs);
+        }
+
+        .product-hero__format {
+            font-size: 14px;
+            color: var(--color-stone);
+            margin-bottom: var(--space-lg);
+        }
+
+        .product-hero__cta {
+            display: inline-block;
+            background: var(--color-deep);
+            color: var(--color-cream);
+            padding: 20px 48px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-deep);
+            margin-bottom: var(--space-md);
+        }
+
+        .product-hero__cta:hover {
+            background: transparent;
+            color: var(--color-deep);
+        }
+
+        .product-hero__guarantee {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--color-stone);
+        }
+
+        .product-hero__guarantee svg {
+            color: var(--color-success);
+        }
+
+        /* Product badges bar */
+        .product-badges {
+            background: var(--color-cream);
+            border-top: 1px solid var(--color-sand);
+            border-bottom: 1px solid var(--color-sand);
+            padding: var(--space-lg) var(--space-xl);
+        }
+
+        .product-badges__grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+
+        .product-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: var(--space-xs);
+        }
+
+        .product-badge__icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-badge__icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--color-charcoal);
+            stroke-width: 1;
+            fill: none;
+        }
+
+        .product-badge__label {
+            font-size: 11px;
+            color: var(--color-charcoal);
+            line-height: 1.4;
+            max-width: 90px;
+        }
+
+        /* Ingredients section */
+        .ingredients {
+            background: var(--color-deep);
+            color: var(--color-cream);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .ingredients__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .ingredients__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .ingredient-card {
+            padding: var(--space-lg);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .ingredient-card__name {
+            font-family: var(--font-display);
+            font-size: 24px;
+            color: var(--color-cream);
+            margin-bottom: var(--space-xs);
+        }
+
+        .ingredient-card__tag {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            padding: 3px 10px;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: var(--space-sm);
+        }
+
+        .ingredient-card__benefit {
+            font-size: 15px;
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        /* Benefits section */
+        .benefits {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .benefits__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+
+        .benefit-card {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .benefit-card__icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-sand);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .benefit-card__icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--color-accent);
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .benefit-card__content h3 {
+            font-family: var(--font-display);
+            font-size: 20px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-xs);
+        }
+
+        .benefit-card__content p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--color-charcoal);
+        }
+
+        /* How to use */
+        .how-to-use {
+            background: var(--color-sand);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .how-to-use__content {
+            max-width: var(--max-width-narrow);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .dosage-box {
+            background: var(--color-cream);
+            padding: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+
+        .dosage-box__number {
+            font-family: var(--font-display);
+            font-size: 64px;
+            color: var(--color-accent);
+            line-height: 1;
+        }
+
+        .dosage-box__text {
+            font-size: 18px;
+            color: var(--color-charcoal);
+            margin-top: var(--space-sm);
+        }
+
+        .dosage-box__note {
+            font-size: 14px;
+            color: var(--color-stone);
+            margin-top: var(--space-md);
+        }
+
+        /* Certifications */
+        .certifications {
+            background: var(--color-cream);
+            padding: var(--space-2xl) var(--space-xl);
+            border-top: 1px solid var(--color-sand);
+        }
+
+        .certifications__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: var(--space-2xl);
+            flex-wrap: wrap;
+        }
+
+        .certification {
+            text-align: center;
+        }
+
+        .certification__label {
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--color-stone);
+            margin-bottom: var(--space-xs);
+        }
+
+        .certification__value {
+            font-family: var(--font-display);
+            font-size: 18px;
+            color: var(--color-deep);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .product-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .product-hero__image {
+                position: static;
+            }
+
+            .ingredients__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-badges__grid {
+                gap: var(--space-md);
+            }
+
+            .certifications__content {
+                flex-direction: column;
+                align-items: center;
+                gap: var(--space-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Spedizione gratuita in Italia · <span>Made in Italy dal 2009</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="/" class="logo">GENERAME</a>
+        <ul class="nav-menu">
+            <li><a href="/chi-siamo/">Chi siamo</a></li>
+            <li><a href="/scienza/">Scienza</a></li>
+            <li><a href="/categoria-prodotto/cosmetici/">Cosmetici</a></li>
+            <li><a href="/categoria-prodotto/integratori-alimentari/">Integratori</a></li>
+            <li><a href="/contatti/">Contatti</a></li>
+        </ul>
+        <div class="nav-trust">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+            </svg>
+            <span>4.7/5 Trustpilot</span>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Product Hero -->
+    <section class="product-hero">
+        <div class="product-hero__image">
+            <img src="../../images/derma-renew.jpg" alt="Derma Renew MSM - Integratore pelle e articolazioni Generame">
+        </div>
+
+        <div class="product-hero__content">
+            <p class="product-hero__category">Pelle e articolazioni</p>
+            <h1 class="product-hero__title">Derma Renew MSM</h1>
+            <p class="product-hero__subtitle">Integratore biotech avanzato per rigenerare la radiosità della pelle e la mobilità articolare. Formula sinergica con Acido Ialuronico, MSM, Boswellia e Vitamina C.</p>
+
+            <p class="product-hero__price">€54</p>
+            <p class="product-hero__format">60 capsule · 1 mese di trattamento</p>
+
+            <a href="#acquista" class="product-hero__cta">Acquista ora</a>
+
+            <p class="product-hero__guarantee">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Spedizione gratuita · Soddisfatti o rimborsati
+            </p>
+        </div>
+    </section>
+
+    <!-- Product Badges -->
+    <section class="product-badges">
+        <div class="product-badges__grid">
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M16 8c0-2 2-4 4-4h8c2 0 4 2 4 4v4h-16v-4z"/>
+                        <circle cx="24" cy="28" r="8"/>
+                        <path d="M20 28h8M24 24v8"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Uso orale</span>
+            </div>
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M24 4c-6 8-12 14-12 22 0 6.6 5.4 12 12 12s12-5.4 12-12c0-8-6-14-12-22z"/>
+                        <path d="M20 28c0 2.2 1.8 4 4 4"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Vegetariano</span>
+            </div>
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="16"/>
+                        <path d="M18 24h12"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Senza glutine</span>
+            </div>
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M24 4l-4 12h-8l8 6-4 12 8-6 8 6-4-12 8-6h-8z"/>
+                        <ellipse cx="24" cy="36" rx="12" ry="6"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Made in Italy</span>
+            </div>
+            <div class="product-badge">
+                <div class="product-badge__icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M24 8v32M16 24h16M8 16h8M32 16h8M8 32h8M32 32h8"/>
+                    </svg>
+                </div>
+                <span class="product-badge__label">Senza prescrizione</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section class="ingredients">
+        <div class="ingredients__content">
+            <div class="section-header">
+                <p class="eyebrow" style="color: var(--color-accent-light);">Ingredienti chiave</p>
+                <h2 style="color: var(--color-cream);">Formula sinergica brevettata</h2>
+            </div>
+
+            <div class="ingredients__grid">
+                <div class="ingredient-card">
+                    <h3 class="ingredient-card__name">BosweX2®</h3>
+                    <span class="ingredient-card__tag">Estratto brevettato</span>
+                    <p class="ingredient-card__benefit">Estratto biotech esclusivo di Boswellia con tecnologia priva di solventi. Biodisponibilità aumentata di 50 volte rispetto agli estratti tradizionali.</p>
+                </div>
+                <div class="ingredient-card">
+                    <h3 class="ingredient-card__name">MSM</h3>
+                    <span class="ingredient-card__tag">Zolfo biodisponibile</span>
+                    <p class="ingredient-card__benefit">Metilsulfonilmetano: fonte di zolfo organico essenziale per la sintesi di collagene e cheratina, pilastri della salute di pelle, capelli e unghie.</p>
+                </div>
+                <div class="ingredient-card">
+                    <h3 class="ingredient-card__name">Acido Ialuronico</h3>
+                    <span class="ingredient-card__tag">Idratazione profonda</span>
+                    <p class="ingredient-card__benefit">Migliora l'idratazione cutanea dall'interno e supporta la salute della cartilagine articolare per una mobilità fluida.</p>
+                </div>
+            </div>
+
+            <div class="ingredients__grid" style="margin-top: var(--space-lg);">
+                <div class="ingredient-card">
+                    <h3 class="ingredient-card__name">Vitamina C</h3>
+                    <span class="ingredient-card__tag">Microincapsulata</span>
+                    <p class="ingredient-card__benefit">Contribuisce alla normale formazione del collagene per la funzione della pelle. Protezione antiossidante avanzata.</p>
+                </div>
+                <div class="ingredient-card">
+                    <h3 class="ingredient-card__name">Vitamina E</h3>
+                    <span class="ingredient-card__tag">Antiossidante</span>
+                    <p class="ingredient-card__benefit">Protegge le cellule dallo stress ossidativo, preservando la giovinezza e l'elasticità della pelle.</p>
+                </div>
+                <div class="ingredient-card">
+                    <h3 class="ingredient-card__name">Zinco</h3>
+                    <span class="ingredient-card__tag">Minerale essenziale</span>
+                    <p class="ingredient-card__benefit">Contribuisce al mantenimento di pelle, capelli e unghie normali. Supporta la protezione delle cellule dallo stress ossidativo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="section-header text-center">
+            <p class="eyebrow">Benefici</p>
+            <h2>Bellezza che viene da dentro</h2>
+            <p class="subtitle">Derma Renew MSM agisce dall'interno per risultati visibili all'esterno.</p>
+        </div>
+
+        <div class="benefits__grid">
+            <div class="benefit-card">
+                <div class="benefit-card__icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="8" r="5"/>
+                        <path d="M3 21v-2a7 7 0 0 1 7-7h4a7 7 0 0 1 7 7v2"/>
+                    </svg>
+                </div>
+                <div class="benefit-card__content">
+                    <h3>Pelle radiosa</h3>
+                    <p>Supporta la produzione naturale di collagene per una pelle più luminosa, elastica e idratata.</p>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-card__icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                </div>
+                <div class="benefit-card__content">
+                    <h3>Capelli e unghie forti</h3>
+                    <p>Lo zolfo organico del MSM è fondamentale per cheratina sana e robusta.</p>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-card__icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                        <line x1="6" y1="1" x2="6" y2="4"/>
+                        <line x1="10" y1="1" x2="10" y2="4"/>
+                        <line x1="14" y1="1" x2="14" y2="4"/>
+                    </svg>
+                </div>
+                <div class="benefit-card__content">
+                    <h3>Articolazioni flessibili</h3>
+                    <p>L'acido ialuronico e la Boswellia supportano la mobilità e il comfort articolare.</p>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-card__icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <div class="benefit-card__content">
+                    <h3>Contrasta l'inflammaging</h3>
+                    <p>L'azione sinergica Boswellia-MSM contrasta l'infiammazione silente legata all'invecchiamento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use -->
+    <section class="how-to-use">
+        <div class="how-to-use__content">
+            <div class="section-header">
+                <p class="eyebrow">Modo d'uso</p>
+                <h2>Semplicità quotidiana</h2>
+                <p class="subtitle">Un gesto semplice per prenderti cura della tua bellezza dall'interno.</p>
+            </div>
+
+            <div class="dosage-box">
+                <p class="dosage-box__number">2</p>
+                <p class="dosage-box__text">capsule al giorno</p>
+                <p class="dosage-box__note">Assumere preferibilmente al mattino con un pasto. Un flacone dura 1 mese.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications">
+        <div class="certifications__content">
+            <div class="certification">
+                <p class="certification__label">Notifica Ministero</p>
+                <p class="certification__value">Codice 138064</p>
+            </div>
+            <div class="certification">
+                <p class="certification__label">Formato</p>
+                <p class="certification__value">60 capsule da 580mg</p>
+            </div>
+            <div class="certification">
+                <p class="certification__label">Produzione</p>
+                <p class="certification__value">100% Made in Italy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cosmetics Cross-sell -->
+    <section class="section section--sand text-center">
+        <div class="section-header">
+            <p class="eyebrow">Completa il rituale</p>
+            <h2>La bellezza anche da fuori</h2>
+            <p class="subtitle">Abbina Derma Renew MSM alle nostre creme epigenetiche per un approccio completo: rigenerazione dall'interno e protezione dall'esterno.</p>
+        </div>
+        <a href="/categoria-prodotto/cosmetici/" class="btn">Scopri i cosmetici</a>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section--dark text-center" id="acquista">
+        <div class="section-header">
+            <p class="eyebrow" style="color: var(--color-accent-light);">Inizia oggi</p>
+            <h2 style="color: var(--color-cream);">Rigenera la tua bellezza</h2>
+            <p class="subtitle" style="color: rgba(255,255,255,0.7);">Derma Renew MSM a €54. Spedizione gratuita in Italia.</p>
+        </div>
+        <a href="#" class="btn btn--light">Acquista Derma Renew MSM</a>
+        <div style="display: flex; justify-content: center; gap: var(--space-lg); margin-top: var(--space-lg); flex-wrap: wrap;">
+            <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(255,255,255,0.7);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-light)" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Spedizione gratuita
+            </span>
+            <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(255,255,255,0.7);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-light)" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Notificato Min. Salute
+            </span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__content">
+            <div class="footer__links">
+                <a href="/chi-siamo/">Chi siamo</a>
+                <a href="/scienza/">Scienza</a>
+                <a href="/contatti/">Contatti</a>
+                <a href="/privacy-informativa-sito/">Privacy</a>
+                <a href="mailto:info@generame.com">info@generame.com</a>
+            </div>
+            <p class="footer__copy">© 2009-2025 Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
