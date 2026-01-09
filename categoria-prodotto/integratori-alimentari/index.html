@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integratori Epigenetici - Generame</title>
+    <meta name="description" content="Integratori alimentari epigenetici Generame: Sharp, Derma Renew MSM, Move3, Age Defence NAD+. Il benessere parte da dentro. Made in Italy.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Integratori Epigenetici - Generame">
+    <meta property="og:description" content="Integratori alimentari epigenetici per il benessere profondo. Made in Italy.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://generame.com/categoria-prodotto/integratori-alimentari/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        /* Category page specific styles */
+        .page-hero {
+            padding: var(--space-3xl) var(--space-xl) var(--space-2xl);
+            text-align: center;
+            max-width: var(--max-width-text);
+            margin: 0 auto;
+        }
+
+        .page-hero__title {
+            margin-bottom: var(--space-md);
+        }
+
+        .page-hero__subtitle {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+        }
+
+        /* Products grid */
+        .products-section {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--space-xl) var(--space-2xl);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+        }
+
+        /* Product card */
+        .product-card-item {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+        }
+
+        .product-card-item--unavailable {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .product-card-item__image {
+            aspect-ratio: 1;
+            overflow: hidden;
+            margin-bottom: var(--space-md);
+            background: var(--color-sand);
+            position: relative;
+        }
+
+        .product-card-item__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card-item:hover .product-card-item__image img {
+            transform: scale(1.05);
+        }
+
+        .product-card-item__badge {
+            position: absolute;
+            top: var(--space-sm);
+            left: var(--space-sm);
+            background: var(--color-stone);
+            color: white;
+            padding: 6px 12px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .product-card-item__category {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-xs);
+        }
+
+        .product-card-item__title {
+            font-family: var(--font-display);
+            font-size: 24px;
+            margin-bottom: var(--space-xs);
+            color: var(--color-deep);
+        }
+
+        .product-card-item__desc {
+            font-size: 14px;
+            color: var(--color-charcoal);
+            line-height: 1.6;
+            margin-bottom: var(--space-sm);
+        }
+
+        .product-card-item__price {
+            font-family: var(--font-display);
+            font-size: 22px;
+            color: var(--color-deep);
+        }
+
+        /* Benefits bar */
+        .benefits-bar {
+            background: var(--color-sand);
+            padding: var(--space-lg) var(--space-xl);
+        }
+
+        .benefits-bar__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-xl);
+            flex-wrap: wrap;
+        }
+
+        .benefits-bar__item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--color-charcoal);
+        }
+
+        .benefits-bar__icon {
+            width: 24px;
+            height: 24px;
+            color: var(--color-accent);
+        }
+
+        /* Approach section */
+        .approach {
+            max-width: var(--max-width-narrow);
+            margin: 0 auto;
+            padding: var(--space-3xl) var(--space-xl);
+            text-align: center;
+        }
+
+        .approach__text {
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--color-charcoal);
+        }
+
+        .approach__text em {
+            color: var(--color-accent);
+        }
+
+        /* Goals grid */
+        .goals {
+            background: var(--color-deep);
+            color: var(--color-cream);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .goals__grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-lg);
+        }
+
+        .goal-card {
+            text-align: center;
+            padding: var(--space-lg);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .goal-card__icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto var(--space-md);
+            color: var(--color-accent-light);
+        }
+
+        .goal-card__title {
+            font-family: var(--font-display);
+            font-size: 22px;
+            color: var(--color-cream);
+            margin-bottom: var(--space-xs);
+        }
+
+        .goal-card__text {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .goals__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .goals__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-bar__content {
+                flex-direction: column;
+                gap: var(--space-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Spedizione gratuita in Italia · <span>Made in Italy dal 2009</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="/" class="logo">GENERAME</a>
+        <ul class="nav-menu">
+            <li><a href="/chi-siamo/">Chi siamo</a></li>
+            <li><a href="/scienza/">Scienza</a></li>
+            <li><a href="/categoria-prodotto/cosmetici/">Cosmetici</a></li>
+            <li><a href="/categoria-prodotto/integratori-alimentari/">Integratori</a></li>
+            <li><a href="/contatti/">Contatti</a></li>
+        </ul>
+        <div class="nav-trust">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+            </svg>
+            <span>4.7/5 Trustpilot</span>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <p class="eyebrow">Nutrizione epigenetica</p>
+        <h1 class="page-hero__title">Integratori <em>epigenetici</em></h1>
+        <p class="page-hero__subtitle">Il benessere parte da dentro. Formulazioni avanzate per supportare energia, pelle, articolazioni e difese naturali dell'organismo.</p>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="products-grid">
+            <!-- Derma Renew MSM - Prima posizione: più rilevante per il pubblico skincare -->
+            <a href="/prodotto/derma-renew/" class="product-card-item">
+                <div class="product-card-item__image">
+                    <img src="../../images/derma-renew.jpg" alt="Derma Renew MSM - Pelle e collagene" loading="lazy">
+                </div>
+                <p class="product-card-item__category">Pelle</p>
+                <h2 class="product-card-item__title">Derma Renew MSM</h2>
+                <p class="product-card-item__desc">Supporto per pelle, capelli e unghie con MSM e nutrienti per la sintesi del collagene.</p>
+                <p class="product-card-item__price">€54</p>
+            </a>
+
+            <!-- Age Defence NAD+ - Seconda posizione: allineato con healthy aging -->
+            <a href="/prodotto/age-defence/" class="product-card-item">
+                <div class="product-card-item__image">
+                    <img src="../../images/age-defence.jpg" alt="Age Defence NAD+ - Antiossidante" loading="lazy">
+                </div>
+                <p class="product-card-item__category">Antiossidante</p>
+                <h2 class="product-card-item__title">Age Defence NAD+</h2>
+                <p class="product-card-item__desc">Supporto per le difese antiossidanti con precursori NAD+ per l'energia cellulare.</p>
+                <p class="product-card-item__price">€54</p>
+            </a>
+
+            <!-- Move3 - Terza posizione: benessere fisico -->
+            <a href="/prodotto/move3/" class="product-card-item">
+                <div class="product-card-item__image">
+                    <img src="../../images/move3.jpg" alt="Move3 - Articolazioni" loading="lazy">
+                </div>
+                <p class="product-card-item__category">Articolazioni</p>
+                <h2 class="product-card-item__title">Move3</h2>
+                <p class="product-card-item__desc">Formula per il benessere articolare con ingredienti mirati per mobilità e comfort.</p>
+                <p class="product-card-item__price">€24,80</p>
+            </a>
+
+            <!-- Sharp - Quarta posizione: più di nicchia -->
+            <a href="/prodotto/sharp/" class="product-card-item">
+                <div class="product-card-item__image">
+                    <img src="../../images/sharp.jpg" alt="Sharp - Tonico fisico e mentale" loading="lazy">
+                </div>
+                <p class="product-card-item__category">Energia</p>
+                <h2 class="product-card-item__title">Sharp</h2>
+                <p class="product-card-item__desc">Tonico fisico e mentale con RodioX2 per concentrazione e resistenza allo stress.</p>
+                <p class="product-card-item__price">€45</p>
+            </a>
+
+            <!-- Fluidrain - Non disponibile -->
+            <div class="product-card-item product-card-item--unavailable">
+                <div class="product-card-item__image">
+                    <img src="../../images/fluidrain.jpg" alt="Fluidrain - Drenante" loading="lazy">
+                    <span class="product-card-item__badge">Non disponibile</span>
+                </div>
+                <p class="product-card-item__category">Drenante</p>
+                <h2 class="product-card-item__title">Fluidrain</h2>
+                <p class="product-card-item__desc">Formula drenante per favorire l'eliminazione dei liquidi in eccesso.</p>
+                <p class="product-card-item__price">€39</p>
+            </div>
+
+            <!-- Generameal - Non disponibile -->
+            <div class="product-card-item product-card-item--unavailable">
+                <div class="product-card-item__image">
+                    <img src="../../images/generameal.jpg" alt="Generameal - Merenda probiotica" loading="lazy">
+                    <span class="product-card-item__badge">Non disponibile</span>
+                </div>
+                <p class="product-card-item__category">Intestino</p>
+                <h2 class="product-card-item__title">Generameal</h2>
+                <p class="product-card-item__desc">La prima merenda probiotica. Supporto per la flora intestinale con Lievito Lattico Probiotico.</p>
+                <p class="product-card-item__price">€39</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Bar -->
+    <section class="benefits-bar">
+        <div class="benefits-bar__content">
+            <div class="benefits-bar__item">
+                <svg class="benefits-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+                <span>Formulazioni avanzate</span>
+            </div>
+            <div class="benefits-bar__item">
+                <svg class="benefits-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>100% Made in Italy</span>
+            </div>
+            <div class="benefits-bar__item">
+                <svg class="benefits-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+                <span>Ingredienti selezionati</span>
+            </div>
+            <div class="benefits-bar__item">
+                <svg class="benefits-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>15+ anni di ricerca</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Goals Section -->
+    <section class="goals">
+        <div class="section-header mb-xl">
+            <p class="eyebrow" style="color: var(--color-accent-light);">I tuoi obiettivi</p>
+            <h2 style="color: var(--color-cream);">Un integratore per ogni esigenza</h2>
+            <p class="subtitle" style="color: rgba(255,255,255,0.7);">Formulazioni mirate per supportare il corpo nei suoi processi naturali.</p>
+        </div>
+
+        <div class="goals__grid">
+            <div class="goal-card">
+                <svg class="goal-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+                <h3 class="goal-card__title">Energia</h3>
+                <p class="goal-card__text">Sharp: tonico fisico e mentale per affrontare le sfide quotidiane.</p>
+            </div>
+
+            <div class="goal-card">
+                <svg class="goal-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+                <h3 class="goal-card__title">Pelle</h3>
+                <p class="goal-card__text">Derma Renew MSM: nutrienti per collagene, pelle e annessi cutanei.</p>
+            </div>
+
+            <div class="goal-card">
+                <svg class="goal-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <h3 class="goal-card__title">Articolazioni</h3>
+                <p class="goal-card__text">Move3: supporto per mobilità articolare e comfort nei movimenti.</p>
+            </div>
+
+            <div class="goal-card">
+                <svg class="goal-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+                <h3 class="goal-card__title">Difese</h3>
+                <p class="goal-card__text">Age Defence NAD+: antiossidanti e precursori per l'energia cellulare.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="approach">
+        <p class="eyebrow">La nostra filosofia</p>
+        <h2 class="mb-lg">Il benessere parte da dentro</h2>
+        <p class="approach__text">
+            La pelle riflette lo stato di salute interno. Per questo i nostri integratori lavorano in sinergia con i cosmetici epigenetici: mentre le creme agiscono dall'esterno, gli integratori supportano i processi di <em>rigenerazione</em> dall'interno.
+        </p>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section--dark text-center">
+        <div class="section-header">
+            <p class="eyebrow" style="color: var(--color-accent-light);">Approccio completo</p>
+            <h2 style="color: var(--color-cream);">Fuori e dentro</h2>
+            <p class="subtitle" style="color: rgba(255,255,255,0.7);">Scopri anche i nostri cosmetici epigenetici per un approccio olistico al benessere.</p>
+        </div>
+        <a href="/categoria-prodotto/cosmetici/" class="btn btn--light">Scopri i cosmetici</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__content">
+            <div class="footer__links">
+                <a href="/chi-siamo/">Chi siamo</a>
+                <a href="/scienza/">Scienza</a>
+                <a href="/contatti/">Contatti</a>
+                <a href="/privacy-informativa-sito/">Privacy</a>
+                <a href="mailto:info@generame.com">info@generame.com</a>
+            </div>
+            <p class="footer__copy">© 2009-2025 Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
