@@ -6,11 +6,26 @@
     <title>Integratori Epigenetici - Generame</title>
     <meta name="description" content="Integratori alimentari epigenetici Generame: Sharp, Derma Renew MSM, Move3, Age Defence NAD+. Il benessere parte da dentro. Made in Italy.">
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://generame.com/categoria-prodotto/integratori-alimentari/">
+
     <!-- Open Graph -->
     <meta property="og:title" content="Integratori Epigenetici - Generame">
     <meta property="og:description" content="Integratori alimentari epigenetici per il benessere profondo. Made in Italy.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://generame.com/categoria-prodotto/integratori-alimentari/">
+    <meta property="og:image" content="https://generame.com/images/og-image.png">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Generame">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Integratori Epigenetici - Generame">
+    <meta name="twitter:description" content="Integratori alimentari epigenetici per il benessere profondo. Made in Italy.">
+    <meta name="twitter:image" content="https://generame.com/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/icona.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -452,10 +467,12 @@
                 <a href="/chi-siamo/">Chi siamo</a>
                 <a href="/scienza/">Scienza</a>
                 <a href="/contatti/">Contatti</a>
-                <a href="/privacy-informativa-sito/">Privacy</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/cookie/">Cookie</a>
+                <a href="/termini/">Termini</a>
                 <a href="mailto:info@generame.com">info@generame.com</a>
             </div>
-            <p class="footer__copy">© 2009-2025 Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+            <p class="footer__copy">© 2009-<span id="year"></span> Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
         </div>
     </footer>
 
@@ -470,5 +487,19 @@
             });
         }
     </script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <p>Utilizziamo cookie tecnici e, con il tuo consenso, cookie di profilazione per migliorare la tua esperienza. <a href="/cookie/">Maggiori informazioni</a></p>
+            </div>
+            <div class="cookie-banner__buttons">
+                <button id="cookie-accept" class="cookie-banner__btn cookie-banner__btn--accept">Accetta</button>
+                <button id="cookie-reject" class="cookie-banner__btn cookie-banner__btn--reject">Rifiuta</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/cookie-banner.js"></script>
 </body>
 </html>

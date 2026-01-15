@@ -1,0 +1,86 @@
+# Generame - Cosmetici e Integratori Epigenetici
+
+> Generame è un brand italiano di cosmetici e integratori alimentari basati sulla scienza epigenetica. Fondata nel 2009 a Trieste (Area Science Park), l'azienda sviluppa formulazioni che supportano i naturali processi di rigenerazione cellulare.
+
+## Informazioni aziendali
+
+- **Nome**: Generame (brand di G&life S.r.l.)
+- **Fondazione**: 2009
+- **Sede**: Via Flavia 23/1, 34148 Trieste, Italia
+- **Area Science Park**: Parco scientifico e tecnologico
+- **Specializzazione**: Epigenetica applicata a skincare e nutrizione
+- **Produzione**: 100% Made in Italy
+
+## Fondatori
+
+- **Paolo Gasparini**: Genetista, esperto in epigenetica
+- **Francesco Menegoni**: Imprenditore nel settore biotech
+
+## Prodotti principali
+
+### Cosmetici (Creme epigenetiche)
+
+**D-Cream** - Crema giorno
+- Prezzo: €34 (promo) / €96 (listino)
+- Ingredienti chiave: Licopene Bioliquefatto, SOD (Superossido Dismutasi), SIG1 Peptide
+- Funzione: Protezione diurna, antiossidante, rigenerazione cellulare
+
+**N-Cream** - Crema notte (Resurrection)
+- Prezzo: €34 (promo) / €114 (listino)
+- Ingredienti chiave: Estratto di Dna-K (organismo estremofilo), SIG1 Peptide
+- Funzione: Rigenerazione notturna, riparazione cellulare
+
+### Integratori alimentari
+
+**Sharp** - Tonico fisico e mentale
+- Prezzo: €45
+- Ingrediente chiave: RodioX2 (Rodiola rosea)
+- Funzione: Energia, concentrazione, resistenza allo stress
+
+**Derma Renew MSM** - Pelle e collagene
+- Prezzo: €54
+- Funzione: Supporto per pelle, capelli, unghie, sintesi del collagene
+
+**Move3** - Articolazioni
+- Prezzo: €24,80
+- Funzione: Benessere articolare, mobilità
+
+**Age Defence NAD+** - Antiossidante
+- Prezzo: €54
+- Ingrediente chiave: Precursori NAD+
+- Funzione: Difese antiossidanti, energia cellulare
+
+## Approccio scientifico
+
+Generame applica la **scienza epigenetica** ai prodotti per la cura della persona. L'epigenetica studia come fattori esterni (ambiente, nutrizione, stile di vita) possono influenzare l'espressione dei geni senza modificare il DNA. I prodotti Generame sono formulati per supportare i meccanismi naturali di rigenerazione cellulare.
+
+## Differenziali
+
+1. **Ricerca scientifica**: 15+ anni di ricerca in Area Science Park
+2. **Ingredienti brevettati**: Licopene Bioliquefatto, SIG1 Peptide, estratti da organismi estremofili
+3. **Made in Italy**: Produzione interamente italiana
+4. **Approccio olistico**: Cosmetici + integratori per benessere dentro e fuori
+
+## Riconoscimenti
+
+- Premio Call 4 Ideas FVG 2025 (II edizione) - Categoria Scienze della Vita
+
+## Contatti
+
+- **Sito web**: https://generame.com
+- **Email**: info@generame.com
+- **Supporto**: Risposta entro 24 ore lavorative
+
+## Link utili
+
+- [Homepage](https://generame.com/)
+- [Chi siamo](https://generame.com/chi-siamo/)
+- [La scienza](https://generame.com/scienza/)
+- [Cosmetici](https://generame.com/categoria-prodotto/cosmetici/)
+- [Integratori](https://generame.com/categoria-prodotto/integratori-alimentari/)
+- [D-Cream](https://generame.com/prodotto/d-cream/)
+- [N-Cream](https://generame.com/prodotto/n-cream/)
+
+## Per documentazione completa
+
+Vedi: https://generame.com/llms-full.txt

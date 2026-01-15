@@ -6,13 +6,61 @@
     <title>Sharp - Tonico Fisico e Mentale | Generame</title>
     <meta name="description" content="Sharp: integratore con RodioX2 brevettato per concentrazione, focus e resistenza allo stress. Rhodiola Rosea biotech 10x più efficace. Made in Italy.">
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://generame.com/prodotto/sharp/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/icona.png">
+
     <!-- Open Graph -->
     <meta property="og:title" content="Sharp - Tonico Fisico e Mentale | Generame">
     <meta property="og:description" content="Integratore biotech per concentrazione e resistenza allo stress con RodioX2 brevettato.">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://generame.com/prodotto/sharp/">
+    <meta property="og:image" content="https://generame.com/images/sharp.jpg">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Generame">
     <meta property="product:price:amount" content="45">
     <meta property="product:price:currency" content="EUR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sharp - Tonico Fisico e Mentale | Generame">
+    <meta name="twitter:description" content="Integratore biotech per concentrazione e resistenza allo stress con RodioX2 brevettato.">
+    <meta name="twitter:image" content="https://generame.com/images/sharp.jpg">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Sharp - Tonico Fisico e Mentale",
+        "image": "https://generame.com/images/sharp.jpg",
+        "description": "Integratore con RodioX2 brevettato per concentrazione, focus e resistenza allo stress. Rhodiola Rosea biotech.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Generame"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://generame.com/prodotto/sharp/",
+            "priceCurrency": "EUR",
+            "price": "45",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://generame.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Integratori", "item": "https://generame.com/categoria-prodotto/integratori-alimentari/"},
+            {"@type": "ListItem", "position": 3, "name": "Sharp"}
+        ]
+    }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -644,6 +692,122 @@
             color: var(--color-deep);
         }
 
+        /* Reviews */
+        .reviews {
+            background: var(--color-cream);
+            padding: var(--space-3xl) var(--space-xl);
+            border-top: 1px solid var(--color-sand);
+        }
+
+        .reviews__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .reviews__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: var(--space-xl);
+        }
+
+        .reviews__header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4vw, 36px);
+            color: var(--color-deep);
+        }
+
+        .reviews__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+        }
+
+        .review-card {
+            background: var(--color-sand);
+            padding: var(--space-lg);
+        }
+
+        .review-card__stars {
+            color: #00b67a;
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: var(--space-sm);
+        }
+
+        .review-card__text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--color-charcoal);
+            margin-bottom: var(--space-md);
+            font-style: italic;
+        }
+
+        .review-card__author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .review-card__avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--color-cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--color-charcoal);
+        }
+
+        .review-card__name {
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--color-deep);
+        }
+
+        .review-card__date {
+            font-size: 12px;
+            color: var(--color-stone);
+        }
+
+        .review-card__verified {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            color: #00b67a;
+            margin-top: 2px;
+        }
+
+        .trustpilot-badge {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-lg);
+            background: white;
+            border: 1px solid var(--color-sand);
+        }
+
+        .trustpilot-badge__score {
+            font-family: var(--font-display);
+            font-size: 36px;
+            font-weight: 500;
+            color: var(--color-deep);
+        }
+
+        .trustpilot-badge__info {
+            font-size: 13px;
+            color: var(--color-charcoal);
+        }
+
+        .trustpilot-badge__stars {
+            color: #00b67a;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .product-hero {
@@ -655,6 +819,16 @@
             }
 
             .simple-powerful__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews__header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--space-md);
+            }
+
+            .reviews__grid {
                 grid-template-columns: 1fr;
             }
 
@@ -793,7 +967,7 @@
                 </div>
                 <div class="timeline-item">
                     <h3 class="timeline-item__title">Ispirato dall'epigenetica</h3>
-                    <p class="timeline-item__text">Studiamo l'influenza reciproca tra geni e ambiente da più di 10 anni. Vogliamo offrire soluzioni con un approccio completamente nuovo, basato sugli studi epigenetici.</p>
+                    <p class="timeline-item__text">Studiamo l'influenza reciproca tra geni e ambiente da più di 15 anni. Vogliamo offrire soluzioni con un approccio completamente nuovo, basato sugli studi epigenetici.</p>
                 </div>
             </div>
         </div>
@@ -1037,6 +1211,66 @@
         </div>
     </section>
 
+    <!-- Reviews -->
+    <section class="reviews">
+        <div class="reviews__content">
+            <div class="reviews__header">
+                <div>
+                    <p class="eyebrow">Cosa dicono di noi</p>
+                    <h2>Recensioni verificate</h2>
+                </div>
+                <a href="https://www.trustpilot.com/review/generame.com?languages=all" target="_blank" rel="noopener" class="trustpilot-badge" style="text-decoration: none;">
+                    <div>
+                        <div class="trustpilot-badge__stars">★★★★★</div>
+                        <p class="trustpilot-badge__info">Trustpilot</p>
+                    </div>
+                    <div>
+                        <div class="trustpilot-badge__score">4.7</div>
+                        <p class="trustpilot-badge__info">57 recensioni</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="reviews__grid">
+                <div class="review-card">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Prodotto strepitoso, senza controindicazioni. Da quando assumo Sharp ho notato un miglioramento nella concentrazione e nella gestione dello stress quotidiano. Lo consiglio a tutti."</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">CM</div>
+                        <div>
+                            <p class="review-card__name">Chiara M.</p>
+                            <p class="review-card__date">Aprile 2023</p>
+                            <p class="review-card__verified">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                Acquisto verificato
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-card__stars">★★★★☆</div>
+                    <p class="review-card__text">"Previene l'affaticamento muscolare e genera concentrazione. Ottimo prodotto per chi come me pratica sport e ha bisogno di mantenere alta l'attenzione durante le gare."</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">FD</div>
+                        <div>
+                            <p class="review-card__name">Franco D.</p>
+                            <p class="review-card__date">Giugno 2023</p>
+                            <p class="review-card__verified">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                Acquisto verificato
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="section section--dark text-center" id="acquista">
         <div class="section-header">
@@ -1070,10 +1304,12 @@
                 <a href="/chi-siamo/">Chi siamo</a>
                 <a href="/scienza/">Scienza</a>
                 <a href="/contatti/">Contatti</a>
-                <a href="/privacy-informativa-sito/">Privacy</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/cookie/">Cookie</a>
+                <a href="/termini/">Termini</a>
                 <a href="mailto:info@generame.com">info@generame.com</a>
             </div>
-            <p class="footer__copy">© 2009-2025 Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+            <p class="footer__copy">© 2009-<span id="year"></span> Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
         </div>
     </footer>
 
@@ -1086,5 +1322,19 @@
             });
         }
     </script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <p>Utilizziamo cookie tecnici e, con il tuo consenso, cookie di profilazione per migliorare la tua esperienza. <a href="/cookie/">Maggiori informazioni</a></p>
+            </div>
+            <div class="cookie-banner__buttons">
+                <button id="cookie-accept" class="cookie-banner__btn cookie-banner__btn--accept">Accetta</button>
+                <button id="cookie-reject" class="cookie-banner__btn cookie-banner__btn--reject">Rifiuta</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/cookie-banner.js"></script>
 </body>
 </html>
