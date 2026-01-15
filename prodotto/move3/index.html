@@ -6,13 +6,61 @@
     <title>Move3 - Mobilità Articolare | Generame</title>
     <meta name="description" content="Move3: integratore biotech con BosweX2 per articolazioni flessibili e cartilagine sana. Formula con MSM, Acido Ialuronico e Vitamina C. Made in Italy.">
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://generame.com/prodotto/move3/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/icona.png">
+
     <!-- Open Graph -->
     <meta property="og:title" content="Move3 - Mobilità Articolare | Generame">
     <meta property="og:description" content="Integratore biotech per articolazioni flessibili e cartilagine sana.">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://generame.com/prodotto/move3/">
+    <meta property="og:image" content="https://generame.com/images/move3.jpg">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Generame">
     <meta property="product:price:amount" content="24.80">
     <meta property="product:price:currency" content="EUR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Move3 - Mobilità Articolare | Generame">
+    <meta name="twitter:description" content="Integratore biotech per articolazioni flessibili e cartilagine sana.">
+    <meta name="twitter:image" content="https://generame.com/images/move3.jpg">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Move3 - Mobilità Articolare",
+        "image": "https://generame.com/images/move3.jpg",
+        "description": "Integratore biotech con BosweX2 per articolazioni flessibili e cartilagine sana. Formula con MSM, Acido Ialuronico e Vitamina C.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Generame"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://generame.com/prodotto/move3/",
+            "priceCurrency": "EUR",
+            "price": "24.80",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://generame.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Integratori", "item": "https://generame.com/categoria-prodotto/integratori-alimentari/"},
+            {"@type": "ListItem", "position": 3, "name": "Move3"}
+        ]
+    }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -301,24 +349,7 @@
             color: var(--color-charcoal);
         }
 
-        /* How to use */
-        .how-to-use {
-            background: var(--color-sand);
-            padding: var(--space-3xl) var(--space-xl);
-        }
-
-        .how-to-use__content {
-            max-width: var(--max-width-narrow);
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .dosage-box {
-            background: var(--color-cream);
-            padding: var(--space-xl);
-            margin-top: var(--space-xl);
-        }
-
+        /* Dosage box */
         .dosage-box__number {
             font-family: var(--font-display);
             font-size: 64px;
@@ -336,6 +367,7 @@
             font-size: 14px;
             color: var(--color-stone);
             margin-top: var(--space-md);
+            line-height: 1.6;
         }
 
         /* Certifications */
@@ -372,6 +404,255 @@
             color: var(--color-deep);
         }
 
+        /* Clinical Study Section */
+        .clinical-study {
+            background: var(--color-sand);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .clinical-study__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .study-results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .study-result {
+            background: var(--color-cream);
+            padding: var(--space-xl);
+        }
+
+        .study-result__value {
+            font-family: var(--font-display);
+            font-size: 56px;
+            color: var(--color-accent);
+            line-height: 1;
+            margin-bottom: var(--space-sm);
+        }
+
+        .study-result__label {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--color-deep);
+            margin-bottom: var(--space-sm);
+        }
+
+        .study-result__detail {
+            font-size: 14px;
+            color: var(--color-stone);
+            line-height: 1.6;
+        }
+
+        .study-result__detail strong {
+            color: var(--color-charcoal);
+        }
+
+        .study-note {
+            font-size: 13px;
+            color: var(--color-stone);
+            margin-top: var(--space-xl);
+        }
+
+        /* Healthcare Professionals Feedback */
+        .professionals-feedback {
+            background: var(--color-cream);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .professionals-feedback__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            align-items: center;
+        }
+
+        .professionals-feedback__text .eyebrow {
+            color: var(--color-accent);
+        }
+
+        .professionals-feedback__text h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 3vw, 36px);
+            color: var(--color-deep);
+            margin-bottom: var(--space-xl);
+        }
+
+        .feedback-stats {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+
+        .feedback-stat {
+            position: relative;
+        }
+
+        .feedback-stat__bar {
+            height: 6px;
+            background: var(--color-accent);
+            margin-bottom: var(--space-xs);
+        }
+
+        .feedback-stat__value {
+            font-family: var(--font-display);
+            font-size: 32px;
+            color: var(--color-deep);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .feedback-stat__label {
+            font-size: 14px;
+            color: var(--color-charcoal);
+        }
+
+        .feedback-stat__label strong {
+            color: var(--color-accent);
+        }
+
+        .feedback-note {
+            font-size: 12px;
+            color: var(--color-stone);
+            margin-top: var(--space-lg);
+        }
+
+        .professionals-feedback__dosage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .professionals-feedback__dosage .dosage-box {
+            background: var(--color-sand);
+            padding: var(--space-xl);
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Reviews */
+        .reviews {
+            background: var(--color-sand);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .reviews__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .reviews__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: var(--space-xl);
+        }
+
+        .reviews__header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4vw, 36px);
+            color: var(--color-deep);
+        }
+
+        .reviews__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+        }
+
+        .review-card {
+            background: var(--color-cream);
+            padding: var(--space-lg);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .review-card__stars {
+            color: #00b67a;
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: var(--space-sm);
+        }
+
+        .review-card__text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--color-charcoal);
+            margin-bottom: var(--space-md);
+            font-style: italic;
+        }
+
+        .review-card__author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .review-card__avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--color-sand);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--color-charcoal);
+        }
+
+        .review-card__name {
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--color-deep);
+        }
+
+        .review-card__date {
+            font-size: 12px;
+            color: var(--color-stone);
+        }
+
+        .review-card__verified {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            color: #00b67a;
+            margin-top: 2px;
+        }
+
+        .trustpilot-badge {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-lg);
+            background: white;
+            border: 1px solid var(--color-sand);
+        }
+
+        .trustpilot-badge__score {
+            font-family: var(--font-display);
+            font-size: 36px;
+            font-weight: 500;
+            color: var(--color-deep);
+        }
+
+        .trustpilot-badge__info {
+            font-size: 13px;
+            color: var(--color-charcoal);
+        }
+
+        .trustpilot-badge__stars {
+            color: #00b67a;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .product-hero {
@@ -391,6 +672,24 @@
             }
 
             .benefits__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .study-results {
+                grid-template-columns: 1fr;
+            }
+
+            .professionals-feedback__content {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews__header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--space-md);
+            }
+
+            .reviews__grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -452,7 +751,7 @@
             <p class="product-hero__subtitle">Integratore biotech per articolazioni flessibili e cartilagine sana. Formula avanzata con BosweX2®, MSM e Acido Ialuronico per ritrovare libertà di movimento.</p>
 
             <p class="product-hero__price">€24,80</p>
-            <p class="product-hero__format">60 capsule · 1 mese di trattamento</p>
+            <p class="product-hero__format">60 capsule · Fornitura per 1 mese</p>
 
             <a href="#acquista" class="product-hero__cta">Acquista ora</a>
 
@@ -530,7 +829,7 @@
                     <h3>BosweX2®</h3>
                     <span class="ingredient-highlight__tag">Estratto brevettato</span>
                     <p class="ingredient-highlight__desc">Estratto biotech esclusivo di Boswellia serrata ottenuto con tecnologia priva di solventi. La solubilità aumentata di 50 volte permette un assorbimento superiore e un'azione più efficace sulle articolazioni.</p>
-                    <p class="ingredient-highlight__desc">La ricerca mostra che la Boswellia regola l'espressione di 113 geni associati a infiammazione, apoptosi e degradazione del collagene.</p>
+                    <p class="ingredient-highlight__desc">La <a href="https://pubmed.ncbi.nlm.nih.gov/15812241/" target="_blank" rel="noopener" style="color: var(--color-accent-light); text-decoration: underline;">ricerca scientifica</a> mostra che la Boswellia interviene nella regolazione di 113 geni, supportando i naturali processi di benessere articolare.</p>
                     <div class="ingredient-highlight__stat">113</div>
                     <p class="ingredient-highlight__stat-label">geni regolati positivamente</p>
                 </div>
@@ -581,7 +880,7 @@
                     </svg>
                 </div>
                 <h3>Protezione</h3>
-                <p>BosweX2® contrasta i processi infiammatori che danneggiano le articolazioni.</p>
+                <p>BosweX2® supporta il naturale benessere delle articolazioni grazie alle sue proprietà antiossidanti.</p>
             </div>
             <div class="benefit-card">
                 <div class="benefit-card__icon">
@@ -596,19 +895,71 @@
         </div>
     </section>
 
-    <!-- How to Use -->
-    <section class="how-to-use">
-        <div class="how-to-use__content">
+    <!-- Studio Osservazionale -->
+    <section class="clinical-study">
+        <div class="clinical-study__content">
             <div class="section-header">
-                <p class="eyebrow">Modo d'uso</p>
-                <h2>Semplicità quotidiana</h2>
-                <p class="subtitle">Un gesto semplice per prenderti cura delle tue articolazioni ogni giorno.</p>
+                <p class="eyebrow">Studio osservazionale</p>
+                <h2>Supporto al benessere articolare</h2>
+                <p class="subtitle">Uno studio osservazionale su 16 partecipanti ha valutato Move3 come supporto nutrizionale in un programma di benessere articolare della durata di 30 giorni.</p>
             </div>
 
-            <div class="dosage-box">
-                <p class="dosage-box__number">2</p>
-                <p class="dosage-box__text">capsule al giorno</p>
-                <p class="dosage-box__note">Assumere preferibilmente al mattino a stomaco pieno. Un flacone dura 1 mese.</p>
+            <div class="study-results">
+                <div class="study-result">
+                    <div class="study-result__value">16</div>
+                    <div class="study-result__label">Partecipanti</div>
+                    <div class="study-result__detail">Hanno completato<br>il programma</div>
+                </div>
+                <div class="study-result">
+                    <div class="study-result__value">100%</div>
+                    <div class="study-result__label">Soddisfazione</div>
+                    <div class="study-result__detail">Ripeterebbero<br>l'esperienza</div>
+                </div>
+                <div class="study-result">
+                    <div class="study-result__value">30</div>
+                    <div class="study-result__label">Giorni</div>
+                    <div class="study-result__detail">Durata<br>dell'osservazione</div>
+                </div>
+            </div>
+
+            <p class="study-note">Studio osservazionale condotto in collaborazione con professionisti del benessere. Move3 è stato utilizzato come supporto nutrizionale. I risultati riflettono il benessere percepito dai partecipanti. G&life srl, Trieste.</p>
+        </div>
+    </section>
+
+    <!-- Healthcare Professionals Feedback -->
+    <section class="professionals-feedback">
+        <div class="professionals-feedback__content">
+            <div class="professionals-feedback__text">
+                <p class="eyebrow">Feedback dei professionisti</p>
+                <h2>Cosa dicono i professionisti della salute che lo hanno conosciuto?</h2>
+
+                <div class="feedback-stats">
+                    <div class="feedback-stat">
+                        <div class="feedback-stat__bar" style="width: 100%;"></div>
+                        <div class="feedback-stat__value">100%</div>
+                        <div class="feedback-stat__label">ha <strong>consigliato</strong> Move3</div>
+                    </div>
+                    <div class="feedback-stat">
+                        <div class="feedback-stat__bar" style="width: 67%;"></div>
+                        <div class="feedback-stat__value">67%</div>
+                        <div class="feedback-stat__label">suggerirebbe Move3 <strong>a un collega</strong></div>
+                    </div>
+                    <div class="feedback-stat">
+                        <div class="feedback-stat__bar" style="width: 100%;"></div>
+                        <div class="feedback-stat__value">100%</div>
+                        <div class="feedback-stat__label">feedback dai pazienti è <strong>buono o meglio</strong> di altri integratori</div>
+                    </div>
+                </div>
+
+                <p class="feedback-note">*Risultati preliminari sulle prime 6 interviste</p>
+            </div>
+            <div class="professionals-feedback__dosage">
+                <div class="dosage-box">
+                    <p class="eyebrow" style="text-align: center; margin-bottom: var(--space-md);">Modo d'uso</p>
+                    <p class="dosage-box__number">2</p>
+                    <p class="dosage-box__text">capsule al giorno</p>
+                    <p class="dosage-box__note">Assumere preferibilmente al mattino a stomaco pieno.<br>Un flacone dura 1 mese.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -627,6 +978,66 @@
             <div class="certification">
                 <p class="certification__label">Produzione</p>
                 <p class="certification__value">100% Made in Italy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+        <div class="reviews__content">
+            <div class="reviews__header">
+                <div>
+                    <p class="eyebrow">Cosa dicono di noi</p>
+                    <h2>Recensioni verificate</h2>
+                </div>
+                <a href="https://www.trustpilot.com/review/generame.com?languages=all" target="_blank" rel="noopener" class="trustpilot-badge" style="text-decoration: none;">
+                    <div>
+                        <div class="trustpilot-badge__stars">★★★★★</div>
+                        <p class="trustpilot-badge__info">Trustpilot</p>
+                    </div>
+                    <div>
+                        <div class="trustpilot-badge__score">4.7</div>
+                        <p class="trustpilot-badge__info">57 recensioni</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="reviews__grid">
+                <div class="review-card">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Benefici per infiammazione articolare, ginocchia e caviglie. Ho iniziato ad assumere Move3 su consiglio di un amico e dopo poche settimane ho notato un netto miglioramento nella mobilità."</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">GL</div>
+                        <div>
+                            <p class="review-card__name">Giorgio L.</p>
+                            <p class="review-card__date">Marzo 2024</p>
+                            <p class="review-card__verified">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                Acquisto verificato
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Eccezionale antinfiammatorio nonostante i miei problemi alla spalla. Avevo provato diversi prodotti ma Move3 è quello che mi ha dato i risultati migliori. Lo consiglio vivamente."</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">MG</div>
+                        <div>
+                            <p class="review-card__name">Monier G.</p>
+                            <p class="review-card__date">Gennaio 2024</p>
+                            <p class="review-card__verified">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                Acquisto verificato
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -664,10 +1075,12 @@
                 <a href="/chi-siamo/">Chi siamo</a>
                 <a href="/scienza/">Scienza</a>
                 <a href="/contatti/">Contatti</a>
-                <a href="/privacy-informativa-sito/">Privacy</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/cookie/">Cookie</a>
+                <a href="/termini/">Termini</a>
                 <a href="mailto:info@generame.com">info@generame.com</a>
             </div>
-            <p class="footer__copy">© 2009-2025 Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+            <p class="footer__copy">© 2009-<span id="year"></span> Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
         </div>
     </footer>
 
@@ -680,5 +1093,19 @@
             });
         }
     </script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <p>Utilizziamo cookie tecnici e, con il tuo consenso, cookie di profilazione per migliorare la tua esperienza. <a href="/cookie/">Maggiori informazioni</a></p>
+            </div>
+            <div class="cookie-banner__buttons">
+                <button id="cookie-accept" class="cookie-banner__btn cookie-banner__btn--accept">Accetta</button>
+                <button id="cookie-reject" class="cookie-banner__btn cookie-banner__btn--reject">Rifiuta</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/cookie-banner.js"></script>
 </body>
 </html>

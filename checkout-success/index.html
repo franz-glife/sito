@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordine Confermato | Generame</title>
+    <meta name="description" content="Grazie per il tuo ordine Generame. La tua spedizione è in preparazione.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/icona.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* Success page */
+        .success-page {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-2xl) var(--space-xl);
+        }
+
+        .success-content {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--color-sand);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-lg);
+        }
+
+        .success-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--color-accent);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .success-title {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 5vw, 48px);
+            color: var(--color-deep);
+            margin-bottom: var(--space-md);
+        }
+
+        .success-message {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+            margin-bottom: var(--space-xl);
+        }
+
+        .order-details {
+            background: var(--color-sand);
+            padding: var(--space-xl);
+            margin-bottom: var(--space-xl);
+            text-align: left;
+        }
+
+        .order-details__title {
+            font-family: var(--font-display);
+            font-size: 20px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-md);
+        }
+
+        .order-details__item {
+            display: flex;
+            justify-content: space-between;
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            font-size: 15px;
+        }
+
+        .order-details__item:last-child {
+            border-bottom: none;
+        }
+
+        .order-details__label {
+            color: var(--color-stone);
+        }
+
+        .order-details__value {
+            color: var(--color-deep);
+            font-weight: 500;
+        }
+
+        .next-steps {
+            background: var(--color-cream);
+            border: 1px solid var(--color-sand);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-xl);
+            text-align: left;
+        }
+
+        .next-steps__title {
+            font-family: var(--font-display);
+            font-size: 18px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-md);
+        }
+
+        .next-steps__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .next-steps__list li {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+            padding: var(--space-sm) 0;
+            font-size: 14px;
+            color: var(--color-charcoal);
+            line-height: 1.6;
+        }
+
+        .next-steps__list li svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--color-accent);
+            stroke-width: 2;
+            fill: none;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .success-cta {
+            display: inline-block;
+            background: var(--color-deep);
+            color: var(--color-cream);
+            padding: 16px 40px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-deep);
+        }
+
+        .success-cta:hover {
+            background: transparent;
+            color: var(--color-deep);
+        }
+
+        .success-links {
+            margin-top: var(--space-xl);
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+        }
+
+        .success-links a {
+            font-size: 14px;
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        .success-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Spedizione gratuita in Italia · <span>Made in Italy dal 2009</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="/" class="logo">GENERAME</a>
+        <ul class="nav-menu">
+            <li><a href="/chi-siamo/">Chi siamo</a></li>
+            <li><a href="/scienza/">Scienza</a></li>
+            <li><a href="/categoria-prodotto/cosmetici/">Cosmetici</a></li>
+            <li><a href="/categoria-prodotto/integratori-alimentari/">Integratori</a></li>
+            <li><a href="/contatti/">Contatti</a></li>
+        </ul>
+        <div class="nav-trust">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+            </svg>
+            <span>4.7/5 Trustpilot</span>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Success Content -->
+    <main class="success-page">
+        <div class="success-content">
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+            </div>
+
+            <h1 class="success-title">Grazie per il tuo ordine!</h1>
+            <p class="success-message">Il tuo ordine è stato ricevuto e la spedizione è in preparazione. Riceverai un'email di conferma con i dettagli.</p>
+
+            <div class="order-details">
+                <h2 class="order-details__title">Riepilogo ordine</h2>
+                <div class="order-details__item">
+                    <span class="order-details__label">Numero ordine</span>
+                    <span class="order-details__value" id="order-number">—</span>
+                </div>
+                <div class="order-details__item">
+                    <span class="order-details__label">Data</span>
+                    <span class="order-details__value" id="order-date">—</span>
+                </div>
+                <div class="order-details__item">
+                    <span class="order-details__label">Email di conferma inviata a</span>
+                    <span class="order-details__value" id="order-email">—</span>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h3 class="next-steps__title">Cosa succede ora?</h3>
+                <ul class="next-steps__list">
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        Riceverai un'email di conferma entro pochi minuti
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        La spedizione parte entro 24-48 ore lavorative
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        Riceverai il tracking via email appena disponibile
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        Consegna in 2-4 giorni lavorativi in Italia
+                    </li>
+                </ul>
+            </div>
+
+            <a href="/" class="success-cta">Torna alla home</a>
+
+            <div class="success-links">
+                <a href="/contatti/">Hai domande? Contattaci</a>
+                <a href="mailto:info@generame.com">info@generame.com</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__content">
+            <div class="footer__links">
+                <a href="/chi-siamo/">Chi siamo</a>
+                <a href="/scienza/">Scienza</a>
+                <a href="/contatti/">Contatti</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/cookie/">Cookie</a>
+                <a href="/termini/">Termini</a>
+                <a href="mailto:info@generame.com">info@generame.com</a>
+            </div>
+            <p class="footer__copy">© 2009-<span id="year"></span> Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Populate order details from URL params (set by Stripe redirect)
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderNumber = urlParams.get('order') || 'GEN-' + Date.now().toString(36).toUpperCase();
+        const orderEmail = urlParams.get('email') || '—';
+
+        document.getElementById('order-number').textContent = orderNumber;
+        document.getElementById('order-email').textContent = orderEmail;
+        document.getElementById('order-date').textContent = new Date().toLocaleDateString('it-IT', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+    </script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <p>Utilizziamo cookie tecnici e, con il tuo consenso, cookie di profilazione per migliorare la tua esperienza. <a href="/cookie/">Maggiori informazioni</a></p>
+            </div>
+            <div class="cookie-banner__buttons">
+                <button id="cookie-accept" class="cookie-banner__btn cookie-banner__btn--accept">Accetta</button>
+                <button id="cookie-reject" class="cookie-banner__btn cookie-banner__btn--reject">Rifiuta</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/cookie-banner.js"></script>
+</body>
+</html>

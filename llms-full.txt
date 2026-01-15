@@ -1,0 +1,471 @@
+# Generame - Documentazione Completa per AI
+
+> Questo documento contiene informazioni dettagliate sui prodotti Generame per assistenti AI. Per una panoramica sintetica, vedi: https://generame.com/llms.txt
+
+---
+
+## SEZIONE 1: INFORMAZIONI AZIENDALI
+
+### Chi è Generame
+
+Generame è un brand italiano specializzato in cosmetici e integratori alimentari basati sulla scienza epigenetica. L'azienda nasce nel 2009 all'interno di Area Science Park a Trieste, uno dei principali parchi scientifici e tecnologici italiani.
+
+**Ragione sociale**: G&life S.r.l.
+**Sede legale**: Via Flavia 23/1, 34148 Trieste (TS), Italia
+**Anno di fondazione**: 2009
+**Settore**: Biotech, Skincare, Nutraceutica
+
+### Fondatori
+
+**Paolo Gasparini**
+- Ruolo: Direttore scientifico
+- Background: Genetista con specializzazione in epigenetica
+- Contributo: Sviluppo delle formulazioni e ricerca scientifica
+
+**Francesco Menegoni**
+- Ruolo: CEO
+- Background: Imprenditore nel settore biotech
+- Contributo: Strategia aziendale e sviluppo commerciale
+
+### Filosofia aziendale
+
+Generame crede che la vera bellezza e il benessere nascano dalla salute delle cellule. L'approccio dell'azienda combina:
+- Ricerca scientifica rigorosa (epigenetica)
+- Ingredienti naturali ad alta biodisponibilità
+- Produzione 100% italiana
+- Sostenibilità e qualità premium
+
+---
+
+## SEZIONE 2: LA SCIENZA
+
+### Cos'è l'epigenetica
+
+L'epigenetica è lo studio di come fattori esterni possono influenzare l'espressione dei geni senza modificare la sequenza del DNA. Questi fattori includono:
+- Ambiente
+- Alimentazione
+- Stile di vita
+- Prodotti per la cura della pelle
+
+### Come Generame applica l'epigenetica
+
+I prodotti Generame sono formulati per:
+1. Proteggere le cellule dallo stress ossidativo
+2. Supportare i naturali meccanismi di riparazione del DNA
+3. Ottimizzare l'espressione genica legata alla rigenerazione
+4. Fornire nutrienti che supportano la salute cellulare
+
+### Ingredienti chiave brevettati
+
+**Licopene Bioliquefatto**
+- Origine: Pomodoro
+- Processo: Tecnologia brevettata per aumentare la biodisponibilità
+- Benefici: Potente antiossidante, protezione dai radicali liberi
+- Presente in: D-Cream
+
+**SIG1 Peptide**
+- Tipo: Peptide bioattivo
+- Funzione: Supporta i meccanismi di segnalazione cellulare
+- Benefici: Stimola la rigenerazione cutanea
+- Presente in: D-Cream, N-Cream
+
+**Estratto di Dna-K**
+- Origine: Organismo estremofilo (batteri che sopravvivono in condizioni estreme)
+- Proprietà: Proteine chaperone che proteggono le cellule dallo stress
+- Benefici: Riparazione cellulare, resistenza allo stress ambientale
+- Presente in: N-Cream (Resurrection)
+
+**RodioX2**
+- Origine: Rhodiola rosea (pianta adattogena)
+- Processo: Estratto concentrato con doppia titolazione
+- Benefici: Resistenza allo stress, energia mentale e fisica
+- Presente in: Sharp
+
+---
+
+## SEZIONE 3: CATALOGO PRODOTTI DETTAGLIATO
+
+### COSMETICI
+
+#### D-CREAM - Crema Giorno Epigenetica
+
+**Panoramica**
+D-Cream è una crema viso giorno formulata per proteggere la pelle durante il giorno e supportare i meccanismi di rigenerazione cellulare. Il nome "D" sta per "Day" (giorno).
+
+**Prezzo**
+- Prezzo promozionale: €34
+- Prezzo di listino: €96
+- Contenuto: 50ml
+
+**Ingredienti principali**
+1. Licopene Bioliquefatto - Antiossidante ad alta biodisponibilità
+2. SOD (Superossido Dismutasi) - Enzima antiossidante
+3. SIG1 Peptide - Peptide per la rigenerazione cellulare
+4. Acido ialuronico - Idratazione profonda
+5. Vitamina E - Protezione antiossidante
+
+**Benefici**
+- Protezione dallo stress ossidativo
+- Idratazione duratura
+- Supporto alla barriera cutanea
+- Texture leggera, non unge
+- Base ideale per il trucco
+
+**Modo d'uso**
+1. Applicare al mattino su viso e collo puliti
+2. Massaggiare con movimenti circolari dal centro verso l'esterno
+3. Attendere l'assorbimento prima di applicare trucco o protezione solare
+
+**Per chi è indicata**
+- Tutti i tipi di pelle
+- Chi cerca protezione antiossidante quotidiana
+- Chi desidera prevenire i segni dell'invecchiamento
+- Pelli mature che necessitano supporto alla rigenerazione
+
+**Texture e profumo**
+- Texture: Leggera, setosa, rapido assorbimento
+- Profumo: Delicato, non invasivo
+
+---
+
+#### N-CREAM - Crema Notte Epigenetica (Resurrection)
+
+**Panoramica**
+N-Cream, conosciuta anche come "Resurrection", è una crema viso notte che sfrutta le ore di riposo per supportare la rigenerazione cellulare. Il nome "N" sta per "Night" (notte). Contiene estratti di organismi estremofili, capaci di sopravvivere e rigenerarsi in condizioni estreme.
+
+**Prezzo**
+- Prezzo promozionale: €34
+- Prezzo di listino: €114
+- Contenuto: 50ml
+
+**Ingredienti principali**
+1. Estratto di Dna-K - Da organismo estremofilo, proteine chaperone
+2. SIG1 Peptide - Peptide per la rigenerazione cellulare
+3. Complesso lipidico riparatore
+4. Burro di karité - Nutrimento intenso
+5. Olio di jojoba - Elasticità e morbidezza
+
+**Benefici**
+- Rigenerazione cellulare durante il sonno
+- Riparazione dei danni da stress ambientale
+- Nutrimento intenso
+- Effetto "risveglio radioso"
+- Supporto alla compattezza cutanea
+
+**Modo d'uso**
+1. Applicare la sera su viso e collo puliti
+2. Massaggiare con movimenti delicati verso l'alto
+3. Lasciare agire durante la notte
+4. Al mattino, procedere con la routine di pulizia e D-Cream
+
+**Per chi è indicata**
+- Tutti i tipi di pelle, ideale per pelli mature
+- Chi cerca rigenerazione intensiva notturna
+- Pelli stressate, stanche, che necessitano recupero
+- Chi desidera un effetto anti-età profondo
+
+**Texture e profumo**
+- Texture: Ricca ma non pesante, nutrente
+- Profumo: Rilassante, adatto all'uso notturno
+
+**Il nome "Resurrection"**
+Il nome evoca la capacità degli organismi estremofili di "risorgere" dopo condizioni di stress estremo. Questa proprietà è trasferita alla pelle, che viene supportata nei suoi naturali processi di riparazione.
+
+---
+
+### INTEGRATORI ALIMENTARI
+
+#### SHARP - Tonico Fisico e Mentale
+
+**Panoramica**
+Sharp è un integratore alimentare formulato per supportare energia fisica e mentale, concentrazione e resistenza allo stress. Ideale per periodi di intenso impegno lavorativo o studio.
+
+**Prezzo**: €45
+**Formato**: 30 capsule (1 mese di trattamento)
+
+**Ingrediente chiave**
+RodioX2 - Estratto di Rhodiola rosea con doppia titolazione in:
+- Rosavine (3%)
+- Salidroside (1%)
+
+**Altri ingredienti**
+- Vitamine del gruppo B (B6, B12)
+- Magnesio
+- Zinco
+
+**Benefici**
+- Supporto all'energia mentale
+- Resistenza allo stress (adattogeno)
+- Concentrazione e memoria
+- Riduzione della stanchezza fisica
+- Supporto al sistema nervoso
+
+**Modo d'uso**
+- 1 capsula al giorno, preferibilmente al mattino
+- Assumere con acqua durante i pasti
+- Si consiglia un ciclo di 1-3 mesi
+
+**Per chi è indicato**
+- Professionisti con ritmi intensi
+- Studenti in periodo di esami
+- Sportivi che cercano resistenza mentale
+- Chi affronta periodi di stress
+
+**Avvertenze**
+- Non superare la dose giornaliera consigliata
+- Non utilizzare in gravidanza e allattamento
+- Tenere fuori dalla portata dei bambini
+- Gli integratori non sostituiscono una dieta varia ed equilibrata
+
+---
+
+#### DERMA RENEW MSM - Pelle e Collagene
+
+**Panoramica**
+Derma Renew MSM è un integratore per il benessere di pelle, capelli e unghie. Contiene MSM (Metilsulfonilmetano) e nutrienti che supportano la sintesi del collagene.
+
+**Prezzo**: €54
+**Formato**: 60 capsule (1 mese di trattamento)
+
+**Ingredienti principali**
+- MSM (Metilsulfonilmetano) - Fonte di zolfo biodisponibile
+- Vitamina C - Essenziale per la sintesi del collagene
+- Biotina - Benessere di capelli e unghie
+- Zinco - Mantenimento della pelle normale
+- Rame - Pigmentazione dei capelli
+
+**Benefici**
+- Supporto alla sintesi del collagene
+- Elasticità e idratazione della pelle
+- Rafforzamento di capelli e unghie
+- Azione antiossidante
+- Benessere dei tessuti connettivi
+
+**Modo d'uso**
+- 2 capsule al giorno
+- Assumere con acqua durante i pasti
+- Si consiglia un ciclo di 2-3 mesi per risultati ottimali
+
+**Per chi è indicato**
+- Chi desidera supportare la pelle dall'interno
+- Capelli fragili o unghie che si spezzano
+- In sinergia con cosmetici Generame
+- Chi cerca un approccio completo alla bellezza
+
+---
+
+#### MOVE3 - Articolazioni
+
+**Panoramica**
+Move3 è un integratore per il benessere articolare, formulato per supportare mobilità e comfort nei movimenti quotidiani.
+
+**Prezzo**: €24,80
+**Formato**: 30 compresse (1 mese di trattamento)
+
+**Ingredienti principali**
+- Glucosamina - Componente della cartilagine
+- Condroitina - Elasticità articolare
+- MSM - Benessere dei tessuti
+- Vitamina D - Mantenimento delle ossa
+- Manganese - Formazione dei tessuti connettivi
+
+**Benefici**
+- Supporto alla funzione articolare
+- Mobilità e flessibilità
+- Comfort nei movimenti
+- Benessere delle cartilagini
+- Supporto al sistema muscolo-scheletrico
+
+**Modo d'uso**
+- 1 compressa al giorno
+- Assumere con acqua durante i pasti
+- Si consiglia un utilizzo continuativo
+
+**Per chi è indicato**
+- Sportivi e persone attive
+- Chi avverte rigidità articolare
+- Persone over 40 per mantenimento
+- Chi pratica attività fisica regolare
+
+---
+
+#### AGE DEFENCE NAD+ - Antiossidante
+
+**Panoramica**
+Age Defence NAD+ è un integratore antiossidante di ultima generazione che contiene precursori del NAD+ (Nicotinamide Adenine Dinucleotide), una molecola fondamentale per l'energia cellulare.
+
+**Prezzo**: €54
+**Formato**: 30 capsule (1 mese di trattamento)
+
+**Ingrediente chiave**
+- NMN (Nicotinamide Mononucleotide) o NR (Nicotinamide Riboside) - Precursori del NAD+
+
+**Altri ingredienti**
+- Resveratrolo - Antiossidante da uva
+- Coenzima Q10 - Energia cellulare
+- Vitamina C - Protezione antiossidante
+- Selenio - Protezione dallo stress ossidativo
+
+**Benefici**
+- Supporto ai livelli di NAD+ cellulare
+- Energia e vitalità
+- Protezione antiossidante
+- Supporto al metabolismo cellulare
+- Healthy aging
+
+**Modo d'uso**
+- 1 capsula al giorno
+- Assumere al mattino a stomaco vuoto o durante la colazione
+- Si consiglia un utilizzo continuativo
+
+**Per chi è indicato**
+- Chi cerca supporto antiossidante avanzato
+- Persone interessate a healthy aging
+- Chi desidera supportare l'energia cellulare
+- In combinazione con uno stile di vita sano
+
+---
+
+### PRODOTTI NON DISPONIBILI
+
+#### FLUIDRAIN - Drenante
+**Status**: Temporaneamente non disponibile
+**Prezzo di listino**: €39
+**Funzione**: Formula drenante per l'eliminazione dei liquidi in eccesso
+
+#### GENERAMEAL - Flora Intestinale
+**Status**: Temporaneamente non disponibile
+**Prezzo di listino**: €39
+**Funzione**: Prima merenda probiotica, supporto alla flora intestinale con Lievito Lattico Probiotico
+
+---
+
+## SEZIONE 4: PREMIUM CLUB (ABBONAMENTO)
+
+### Cos'è il Premium Club
+
+Il Premium Club è il programma di abbonamento esclusivo Generame che permette di ricevere ogni mese la propria crema preferita a prezzo bloccato.
+
+**Caratteristiche**
+- Prezzo fisso: €34/mese (invece di €96-114)
+- Spedizione sempre gratuita
+- Possibilità di cambiare prodotto ogni mese (D-Cream o N-Cream)
+- Pausa o cancellazione in qualsiasi momento
+- Nessun vincolo
+
+**Come funziona**
+1. Si sceglie il prodotto iniziale (D-Cream o N-Cream)
+2. Ogni mese si riceve la crema a casa
+3. Si può cambiare prodotto contattando il servizio clienti
+4. Si può mettere in pausa o cancellare quando si vuole
+
+**A chi è rivolto**
+Il Premium Club è disponibile solo per chi ha già acquistato almeno una volta. L'invito viene inviato via email al 25° giorno dopo il primo acquisto.
+
+**Nota**: La pagina Premium Club non è indicizzata pubblicamente (noindex).
+
+---
+
+## SEZIONE 5: SPEDIZIONE E RESI
+
+### Spedizione
+- **Costo**: Gratuita in tutta Italia
+- **Tempi**: 2-4 giorni lavorativi
+- **Corriere**: Corriere espresso tracciato
+
+### Diritto di recesso
+- **Durata**: 14 giorni dalla ricezione (come da Codice del Consumo italiano)
+- **Condizioni**: Prodotto integro, non aperto
+- **Procedura**: Contattare info@generame.com
+
+### Garanzia
+Tutti i prodotti sono garantiti e conformi alle normative europee:
+- Cosmetici: Regolamento CE 1223/2009
+- Integratori: D.Lgs. 169/2004
+
+---
+
+## SEZIONE 6: CONTATTI E ASSISTENZA
+
+**Email**: info@generame.com
+**Risposta**: Entro 24 ore lavorative
+**Lingue**: Italiano, Inglese
+
+**Indirizzo**:
+G&life S.r.l.
+Via Flavia 23/1
+34148 Trieste (TS)
+Italia
+
+**P.IVA**: 02433960024
+
+---
+
+## SEZIONE 7: DOMANDE FREQUENTI
+
+### Generale
+
+**D: Generame è un brand italiano?**
+R: Sì, Generame è 100% italiano. Nasce nel 2009 a Trieste in Area Science Park e tutti i prodotti sono formulati e prodotti in Italia.
+
+**D: Cos'è l'epigenetica?**
+R: L'epigenetica studia come fattori esterni (ambiente, alimentazione, skincare) possono influenzare l'espressione dei geni senza modificare il DNA. Generame applica questa scienza ai prodotti per supportare la rigenerazione cellulare.
+
+**D: I prodotti sono testati su animali?**
+R: No, Generame non testa i prodotti su animali, in conformità con la normativa europea sui cosmetici.
+
+### Cosmetici
+
+**D: Posso usare D-Cream e N-Cream insieme?**
+R: Sì, sono formulate per essere usate in sinergia. D-Cream al mattino per protezione, N-Cream alla sera per rigenerazione.
+
+**D: Per quali tipi di pelle sono adatte le creme?**
+R: Entrambe le creme sono adatte a tutti i tipi di pelle. La formula è stata studiata per essere efficace senza irritare.
+
+**D: Quanto dura un vasetto?**
+R: Con un uso regolare (mattino per D-Cream, sera per N-Cream), un vasetto da 50ml dura circa 1 mese.
+
+### Integratori
+
+**D: Gli integratori sostituiscono i farmaci?**
+R: No, gli integratori alimentari non sono farmaci e non sono destinati a prevenire, curare o trattare malattie. Sono un supporto nutrizionale a una dieta varia ed equilibrata.
+
+**D: Posso assumere più integratori insieme?**
+R: In generale sì, ma si consiglia di consultare il proprio medico, soprattutto in caso di patologie o assunzione di farmaci.
+
+### Premium Club
+
+**D: Posso chiedere ogni mese lo stesso prodotto?**
+R: Certo. Puoi ricevere lo stesso prodotto ogni mese, oppure cambiare quando preferisci. Non ci sono limitazioni: la scelta è completamente tua.
+
+**D: Come posso cancellare l'abbonamento?**
+R: Basta inviare una email a info@generame.com. La cancellazione è immediata e senza penali.
+
+---
+
+## METADATA PER AI
+
+**Ultimo aggiornamento**: Gennaio 2026
+**Versione documento**: 1.0
+**Lingua**: Italiano
+**Mercato principale**: Italia
+
+**Keywords principali**:
+- Cosmetici epigenetici
+- Creme viso anti-età
+- Integratori alimentari italiani
+- Skincare scientifica
+- Made in Italy beauty
+- Rigenerazione cellulare
+- NAD+ integratore
+- Rodiola integratore
+- MSM collagene
+
+**Schema.org types utilizzati nel sito**:
+- Organization
+- WebSite
+- Product
+- BreadcrumbList
+- FAQPage
+
+**Sito web**: https://generame.com

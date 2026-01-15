@@ -6,11 +6,26 @@
     <title>Chi Siamo - Generame</title>
     <meta name="description" content="Generame nasce nel 2009 in Area Science Park. Scopri la storia, i fondatori e la missione di un'azienda che accompagna il tempo con scienza e cura.">
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://generame.com/chi-siamo/">
+
     <!-- Open Graph -->
     <meta property="og:title" content="Chi Siamo - Generame">
     <meta property="og:description" content="La storia di Generame: dal 2009 sviluppiamo cosmetici e integratori epigenetici Made in Italy.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://generame.com/chi-siamo/">
+    <meta property="og:image" content="https://generame.com/images/og-image.png">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Generame">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chi Siamo - Generame">
+    <meta name="twitter:description" content="La storia di Generame: dal 2009 sviluppiamo cosmetici e integratori epigenetici Made in Italy.">
+    <meta name="twitter:image" content="https://generame.com/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/icona.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -425,7 +440,7 @@
                 <h3 class="founder__name">Paolo Gasparini</h3>
                 <p class="founder__bio">Medico e ricercatore, ha dedicato la sua carriera allo studio della genetica umana e alle sue applicazioni per il benessere delle persone.</p>
                 <p class="founder__credentials">
-                    Presidente della Società Italiana di Genetica Umana · Professore di Genetica Medica all'Università di Trieste · Esperto ISS per la terapia genomica · 300+ pubblicazioni peer-reviewed · Premio Gran Prix Ippocrate 2011
+                    Rappresentante italiano CHMP - Agenzia Europea del Farmaco (EMA) · Presidente della Società Italiana di Genetica Umana · Professore di Genetica Medica all'Università di Trieste · Direttore Genetica Medica IRCCS "Burlo Garofolo" · 300+ pubblicazioni peer-reviewed · Premio Gran Prix Ippocrate 2011
                 </p>
             </div>
 
@@ -499,7 +514,7 @@
                 <div class="timeline__year">2009</div>
                 <div class="timeline__content">
                     <h4>La fondazione</h4>
-                    <p>Generame nasce in Area Science Park, Trieste. Inizia la ricerca sul rapporto tra genetica individuale e benessere.</p>
+                    <p>G&life nasce in Area Science Park, Trieste. Inizia la ricerca sul rapporto tra genetica individuale e benessere.</p>
                 </div>
             </div>
 
@@ -520,9 +535,9 @@
             </div>
 
             <div class="timeline__item">
-                <div class="timeline__year">2017</div>
+                <div class="timeline__year">2018</div>
                 <div class="timeline__content">
-                    <h4>Linea cosmetica epigenetica</h4>
+                    <h4>Nasce l'approccio Generame</h4>
                     <p>Lancio di D-Cream e N-Cream, le prime creme viso che applicano i principi della ricerca epigenetica alla skincare.</p>
                 </div>
             </div>
@@ -576,10 +591,12 @@
                 <a href="/chi-siamo/">Chi siamo</a>
                 <a href="/scienza/">Scienza</a>
                 <a href="/contatti/">Contatti</a>
-                <a href="/privacy-informativa-sito/">Privacy</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/cookie/">Cookie</a>
+                <a href="/termini/">Termini</a>
                 <a href="mailto:info@generame.com">info@generame.com</a>
             </div>
-            <p class="footer__copy">© 2009-2025 Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+            <p class="footer__copy">© 2009-<span id="year"></span> Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
         </div>
     </footer>
 
@@ -595,5 +612,19 @@
         }
 
             </script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <p>Utilizziamo cookie tecnici e, con il tuo consenso, cookie di profilazione per migliorare la tua esperienza. <a href="/cookie/">Maggiori informazioni</a></p>
+            </div>
+            <div class="cookie-banner__buttons">
+                <button id="cookie-accept" class="cookie-banner__btn cookie-banner__btn--accept">Accetta</button>
+                <button id="cookie-reject" class="cookie-banner__btn cookie-banner__btn--reject">Rifiuta</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/cookie-banner.js"></script>
 </body>
 </html>

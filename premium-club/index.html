@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Club - Abbonamento Esclusivo | Generame</title>
+    <meta name="description" content="Il Premium Club Generame: ricevi ogni mese la tua crema epigenetica a €34. Prezzo bloccato per sempre, spedizione gratuita, libertà totale.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://generame.com/premium-club/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Premium Club - Abbonamento Esclusivo | Generame">
+    <meta property="og:description" content="Il tuo rituale di bellezza, ogni mese a €34. Prezzo bloccato per sempre.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://generame.com/premium-club/">
+    <meta property="og:image" content="https://generame.com/images/og-image.png">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Generame">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Premium Club - Abbonamento Esclusivo | Generame">
+    <meta name="twitter:description" content="Il tuo rituale di bellezza, ogni mese a €34. Prezzo bloccato per sempre.">
+    <meta name="twitter:image" content="https://generame.com/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/icona.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* Premium Club Hero */
+        .club-hero {
+            background: linear-gradient(135deg, var(--color-deep) 0%, #2a2520 100%);
+            padding: var(--space-3xl) var(--space-xl);
+            text-align: center;
+        }
+
+        .club-hero__content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .club-hero__eyebrow {
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-accent-light);
+            margin-bottom: var(--space-md);
+        }
+
+        .club-hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(48px, 7vw, 80px);
+            color: var(--color-cream);
+            margin-bottom: var(--space-lg);
+            line-height: 1.05;
+        }
+
+        .club-hero__question {
+            font-family: var(--font-display);
+            font-size: clamp(24px, 3vw, 32px);
+            color: rgba(255,255,255,0.9);
+            font-style: italic;
+            margin-bottom: var(--space-md);
+        }
+
+        .club-hero__intro {
+            font-size: 18px;
+            line-height: 1.9;
+            color: rgba(255,255,255,0.8);
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .club-hero__intro strong {
+            color: var(--color-cream);
+        }
+
+        /* Reciprocity Section */
+        .reciprocity {
+            background: var(--color-sand);
+            padding: var(--space-2xl) var(--space-xl);
+        }
+
+        .reciprocity__content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xl);
+        }
+
+        .reciprocity__icon {
+            width: 80px;
+            height: 80px;
+            background: var(--color-cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .reciprocity__icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--color-accent);
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .reciprocity__text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+        }
+
+        .reciprocity__text strong {
+            color: var(--color-deep);
+        }
+
+        /* Value proposition */
+        .value-prop {
+            background: var(--color-cream);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .value-prop__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            align-items: center;
+        }
+
+        .value-prop__text h2 {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 4vw, 44px);
+            color: var(--color-deep);
+            margin-bottom: var(--space-md);
+            line-height: 1.2;
+        }
+
+        .value-prop__text p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: var(--color-charcoal);
+            margin-bottom: var(--space-md);
+        }
+
+        .value-prop__list {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-lg) 0 0 0;
+        }
+
+        .value-prop__list li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: 15px;
+            color: var(--color-charcoal);
+            padding: var(--space-sm) 0;
+        }
+
+        .value-prop__list li svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--color-accent);
+            stroke-width: 2;
+            fill: none;
+            flex-shrink: 0;
+        }
+
+        .price-box {
+            background: var(--color-deep);
+            padding: var(--space-xl);
+            text-align: center;
+        }
+
+        .price-box__label {
+            font-family: var(--font-display);
+            font-size: 28px;
+            color: var(--color-cream);
+            margin-bottom: var(--space-md);
+        }
+
+        .price-box__price-row {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: var(--space-sm);
+        }
+
+        .price-box__new {
+            font-family: var(--font-display);
+            font-size: 72px;
+            color: var(--color-accent-light);
+            line-height: 1;
+        }
+
+        .price-box__period {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .price-box__examples {
+            background: rgba(255,255,255,0.1);
+            padding: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .price-box__example-item {
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .price-box__example-item:last-child {
+            border-bottom: none;
+        }
+
+        .price-box__example-item p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            margin: 0;
+        }
+
+        .price-box__old-inline {
+            text-decoration: line-through;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .price-box__example-item strong {
+            color: var(--color-accent-light);
+        }
+
+        .price-box__note {
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            font-style: italic;
+            margin-top: var(--space-lg);
+        }
+
+        /* Benefits */
+        .benefits {
+            background: var(--color-deep);
+            color: var(--color-cream);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .benefits__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .benefits__header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .benefits__header .eyebrow {
+            color: var(--color-accent-light);
+        }
+
+        .benefits__header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4vw, 40px);
+            color: var(--color-cream);
+        }
+
+        .benefits__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-lg);
+        }
+
+        .benefit {
+            text-align: center;
+            padding: var(--space-lg);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .benefit__icon {
+            width: 56px;
+            height: 56px;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-md);
+        }
+
+        .benefit__icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--color-accent-light);
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .benefit h3 {
+            font-family: var(--font-display);
+            font-size: 20px;
+            color: var(--color-cream);
+            margin-bottom: var(--space-sm);
+        }
+
+        .benefit p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Reviews */
+        .reviews {
+            background: var(--color-cream);
+            padding: var(--space-3xl) var(--space-xl);
+            border-top: 1px solid var(--color-sand);
+        }
+
+        .reviews__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .reviews__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: var(--space-xl);
+        }
+
+        .reviews__header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4vw, 36px);
+            color: var(--color-deep);
+        }
+
+        .reviews__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+        }
+
+        .review-card {
+            background: var(--color-sand);
+            padding: var(--space-lg);
+        }
+
+        .review-card__stars {
+            color: #00b67a;
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: var(--space-sm);
+        }
+
+        .review-card__text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--color-charcoal);
+            margin-bottom: var(--space-md);
+            font-style: italic;
+        }
+
+        .review-card__author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .review-card__avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--color-cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--color-charcoal);
+        }
+
+        .review-card__name {
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--color-deep);
+        }
+
+        .review-card__date {
+            font-size: 12px;
+            color: var(--color-stone);
+        }
+
+        .review-card__verified {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            color: #00b67a;
+            margin-top: 2px;
+        }
+
+        .trustpilot-badge {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-lg);
+            background: white;
+            border: 1px solid var(--color-sand);
+        }
+
+        .trustpilot-badge__score {
+            font-family: var(--font-display);
+            font-size: 36px;
+            font-weight: 500;
+            color: var(--color-deep);
+        }
+
+        .trustpilot-badge__info {
+            font-size: 13px;
+            color: var(--color-charcoal);
+        }
+
+        .trustpilot-badge__stars {
+            color: #00b67a;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        /* Product Selection */
+        .product-selection {
+            background: var(--color-cream);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .product-selection__content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .product-selection__header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .product-selection__header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4vw, 40px);
+            color: var(--color-deep);
+            margin-bottom: var(--space-sm);
+        }
+
+        .product-selection__header p {
+            font-size: 16px;
+            color: var(--color-charcoal);
+        }
+
+        .product-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+        }
+
+        .product-option {
+            border: 2px solid var(--color-sand);
+            padding: var(--space-lg);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-option:hover {
+            border-color: var(--color-stone);
+        }
+
+        .product-option.selected {
+            border-color: var(--color-accent);
+        }
+
+        .product-option__radio {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--color-stone);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-option.selected .product-option__radio {
+            border-color: var(--color-accent);
+        }
+
+        .product-option.selected .product-option__radio::after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: var(--color-accent);
+            border-radius: 50%;
+        }
+
+        .product-option__image {
+            aspect-ratio: 1;
+            background: var(--color-sand);
+            margin-bottom: var(--space-md);
+        }
+
+        .product-option__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-option__name {
+            font-family: var(--font-display);
+            font-size: 24px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-xs);
+        }
+
+        .product-option__desc {
+            font-size: 14px;
+            color: var(--color-charcoal);
+            line-height: 1.6;
+        }
+
+        .product-selection__note {
+            text-align: center;
+            margin-top: var(--space-lg);
+            font-size: 14px;
+            color: var(--color-stone);
+            font-style: italic;
+        }
+
+        /* CTA Section */
+        .club-cta {
+            background: var(--color-sand);
+            padding: var(--space-3xl) var(--space-xl);
+            text-align: center;
+        }
+
+        .club-cta__content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .club-cta h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4vw, 42px);
+            color: var(--color-deep);
+            margin-bottom: var(--space-md);
+        }
+
+        .club-cta p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+            margin-bottom: var(--space-xl);
+        }
+
+        .club-cta__btn {
+            display: inline-block;
+            background: var(--color-deep);
+            color: var(--color-cream);
+            padding: 20px 48px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-deep);
+        }
+
+        .club-cta__btn:hover {
+            background: transparent;
+            color: var(--color-deep);
+        }
+
+        .club-cta__trust {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            margin-top: var(--space-lg);
+            flex-wrap: wrap;
+        }
+
+        .club-cta__trust span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--color-stone);
+        }
+
+        .club-cta__trust svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--color-accent);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* Commitment reminder */
+        .commitment {
+            background: var(--color-cream);
+            padding: var(--space-2xl) var(--space-xl);
+            text-align: center;
+            border-top: 1px solid var(--color-sand);
+        }
+
+        .commitment__content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .commitment p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+            font-style: italic;
+        }
+
+        .commitment p strong {
+            color: var(--color-deep);
+            font-style: normal;
+        }
+
+        /* FAQ */
+        .faq {
+            background: var(--color-cream);
+            padding: var(--space-3xl) var(--space-xl);
+            border-top: 1px solid var(--color-sand);
+        }
+
+        .faq__content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq__header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .faq__header h2 {
+            font-family: var(--font-display);
+            font-size: 32px;
+            color: var(--color-deep);
+        }
+
+        .faq__list {
+            margin-top: var(--space-xl);
+        }
+
+        .faq__item {
+            border-bottom: 1px solid var(--color-sand);
+            padding: var(--space-lg) 0;
+        }
+
+        .faq__question {
+            font-family: var(--font-display);
+            font-size: 20px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-sm);
+        }
+
+        .faq__answer {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--color-charcoal);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .value-prop__content {
+                grid-template-columns: 1fr;
+            }
+
+            .reciprocity__content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .benefits__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .reviews__header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--space-md);
+            }
+
+            .reviews__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .benefits__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-options {
+                grid-template-columns: 1fr;
+            }
+
+            .club-cta__trust {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Spedizione gratuita in Italia · <span>Made in Italy dal 2009</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="/" class="logo">GENERAME</a>
+        <ul class="nav-menu">
+            <li><a href="/chi-siamo/">Chi siamo</a></li>
+            <li><a href="/scienza/">Scienza</a></li>
+            <li><a href="/categoria-prodotto/cosmetici/">Cosmetici</a></li>
+            <li><a href="/categoria-prodotto/integratori-alimentari/">Integratori</a></li>
+            <li><a href="/contatti/">Contatti</a></li>
+        </ul>
+        <div class="nav-trust">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+            </svg>
+            <span>4.7/5 Trustpilot</span>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="club-hero">
+        <div class="club-hero__content">
+            <p class="club-hero__eyebrow">Invito riservato</p>
+            <h1 class="club-hero__title">Premium Club</h1>
+            <p class="club-hero__question">Ti sei trovata bene con la tua crema?</p>
+            <p class="club-hero__intro">Hai iniziato un percorso. La tua pelle ha già cominciato a rispondere. Ora puoi scegliere di <strong>continuare</strong>, ogni mese, senza pensieri — e senza rinunciare al prezzo che ti abbiamo riservato.</p>
+        </div>
+    </section>
+
+    <!-- Reciprocity -->
+    <section class="reciprocity">
+        <div class="reciprocity__content">
+            <div class="reciprocity__icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+            </div>
+            <p class="reciprocity__text">Ti abbiamo regalato <strong>oltre 50€ di sconto</strong> sulla prima crema perché volevamo farti provare cosa significa prendersi cura della pelle in modo diverso. Ora che hai visto i primi risultati, il Club ti permette di mantenere questo vantaggio — per sempre.</p>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-prop">
+        <div class="value-prop__content">
+            <div class="value-prop__text">
+                <h2>Il tuo rituale,<br>senza interruzioni</h2>
+                <p>Entrando nel Premium Club, il prodotto che scegli arriva ogni mese. Automaticamente. Al prezzo riservato che hai già sperimentato. Non devi ricordarti di riordinare, non rischi di restare senza.</p>
+                <p>E soprattutto: <strong>il prezzo resta bloccato a €34</strong>. Qualunque prodotto tu scelga. Questo mese la N-Cream, il prossimo la D-Cream, quello dopo Derma Renew per agire dall'interno. La scelta è tua, ogni mese. <strong>Tu decidi, noi spediamo.</strong></p>
+
+                <ul class="value-prop__list">
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        €34/mese, bloccato per sempre
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        Spedizione sempre gratuita
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        Cambi prodotto ogni mese, come preferisci
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        Metti in pausa o esci quando vuoi
+                    </li>
+                </ul>
+            </div>
+
+            <div class="price-box">
+                <p class="price-box__label">Premium Club</p>
+                <div class="price-box__price-row">
+                    <span class="price-box__new">€34</span>
+                    <span class="price-box__period">al mese</span>
+                </div>
+                <div class="price-box__examples">
+                    <div class="price-box__example-item">
+                        <p>Questo mese scegli N-Cream? <span class="price-box__old-inline">€114</span> → <strong>Risparmi €80</strong></p>
+                    </div>
+                    <div class="price-box__example-item">
+                        <p>Il prossimo D-Cream? <span class="price-box__old-inline">€96</span> → <strong>Risparmi €62</strong></p>
+                    </div>
+                </div>
+                <p class="price-box__note">Prezzo bloccato per sempre</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="benefits__content">
+            <div class="benefits__header">
+                <p class="eyebrow">Il vantaggio di chi sceglie la continuità</p>
+                <h2>Cosa include il Premium Club</h2>
+            </div>
+
+            <div class="benefits__grid">
+                <div class="benefit">
+                    <div class="benefit__icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3>Prezzo protetto</h3>
+                    <p>€34/mese garantito, qualunque variazione di listino ci sia in futuro.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit__icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="1" y="3" width="15" height="13" rx="2"/>
+                            <path d="M16 8h4l3 3.5V16h-7V8z"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/>
+                            <circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
+                    </div>
+                    <h3>Consegna automatica</h3>
+                    <p>Il prodotto scelto arriva ogni 30 giorni. Non devi fare nulla.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit__icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+                        </svg>
+                    </div>
+                    <h3>Libertà totale</h3>
+                    <p>Cambi prodotto ogni mese: creme, integratori, quello che preferisci.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit__icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 8v4l3 3"/>
+                        </svg>
+                    </div>
+                    <h3>Nessun vincolo</h3>
+                    <p>Pausa o cancellazione in qualsiasi momento. Senza penali, senza domande.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+        <div class="reviews__content">
+            <div class="reviews__header">
+                <div>
+                    <p class="eyebrow">Chi ha già scelto Generame</p>
+                    <h2>Cosa dicono i nostri clienti</h2>
+                </div>
+                <div class="trustpilot-badge">
+                    <div>
+                        <div class="trustpilot-badge__stars">★★★★★</div>
+                        <p class="trustpilot-badge__info">Trustpilot</p>
+                    </div>
+                    <div>
+                        <div class="trustpilot-badge__score">4.7</div>
+                        <p class="trustpilot-badge__info">57 recensioni</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews__grid">
+                <div class="review-card">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Da quando ho iniziato ad usare la crema giorno e la crema notte ho notato che la pelle del viso rimane sempre ben idratata e levigata a differenza di tante altre creme."</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">VM</div>
+                        <div>
+                            <p class="review-card__name">Valentina M.</p>
+                            <p class="review-card__date">Aprile 2022</p>
+                            <p class="review-card__verified">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                Acquisto verificato
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"L'azienda è veramente professionale sia nella precisione commerciale, nella qualità del prodotto e nella continua ricerca di ottimizzare i risultati."</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">CF</div>
+                        <div>
+                            <p class="review-card__name">Carla F.</p>
+                            <p class="review-card__date">Marzo 2024</p>
+                            <p class="review-card__verified">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                Acquisto verificato
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Mi sono trovata molto bene con le creme, non ungono per niente, sono ottime antirughe. Sono ottime anche in periodo estivo."</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">G</div>
+                        <div>
+                            <p class="review-card__name">Giulia</p>
+                            <p class="review-card__date">2022</p>
+                            <p class="review-card__verified">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                Acquisto verificato
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Selection -->
+    <section class="product-selection">
+        <div class="product-selection__content">
+            <div class="product-selection__header">
+                <p class="eyebrow">Il prossimo passo</p>
+                <h2>Con quale prodotto vuoi iniziare?</h2>
+                <p>Scegli il primo prodotto. Da lì in poi, ogni mese potrai confermare o cambiare.</p>
+            </div>
+
+            <div class="product-options">
+                <div class="product-option selected" data-product="d-cream">
+                    <div class="product-option__radio"></div>
+                    <div class="product-option__image">
+                        <img src="../images/d-cream.jpg" alt="D-Cream - Crema giorno">
+                    </div>
+                    <h3 class="product-option__name">D-Cream</h3>
+                    <p class="product-option__desc">La crema giorno. Protegge la pelle durante le ore attive, mentre affronti la giornata.</p>
+                </div>
+                <div class="product-option" data-product="n-cream">
+                    <div class="product-option__radio"></div>
+                    <div class="product-option__image">
+                        <img src="../images/n-cream.jpg" alt="N-Cream - Crema notte">
+                    </div>
+                    <h3 class="product-option__name">N-Cream</h3>
+                    <p class="product-option__desc">La crema notte. Lavora mentre dormi, quando la pelle si rigenera naturalmente.</p>
+                </div>
+            </div>
+
+            <p class="product-selection__note">Ogni mese potrai scegliere liberamente tra creme e integratori.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="club-cta">
+        <div class="club-cta__content">
+            <h2>Entra nel Club</h2>
+            <p>Il tuo primo prodotto arriverà tra pochi giorni. Da quel momento, ogni mese scegli tu cosa ricevere — sempre a €34, senza dover pensare a nulla.</p>
+            <a href="#" class="club-cta__btn" id="subscribe-btn">Attiva l'abbonamento</a>
+            <div class="club-cta__trust">
+                <span>
+                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Pagamento sicuro
+                </span>
+                <span>
+                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Cancelli quando vuoi
+                </span>
+                <span>
+                    <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    €34/mese bloccato
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Reminder -->
+    <section class="commitment">
+        <div class="commitment__content">
+            <p>Hai già scelto Generame una volta. La tua pelle ha iniziato un percorso. Il Premium Club è semplicemente il modo più semplice — e più conveniente — per <strong>non interromperlo</strong>.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="faq__content">
+            <div class="faq__header">
+                <p class="eyebrow">Domande frequenti</p>
+                <h2>Tutto chiaro?</h2>
+            </div>
+
+            <div class="faq__list">
+                <div class="faq__item">
+                    <h3 class="faq__question">Quando arriva il primo prodotto?</h3>
+                    <p class="faq__answer">Lo spediamo entro 24-48 ore dall'attivazione. Le consegne successive avvengono ogni 30 giorni, automaticamente.</p>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__question">Posso cambiare prodotto ogni mese?</h3>
+                    <p class="faq__answer">Assolutamente sì. D-Cream, N-Cream, Derma Renew, Sharp... puoi scegliere un prodotto diverso ogni mese. Basta scriverci prima della spedizione. Sempre €34.</p>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__question">Posso chiedere ogni mese lo stesso prodotto?</h3>
+                    <p class="faq__answer">Certo. Puoi ricevere lo stesso prodotto ogni mese, oppure cambiare quando preferisci. Non ci sono limitazioni: la scelta è completamente tua.</p>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__question">E se ho bisogno di una pausa?</h3>
+                    <p class="faq__answer">Puoi mettere in pausa l'abbonamento quando vuoi, per uno o più mesi. Il tuo prezzo bloccato resta valido.</p>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__question">Come funziona la cancellazione?</h3>
+                    <p class="faq__answer">Scrivi a info@generame.com prima della prossima data di rinnovo. Nessuna penale, nessuna domanda. Se vorrai tornare, il prezzo sarà quello di listino.</p>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__question">Il prezzo può aumentare?</h3>
+                    <p class="faq__answer">No, mai. Una volta attivato l'abbonamento, €34/mese resta il tuo prezzo per sempre — anche se il listino dovesse salire a €150.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__content">
+            <div class="footer__links">
+                <a href="/chi-siamo/">Chi siamo</a>
+                <a href="/scienza/">Scienza</a>
+                <a href="/contatti/">Contatti</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/cookie/">Cookie</a>
+                <a href="mailto:info@generame.com">info@generame.com</a>
+            </div>
+            <p class="footer__copy">© 2009-<span id="year"></span> Generame - G&life S.r.l. · Via Flavia 23/1, 34148 Trieste, Italia · P.IVA 02433960024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Product selection
+        const productOptions = document.querySelectorAll('.product-option');
+        productOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                productOptions.forEach(o => o.classList.remove('selected'));
+                option.classList.add('selected');
+            });
+        });
+
+        // Subscribe button - will integrate with Stripe
+        const subscribeBtn = document.getElementById('subscribe-btn');
+        if (subscribeBtn) {
+            subscribeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const selectedProduct = document.querySelector('.product-option.selected');
+                const productId = selectedProduct ? selectedProduct.dataset.product : 'd-cream';
+                // TODO: Integrate with Stripe Checkout for subscription
+                console.log('Subscribe to:', productId);
+                alert('Integrazione Stripe in fase di configurazione. Contattaci a info@generame.com per attivare l\'abbonamento.');
+            });
+        }
+    </script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <p>Utilizziamo cookie tecnici e, con il tuo consenso, cookie di profilazione per migliorare la tua esperienza. <a href="/cookie/">Maggiori informazioni</a></p>
+            </div>
+            <div class="cookie-banner__buttons">
+                <button id="cookie-accept" class="cookie-banner__btn cookie-banner__btn--accept">Accetta</button>
+                <button id="cookie-reject" class="cookie-banner__btn cookie-banner__btn--reject">Rifiuta</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/cookie-banner.js"></script>
+</body>
+</html>

@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derma Renew MSM - Pelle e Articolazioni | Generame</title>
-    <meta name="description" content="Derma Renew MSM: integratore biotech con BosweX2, MSM, Acido Ialuronico e Vitamina C per pelle radiosa e articolazioni flessibili. Made in Italy.">
+    <title>Age Defence NAD+ - Energia Cellulare | Generame</title>
+    <meta name="description" content="Age Defence NAD+: integratore biotech con precursori NAD+ per energia cellulare, difese antiossidanti e healthy aging. Formula avanzata Made in Italy.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://generame.com/prodotto/derma-renew/">
+    <link rel="canonical" href="https://generame.com/prodotto/age-defence/">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/icona.png">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Derma Renew MSM - Pelle e Articolazioni | Generame">
-    <meta property="og:description" content="Integratore biotech per rigenerare la radiosità della pelle e la mobilità articolare.">
+    <meta property="og:title" content="Age Defence NAD+ - Energia Cellulare | Generame">
+    <meta property="og:description" content="Integratore biotech con precursori NAD+ per energia cellulare e healthy aging.">
     <meta property="og:type" content="product">
-    <meta property="og:url" content="https://generame.com/prodotto/derma-renew/">
-    <meta property="og:image" content="https://generame.com/images/derma-renew.jpg">
+    <meta property="og:url" content="https://generame.com/prodotto/age-defence/">
+    <meta property="og:image" content="https://generame.com/images/age-defence.jpg">
     <meta property="og:locale" content="it_IT">
     <meta property="og:site_name" content="Generame">
     <meta property="product:price:amount" content="54">
@@ -25,25 +25,25 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Derma Renew MSM - Pelle e Articolazioni | Generame">
-    <meta name="twitter:description" content="Integratore biotech per rigenerare la radiosità della pelle e la mobilità articolare.">
-    <meta name="twitter:image" content="https://generame.com/images/derma-renew.jpg">
+    <meta name="twitter:title" content="Age Defence NAD+ - Energia Cellulare | Generame">
+    <meta name="twitter:description" content="Integratore biotech con precursori NAD+ per energia cellulare e healthy aging.">
+    <meta name="twitter:image" content="https://generame.com/images/age-defence.jpg">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "Derma Renew MSM - Pelle e Articolazioni",
-        "image": "https://generame.com/images/derma-renew.jpg",
-        "description": "Integratore biotech con BosweX2, MSM, Acido Ialuronico e Vitamina C per pelle radiosa e articolazioni flessibili.",
+        "name": "Age Defence NAD+ - Energia Cellulare",
+        "image": "https://generame.com/images/age-defence.jpg",
+        "description": "Integratore biotech con precursori NAD+ per energia cellulare, difese antiossidanti e healthy aging.",
         "brand": {
             "@type": "Brand",
             "name": "Generame"
         },
         "offers": {
             "@type": "Offer",
-            "url": "https://generame.com/prodotto/derma-renew/",
+            "url": "https://generame.com/prodotto/age-defence/",
             "priceCurrency": "EUR",
             "price": "54",
             "availability": "https://schema.org/InStock"
@@ -57,7 +57,7 @@
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://generame.com/"},
             {"@type": "ListItem", "position": 2, "name": "Integratori", "item": "https://generame.com/categoria-prodotto/integratori-alimentari/"},
-            {"@type": "ListItem", "position": 3, "name": "Derma Renew MSM"}
+            {"@type": "ListItem", "position": 3, "name": "Age Defence NAD+"}
         ]
     }
     </script>
@@ -225,41 +225,188 @@
             margin: 0 auto;
         }
 
+        .ingredient-highlight {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            margin-top: var(--space-xl);
+            align-items: center;
+        }
+
+        .ingredient-highlight__content h3 {
+            font-family: var(--font-display);
+            font-size: 32px;
+            color: var(--color-cream);
+            margin-bottom: var(--space-xs);
+        }
+
+        .ingredient-highlight__tag {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: var(--space-md);
+        }
+
+        .ingredient-highlight__desc {
+            font-size: 16px;
+            line-height: 1.8;
+            opacity: 0.85;
+            margin-bottom: var(--space-lg);
+        }
+
+        .ingredient-highlight__stat {
+            font-family: var(--font-display);
+            font-size: 48px;
+            color: var(--color-accent-light);
+            line-height: 1;
+        }
+
+        .ingredient-highlight__stat-label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            margin-top: var(--space-xs);
+        }
+
+        .ingredient-highlight__image {
+            background: var(--color-sand);
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .nad-graphic {
+            text-align: center;
+        }
+
+        .nad-graphic__molecule {
+            font-family: var(--font-display);
+            font-size: 64px;
+            color: var(--color-accent);
+            letter-spacing: -2px;
+        }
+
+        .nad-graphic__plus {
+            font-size: 32px;
+            color: var(--color-deep);
+            vertical-align: super;
+        }
+
+        .nad-graphic__label {
+            font-size: 14px;
+            color: var(--color-charcoal);
+            margin-top: var(--space-sm);
+        }
+
         .ingredients__grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: var(--space-lg);
-            margin-top: var(--space-xl);
+            margin-top: var(--space-2xl);
+            padding-top: var(--space-2xl);
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         .ingredient-card {
-            padding: var(--space-lg);
+            padding: var(--space-md);
             border: 1px solid rgba(255,255,255,0.1);
         }
 
         .ingredient-card__name {
             font-family: var(--font-display);
-            font-size: 24px;
+            font-size: 20px;
             color: var(--color-cream);
             margin-bottom: var(--space-xs);
         }
 
-        .ingredient-card__tag {
-            display: inline-block;
-            background: var(--color-accent);
-            color: white;
-            padding: 3px 10px;
-            font-size: 10px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            margin-bottom: var(--space-sm);
+        .ingredient-card__benefit {
+            font-size: 14px;
+            line-height: 1.7;
+            opacity: 0.8;
         }
 
-        .ingredient-card__benefit {
-            font-size: 15px;
-            line-height: 1.7;
-            opacity: 0.85;
+        /* Science section */
+        .nad-science {
+            background: var(--color-cream);
+            padding: var(--space-3xl) var(--space-xl);
+        }
+
+        .nad-science__content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .nad-science__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            margin-top: var(--space-xl);
+            align-items: center;
+        }
+
+        .nad-science__text h3 {
+            font-family: var(--font-display);
+            font-size: 28px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-md);
+        }
+
+        .nad-science__text p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--color-charcoal);
+            margin-bottom: var(--space-md);
+        }
+
+        .nad-decline {
+            background: var(--color-sand);
+            padding: var(--space-xl);
+        }
+
+        .nad-decline__title {
+            font-family: var(--font-display);
+            font-size: 20px;
+            color: var(--color-deep);
+            margin-bottom: var(--space-md);
+            text-align: center;
+        }
+
+        .nad-decline__bars {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .nad-decline__bar {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .nad-decline__age {
+            font-size: 14px;
+            color: var(--color-charcoal);
+            width: 60px;
+            text-align: right;
+        }
+
+        .nad-decline__level {
+            height: 24px;
+            background: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+
+        .nad-decline__value {
+            font-family: var(--font-display);
+            font-size: 18px;
+            color: var(--color-deep);
+            width: 50px;
         }
 
         /* Benefits section */
@@ -271,42 +418,42 @@
 
         .benefits__grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-xl);
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-lg);
             margin-top: var(--space-xl);
         }
 
         .benefit-card {
-            display: flex;
-            gap: var(--space-md);
+            text-align: center;
+            padding: var(--space-lg);
         }
 
         .benefit-card__icon {
-            width: 48px;
-            height: 48px;
+            width: 64px;
+            height: 64px;
             background: var(--color-sand);
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0;
+            margin: 0 auto var(--space-md);
         }
 
         .benefit-card__icon svg {
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
             stroke: var(--color-accent);
             stroke-width: 1.5;
             fill: none;
         }
 
-        .benefit-card__content h3 {
+        .benefit-card h3 {
             font-family: var(--font-display);
-            font-size: 20px;
+            font-size: 22px;
             color: var(--color-deep);
-            margin-bottom: var(--space-xs);
+            margin-bottom: var(--space-sm);
         }
 
-        .benefit-card__content p {
+        .benefit-card p {
             font-size: 15px;
             line-height: 1.7;
             color: var(--color-charcoal);
@@ -393,18 +540,30 @@
                 position: static;
             }
 
+            .ingredient-highlight {
+                grid-template-columns: 1fr;
+            }
+
             .ingredients__grid {
                 grid-template-columns: 1fr;
             }
 
-            .benefits__grid {
+            .nad-science__grid {
                 grid-template-columns: 1fr;
+            }
+
+            .benefits__grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 768px) {
             .product-badges__grid {
                 gap: var(--space-md);
+            }
+
+            .benefits__grid {
+                grid-template-columns: 1fr;
             }
 
             .certifications__content {
@@ -450,16 +609,16 @@
     <!-- Product Hero -->
     <section class="product-hero">
         <div class="product-hero__image">
-            <img src="../../images/derma-renew.jpg" alt="Derma Renew MSM - Integratore pelle e articolazioni Generame">
+            <img src="../../images/age-defence.jpg" alt="Age Defence NAD+ - Integratore antiossidante Generame">
         </div>
 
         <div class="product-hero__content">
-            <p class="product-hero__category">Pelle e articolazioni</p>
-            <h1 class="product-hero__title">Derma Renew MSM</h1>
-            <p class="product-hero__subtitle">Integratore biotech avanzato per rigenerare la radiosità della pelle e la mobilità articolare. Formula sinergica con Acido Ialuronico, MSM, Boswellia e Vitamina C.</p>
+            <p class="product-hero__category">Antiossidante · Energia cellulare</p>
+            <h1 class="product-hero__title">Age Defence NAD+</h1>
+            <p class="product-hero__subtitle">Integratore biotech con precursori NAD+ per supportare l'energia cellulare, le difese antiossidanti e un invecchiamento sano. Formula avanzata per il benessere profondo.</p>
 
             <p class="product-hero__price">€54</p>
-            <p class="product-hero__format">60 capsule · 1 mese di trattamento</p>
+            <p class="product-hero__format">30 capsule · 1 mese di trattamento</p>
 
             <a href="#acquista" class="product-hero__cta">Acquista ora</a>
 
@@ -493,7 +652,7 @@
                         <path d="M20 28c0 2.2 1.8 4 4 4"/>
                     </svg>
                 </div>
-                <span class="product-badge__label">Vegetariano</span>
+                <span class="product-badge__label">Vegano</span>
             </div>
             <div class="product-badge">
                 <div class="product-badge__icon">
@@ -528,43 +687,95 @@
     <section class="ingredients">
         <div class="ingredients__content">
             <div class="section-header">
-                <p class="eyebrow" style="color: var(--color-accent-light);">Ingredienti chiave</p>
-                <h2 style="color: var(--color-cream);">Formula sinergica brevettata</h2>
+                <p class="eyebrow" style="color: var(--color-accent-light);">Ingrediente chiave</p>
+                <h2 style="color: var(--color-cream);">NAD+: la molecola dell'energia</h2>
+            </div>
+
+            <div class="ingredient-highlight">
+                <div class="ingredient-highlight__content">
+                    <h3>Precursori NAD+</h3>
+                    <span class="ingredient-highlight__tag">Formula avanzata</span>
+                    <p class="ingredient-highlight__desc">Il NAD+ (Nicotinamide Adenina Dinucleotide) è una molecola essenziale presente in ogni cellula del corpo. Agisce come coenzima in centinaia di processi metabolici, dalla produzione di energia alla riparazione del DNA.</p>
+                    <p class="ingredient-highlight__desc">I livelli di NAD+ diminuiscono naturalmente con l'età. Integrare i suoi precursori supporta il metabolismo energetico cellulare e le difese antiossidanti.</p>
+                    <div class="ingredient-highlight__stat">100+</div>
+                    <p class="ingredient-highlight__stat-label">reazioni metaboliche dipendono dal NAD+</p>
+                </div>
+                <div class="ingredient-highlight__image">
+                    <div class="nad-graphic">
+                        <span class="nad-graphic__molecule">NAD<span class="nad-graphic__plus">+</span></span>
+                        <p class="nad-graphic__label">Nicotinamide Adenina Dinucleotide</p>
+                    </div>
+                </div>
             </div>
 
             <div class="ingredients__grid">
                 <div class="ingredient-card">
-                    <h3 class="ingredient-card__name">BosweX2®</h3>
-                    <span class="ingredient-card__tag">Estratto brevettato</span>
-                    <p class="ingredient-card__benefit">Estratto biotech esclusivo di Boswellia con tecnologia priva di solventi. Biodisponibilità aumentata di 50 volte rispetto agli estratti tradizionali.</p>
+                    <h3 class="ingredient-card__name">Niacina</h3>
+                    <p class="ingredient-card__benefit">Vitamina B3, precursore diretto del NAD+. Contribuisce al normale metabolismo energetico e alla riduzione della stanchezza.</p>
                 </div>
                 <div class="ingredient-card">
-                    <h3 class="ingredient-card__name">MSM</h3>
-                    <span class="ingredient-card__tag">Zolfo biodisponibile</span>
-                    <p class="ingredient-card__benefit">Metilsulfonilmetano: fonte di zolfo organico essenziale per la sintesi di collagene e cheratina, pilastri della salute di pelle, capelli e unghie.</p>
+                    <h3 class="ingredient-card__name">Resveratrolo</h3>
+                    <p class="ingredient-card__benefit">Polifenolo con potente azione antiossidante. Supporta l'attivazione delle sirtuine, enzimi che regolano il metabolismo cellulare.</p>
                 </div>
                 <div class="ingredient-card">
-                    <h3 class="ingredient-card__name">Acido Ialuronico</h3>
-                    <span class="ingredient-card__tag">Idratazione profonda</span>
-                    <p class="ingredient-card__benefit">Migliora l'idratazione cutanea dall'interno e supporta la salute della cartilagine articolare per una mobilità fluida.</p>
-                </div>
-            </div>
-
-            <div class="ingredients__grid" style="margin-top: var(--space-lg);">
-                <div class="ingredient-card">
-                    <h3 class="ingredient-card__name">Vitamina C</h3>
-                    <span class="ingredient-card__tag">Microincapsulata</span>
-                    <p class="ingredient-card__benefit">Contribuisce alla normale formazione del collagene per la funzione della pelle. Protezione antiossidante avanzata.</p>
+                    <h3 class="ingredient-card__name">Coenzima Q10</h3>
+                    <p class="ingredient-card__benefit">Molecola fondamentale per la produzione di ATP nei mitocondri. Potente antiossidante che protegge le membrane cellulari.</p>
                 </div>
                 <div class="ingredient-card">
                     <h3 class="ingredient-card__name">Vitamina E</h3>
-                    <span class="ingredient-card__tag">Antiossidante</span>
-                    <p class="ingredient-card__benefit">Protegge le cellule dallo stress ossidativo, preservando la giovinezza e l'elasticità della pelle.</p>
+                    <p class="ingredient-card__benefit">Antiossidante liposolubile che contribuisce alla protezione delle cellule dallo stress ossidativo.</p>
+                </div>
+                <div class="ingredient-card">
+                    <h3 class="ingredient-card__name">Selenio</h3>
+                    <p class="ingredient-card__benefit">Oligoelemento essenziale che contribuisce alla protezione delle cellule dallo stress ossidativo e al normale funzionamento del sistema immunitario.</p>
                 </div>
                 <div class="ingredient-card">
                     <h3 class="ingredient-card__name">Zinco</h3>
-                    <span class="ingredient-card__tag">Minerale essenziale</span>
-                    <p class="ingredient-card__benefit">Contribuisce al mantenimento di pelle, capelli e unghie normali. Supporta la protezione delle cellule dallo stress ossidativo.</p>
+                    <p class="ingredient-card__benefit">Contribuisce alla normale sintesi del DNA e alla protezione delle cellule dallo stress ossidativo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NAD+ Science -->
+    <section class="nad-science">
+        <div class="nad-science__content">
+            <div class="section-header text-center">
+                <p class="eyebrow">La scienza</p>
+                <h2>Perché il NAD+ è importante</h2>
+            </div>
+
+            <div class="nad-science__grid">
+                <div class="nad-science__text">
+                    <h3>Il declino naturale con l'età</h3>
+                    <p>Il NAD+ è fondamentale per la produzione di energia nei mitocondri, le "centrali energetiche" delle cellule. Con l'avanzare dell'età, i livelli di NAD+ diminuiscono progressivamente.</p>
+                    <p>Questa diminuzione è associata a una riduzione dell'efficienza metabolica e della capacità delle cellule di ripararsi. Supportare i livelli di NAD+ attraverso i suoi precursori può contribuire a mantenere la vitalità cellulare.</p>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=NAD+aging" target="_blank" rel="noopener" style="font-size: 14px; color: var(--color-accent);">Approfondisci su PubMed →</a>
+                </div>
+                <div class="nad-decline">
+                    <p class="nad-decline__title">Livelli di NAD+ per età</p>
+                    <div class="nad-decline__bars">
+                        <div class="nad-decline__bar">
+                            <span class="nad-decline__age">20 anni</span>
+                            <div class="nad-decline__level" style="width: 100%;"></div>
+                            <span class="nad-decline__value">100%</span>
+                        </div>
+                        <div class="nad-decline__bar">
+                            <span class="nad-decline__age">40 anni</span>
+                            <div class="nad-decline__level" style="width: 60%;"></div>
+                            <span class="nad-decline__value">~60%</span>
+                        </div>
+                        <div class="nad-decline__bar">
+                            <span class="nad-decline__age">60 anni</span>
+                            <div class="nad-decline__level" style="width: 40%;"></div>
+                            <span class="nad-decline__value">~40%</span>
+                        </div>
+                        <div class="nad-decline__bar">
+                            <span class="nad-decline__age">80 anni</span>
+                            <div class="nad-decline__level" style="width: 20%;"></div>
+                            <span class="nad-decline__value">~20%</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -574,48 +785,19 @@
     <section class="benefits">
         <div class="section-header text-center">
             <p class="eyebrow">Benefici</p>
-            <h2>Bellezza che viene da dentro</h2>
-            <p class="subtitle">Derma Renew MSM agisce dall'interno per risultati visibili all'esterno.</p>
+            <h2>Supporto completo per il benessere</h2>
+            <p class="subtitle">Age Defence NAD+ lavora su più fronti per supportare la salute cellulare.</p>
         </div>
 
         <div class="benefits__grid">
             <div class="benefit-card">
                 <div class="benefit-card__icon">
                     <svg viewBox="0 0 24 24">
-                        <circle cx="12" cy="8" r="5"/>
-                        <path d="M3 21v-2a7 7 0 0 1 7-7h4a7 7 0 0 1 7 7v2"/>
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                     </svg>
                 </div>
-                <div class="benefit-card__content">
-                    <h3>Pelle radiosa</h3>
-                    <p>Supporta la produzione naturale di collagene per una pelle più luminosa, elastica e idratata.</p>
-                </div>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-card__icon">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                </div>
-                <div class="benefit-card__content">
-                    <h3>Capelli e unghie forti</h3>
-                    <p>Lo zolfo organico del MSM è fondamentale per cheratina sana e robusta.</p>
-                </div>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-card__icon">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
-                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
-                        <line x1="6" y1="1" x2="6" y2="4"/>
-                        <line x1="10" y1="1" x2="10" y2="4"/>
-                        <line x1="14" y1="1" x2="14" y2="4"/>
-                    </svg>
-                </div>
-                <div class="benefit-card__content">
-                    <h3>Articolazioni flessibili</h3>
-                    <p>L'acido ialuronico e la Boswellia supportano la mobilità e il comfort articolare.</p>
-                </div>
+                <h3>Energia</h3>
+                <p>Supporta il metabolismo energetico cellulare attraverso i precursori NAD+.</p>
             </div>
             <div class="benefit-card">
                 <div class="benefit-card__icon">
@@ -623,10 +805,27 @@
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                     </svg>
                 </div>
-                <div class="benefit-card__content">
-                    <h3>Supporta il benessere della pelle matura</h3>
-                    <p>L'azione sinergica Boswellia-MSM supporta i naturali processi di rigenerazione cutanea.</p>
+                <h3>Protezione</h3>
+                <p>Antiossidanti che contribuiscono alla protezione delle cellule dallo stress ossidativo.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-card__icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
                 </div>
+                <h3>Vitalità</h3>
+                <p>Supporta la riduzione della stanchezza e dell'affaticamento.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-card__icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                </div>
+                <h3>Healthy Aging</h3>
+                <p>Formula studiata per supportare un invecchiamento sano e attivo.</p>
             </div>
         </div>
     </section>
@@ -637,13 +836,13 @@
             <div class="section-header">
                 <p class="eyebrow">Modo d'uso</p>
                 <h2>Semplicità quotidiana</h2>
-                <p class="subtitle">Un gesto semplice per prenderti cura della tua bellezza dall'interno.</p>
+                <p class="subtitle">Un gesto semplice per supportare l'energia delle tue cellule ogni giorno.</p>
             </div>
 
             <div class="dosage-box">
-                <p class="dosage-box__number">2</p>
-                <p class="dosage-box__text">capsule al giorno</p>
-                <p class="dosage-box__note">Assumere preferibilmente al mattino con un pasto. Un flacone dura 1 mese.</p>
+                <p class="dosage-box__number">1</p>
+                <p class="dosage-box__text">capsula al giorno</p>
+                <p class="dosage-box__note">Assumere preferibilmente al mattino a stomaco pieno. Un flacone dura 1 mese.</p>
             </div>
         </div>
     </section>
@@ -653,11 +852,11 @@
         <div class="certifications__content">
             <div class="certification">
                 <p class="certification__label">Notifica Ministero</p>
-                <p class="certification__value">Codice 138064</p>
+                <p class="certification__value">Integratore notificato</p>
             </div>
             <div class="certification">
                 <p class="certification__label">Formato</p>
-                <p class="certification__value">60 capsule da 580mg</p>
+                <p class="certification__value">30 capsule</p>
             </div>
             <div class="certification">
                 <p class="certification__label">Produzione</p>
@@ -666,24 +865,14 @@
         </div>
     </section>
 
-    <!-- Cosmetics Cross-sell -->
-    <section class="section section--sand text-center">
-        <div class="section-header">
-            <p class="eyebrow">Completa il rituale</p>
-            <h2>La bellezza anche da fuori</h2>
-            <p class="subtitle">Abbina Derma Renew MSM alle nostre creme epigenetiche per un approccio completo: rigenerazione dall'interno e protezione dall'esterno.</p>
-        </div>
-        <a href="/categoria-prodotto/cosmetici/" class="btn">Scopri i cosmetici</a>
-    </section>
-
     <!-- CTA Section -->
     <section class="section section--dark text-center" id="acquista">
         <div class="section-header">
             <p class="eyebrow" style="color: var(--color-accent-light);">Inizia oggi</p>
-            <h2 style="color: var(--color-cream);">Rigenera la tua bellezza</h2>
-            <p class="subtitle" style="color: rgba(255,255,255,0.7);">Derma Renew MSM a €54. Spedizione gratuita in Italia.</p>
+            <h2 style="color: var(--color-cream);">Supporta l'energia delle tue cellule</h2>
+            <p class="subtitle" style="color: rgba(255,255,255,0.7);">Age Defence NAD+ a €54. Spedizione gratuita in Italia.</p>
         </div>
-        <a href="#" class="btn btn--light">Acquista Derma Renew MSM</a>
+        <a href="#" class="btn btn--light">Acquista Age Defence NAD+</a>
         <div style="display: flex; justify-content: center; gap: var(--space-lg); margin-top: var(--space-lg); flex-wrap: wrap;">
             <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(255,255,255,0.7);">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-light)" stroke-width="2">

@@ -1,0 +1,59 @@
+# Robots.txt for generame.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://generame.com/sitemap.xml
+
+# LLMs.txt for AI assistants
+# See: https://generame.com/llms.txt
+
+# Disallow private/checkout areas
+Disallow: /premium-club/
+Disallow: /checkout-success/
+
+# =====================================================
+# AI CRAWLERS - Explicitly Allowed
+# =====================================================
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic
+User-agent: anthropic-ai
+Allow: /
+User-agent: Claude-Web
+Allow: /
+
+# Microsoft/Bing AI
+User-agent: Bingbot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Apple AI
+User-agent: Applebot-Extended
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl (used for AI training)
+User-agent: CCBot
+Allow: /

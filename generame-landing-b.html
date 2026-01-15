@@ -970,6 +970,157 @@
                 width: 100%;
             }
         }
+
+        /* Authority Section - Version B */
+        .authority {
+            background: var(--color-sand);
+            padding: 100px 60px;
+        }
+
+        .authority-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .authority-founder {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 32px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .authority-founder img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .authority-info .eyebrow {
+            margin-bottom: 8px;
+        }
+
+        .authority-info h3 {
+            font-family: var(--font-display);
+            font-size: 28px;
+            margin-bottom: 12px;
+            color: var(--color-deep);
+        }
+
+        .authority-credentials {
+            font-size: 14px;
+            color: var(--color-charcoal);
+            line-height: 1.7;
+        }
+
+        .authority-video {
+            max-width: 700px;
+            margin: 0 auto 60px;
+            text-align: center;
+        }
+
+        .authority-video .eyebrow {
+            margin-bottom: 16px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-caption {
+            margin-top: 12px;
+            font-size: 14px;
+            color: var(--color-stone);
+        }
+
+        .authority-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .authority-stats .stat-number {
+            font-family: var(--font-display);
+            font-size: 36px;
+            color: var(--color-accent);
+            display: block;
+        }
+
+        .authority-stats .stat-label {
+            font-size: 13px;
+            color: var(--color-stone);
+        }
+
+        .authority-press {
+            text-align: center;
+        }
+
+        .authority-press .eyebrow {
+            margin-bottom: 24px;
+        }
+
+        .press-logos {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .press-logos img {
+            max-height: 80px;
+            width: auto;
+            mix-blend-mode: multiply;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .press-logos img:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .authority {
+                padding: 60px 24px;
+            }
+
+            .authority-founder {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .authority-founder img {
+                margin: 0 auto;
+            }
+
+            .authority-stats {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .press-logos {
+                gap: 24px;
+            }
+
+            .press-logos img {
+                max-height: 40px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1060,6 +1211,12 @@
                 </svg>
                 <span>100% Made in Italy</span>
             </div>
+            <div class="trust-item">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <span>36.000+ community</span>
+            </div>
         </div>
     </div>
 
@@ -1144,6 +1301,67 @@
                         Risultati misurabili e duraturi
                     </li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority Section - Version B -->
+    <section class="authority">
+        <div class="authority-content">
+            <!-- Founder -->
+            <div class="authority-founder">
+                <img src="./images/paolo-gasparini.jpg" alt="Prof. Paolo Gasparini" onerror="this.style.display='none';">
+                <div class="authority-info">
+                    <p class="section-eyebrow" style="color: var(--color-accent);">Il nostro fondatore</p>
+                    <h3>Prof. Paolo Gasparini</h3>
+                    <p class="authority-credentials">
+                        Rappresentante italiano CHMP - Agenzia Europea del Farmaco (EMA) ·
+                        Presidente della Società Italiana di Genetica Umana ·
+                        Professore di Genetica Medica, Università di Trieste ·
+                        300+ pubblicazioni peer-reviewed
+                    </p>
+                </div>
+            </div>
+
+            <!-- Video SuperQuark -->
+            <div class="authority-video">
+                <p class="section-eyebrow" style="color: var(--color-accent);">Visto su</p>
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/NMtoi4QTNWw?rel=0"
+                        title="SuperQuark - Piero Angela intervista sulla genetica"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="video-caption">Il nostro approccio alla genetica raccontato da Piero Angela su SuperQuark</p>
+            </div>
+
+            <!-- Stats row -->
+            <div class="authority-stats">
+                <div class="stat">
+                    <span class="stat-number">36K+</span>
+                    <span class="stat-label">Community Facebook</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Anni di ricerca</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">9+</span>
+                    <span class="stat-label">Premi e riconoscimenti</span>
+                </div>
+            </div>
+
+            <!-- Press logos -->
+            <div class="authority-press">
+                <p class="section-eyebrow" style="color: var(--color-accent);">Parlano di noi</p>
+                <div class="press-logos">
+                    <img src="./images/stampa-1.jpg" alt="Rassegna stampa" onerror="this.style.display='none';">
+                    <img src="./images/stampa-2.jpg" alt="Rassegna stampa" onerror="this.style.display='none';">
+                    <img src="./images/stampa-3.jpg" alt="Rassegna stampa" onerror="this.style.display='none';">
+                </div>
             </div>
         </div>
     </section>
