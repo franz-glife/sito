@@ -285,6 +285,12 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .trust-row {
+            display: flex;
             justify-content: center;
             align-items: center;
             gap: 60px;
@@ -970,6 +976,128 @@
                 width: 100%;
             }
         }
+
+        /* Lead Magnet Form */
+        .lead-magnet {
+            background: var(--color-deep);
+            padding: 80px 60px;
+            text-align: center;
+        }
+
+        .lead-magnet__content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .lead-magnet__icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto var(--space-md);
+            color: var(--color-accent-light);
+        }
+
+        .lead-magnet__title {
+            font-family: var(--font-display);
+            font-size: 32px;
+            color: var(--color-cream);
+            margin-bottom: var(--space-sm);
+        }
+
+        .lead-magnet__subtitle {
+            font-size: 16px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: var(--space-lg);
+            line-height: 1.7;
+        }
+
+        .lead-magnet__form {
+            display: flex;
+            gap: var(--space-sm);
+            max-width: 450px;
+            margin: 0 auto var(--space-md);
+        }
+
+        .lead-magnet__input {
+            flex: 1;
+            padding: 16px 20px;
+            font-size: 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.05);
+            color: var(--color-cream);
+            font-family: var(--font-body);
+        }
+
+        .lead-magnet__input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .lead-magnet__input:focus {
+            outline: none;
+            border-color: var(--color-accent-light);
+        }
+
+        .lead-magnet__btn {
+            padding: 16px 32px;
+            background: var(--color-cream);
+            color: var(--color-deep);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .lead-magnet__btn:hover {
+            background: var(--color-accent-light);
+            color: var(--color-deep);
+        }
+
+        .lead-magnet__privacy {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .lead-magnet__privacy a {
+            color: var(--color-accent-light);
+        }
+
+        /* Yuka badge */
+        .yuka-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+
+        .yuka-badge__score {
+            font-weight: 700;
+            font-size: 14px;
+            color: #4CAF50;
+        }
+
+        .yuka-badge__text {
+            font-size: 12px;
+            color: var(--color-charcoal);
+        }
+
+        @media (max-width: 600px) {
+            .lead-magnet {
+                padding: 60px 20px;
+            }
+
+            .lead-magnet__form {
+                flex-direction: column;
+            }
+
+            .lead-magnet__btn {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1032,33 +1160,49 @@
     <!-- Trust Bar -->
     <div class="trust-bar">
         <div class="trust-content">
-            <div class="trust-item">
-                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="M12 6v6l4 2"/>
-                </svg>
-                <span>Nessun rinnovo automatico</span>
+            <div class="trust-row">
+                <div class="trust-item">
+                    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                    <span>Nessun rinnovo automatico</span>
+                </div>
+                <div class="trust-item">
+                    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="3" width="15" height="13"/>
+                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                        <circle cx="5.5" cy="18.5" r="2.5"/>
+                        <circle cx="18.5" cy="18.5" r="2.5"/>
+                    </svg>
+                    <span>Spedizione gratuita</span>
+                </div>
+                <div class="trust-item">
+                    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>Garanzia soddisfatti o rimborsati</span>
+                </div>
             </div>
-            <div class="trust-item">
-                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="1" y="3" width="15" height="13"/>
-                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-                    <circle cx="5.5" cy="18.5" r="2.5"/>
-                    <circle cx="18.5" cy="18.5" r="2.5"/>
-                </svg>
-                <span>Spedizione gratuita</span>
-            </div>
-            <div class="trust-item">
-                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
-                <span>Garanzia soddisfatti o rimborsati</span>
-            </div>
-            <div class="trust-item">
-                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                </svg>
-                <span>100% Made in Italy</span>
+            <div class="trust-row">
+                <div class="trust-item">
+                    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                    <span>100% Made in Italy</span>
+                </div>
+                <div class="trust-item">
+                    <div class="yuka-badge">
+                        <span class="yuka-badge__score">100/100</span>
+                        <span class="yuka-badge__text">Yuka</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <svg class="trust-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    <span>36.000+ community</span>
+                </div>
             </div>
         </div>
     </div>
@@ -1166,16 +1310,16 @@
                 
                 <div class="ingredient">
                     <p class="ingredient-name">Licopene Bioliquefatto</p>
-                    <p class="ingredient-benefit">Tecnologia brevettata. Scudo protettivo contro inquinamento e stress ambientale urbano.</p>
+                    <p class="ingredient-benefit">Tecnologia brevettata, ottenuto da bucce di pomodori 100% italiani. Scudo protettivo contro inquinamento e stress ambientale urbano.</p>
                 </div>
                 <div class="ingredient">
                     <p class="ingredient-name">SOD (Superossido Dismutasi)</p>
                     <p class="ingredient-benefit">Antiossidante presente naturalmente nel corpo. Migliora visibilmente la texture, anche nella zona perioculare.</p>
                 </div>
                 <div class="ingredient">
-                    <p class="ingredient-name">SIG1 Peptide</p>
-                    <p class="ingredient-benefit">Peptide biomimetico che attiva 15+ geni nei fibroblasti.</p>
-                    <span class="ingredient-stat">+40% densità · -27% rughe</span>
+                    <p class="ingredient-name">Peptidi Biomimetici</p>
+                    <p class="ingredient-benefit">Peptidi biomimetici che attivano 15+ geni nei fibroblasti e stimolano la sintesi di collagene.</p>
+                    <span class="ingredient-stat">-12% rughe</span> <a href="https://www.dsm-firmenich.com/en/businesses/perfumery-beauty/beauty-care/products/syn-coll.html" target="_blank" style="font-size: 12px; color: var(--color-accent-light); margin-left: 8px;">fonte</a>
                 </div>
             </div>
 
@@ -1196,7 +1340,7 @@
                 </div>
                 <div class="ingredient">
                     <p class="ingredient-name">Matrichine</p>
-                    <p class="ingredient-benefit">Ingrediente brevettato testato su modello SkinEthic.</p>
+                    <p class="ingredient-benefit">Ingrediente brevettato: su modello SkinEthic mostra la stimolazione positiva di 20 geni legati alla rigenerazione cellulare.</p>
                     <span class="ingredient-stat">Stimola 20 geni di rigenerazione</span>
                 </div>
             </div>
@@ -1217,7 +1361,7 @@
                     <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                 </svg>
                 <h4 class="value-title">Principi attivi brevettati</h4>
-                <p class="value-text">Licopene bioliquefatto, SIG1 Peptide e Matrichine non sono ingredienti comuni. Sono il risultato di anni di ricerca e sviluppo.</p>
+                <p class="value-text">Licopene bioliquefatto, Peptidi Biomimetici e Matrichine non sono ingredienti comuni. Sono il risultato di anni di ricerca e sviluppo.</p>
             </div>
             <div class="value-item">
                 <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -1395,6 +1539,22 @@
                 </svg>
                 100% Made in Italy
             </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet -->
+    <section class="lead-magnet">
+        <div class="lead-magnet__content">
+            <svg class="lead-magnet__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            <h3 class="lead-magnet__title">Generame vs i Top Seller</h3>
+            <p class="lead-magnet__subtitle">Scarica il confronto esclusivo tra le nostre creme e i prodotti più venduti. Scopri cosa c'è davvero nel vasetto e perché gli ingredienti fanno la differenza.</p>
+            <form class="lead-magnet__form" action="https://your-brevo-form-url" method="POST">
+                <input type="email" name="email" class="lead-magnet__input" placeholder="La tua email" required>
+                <button type="submit" class="lead-magnet__btn">Scarica gratis</button>
+            </form>
+            <p class="lead-magnet__privacy">Niente spam, solo contenuti utili. <a href="/privacy/">Privacy Policy</a></p>
         </div>
     </section>
 
