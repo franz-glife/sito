@@ -31,6 +31,7 @@ build/
 # File interni di sviluppo (non pubblicare)
 CLAUDE.md
 Report-Compliance-*.html
+readme_privato.md
 
 # Backup files
 *.bak
