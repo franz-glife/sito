@@ -1131,7 +1131,7 @@
                 <span class="price-tag" id="price-discount">-65%</span>
             </div>
             
-            <a href="#acquista" class="hero-cta">Scegli la tua crema</a>
+            <a href="https://buy.stripe.com/3cI6oHcgldsz0064gVbfO01" class="hero-cta cta-acquista">Acquista subito a 34€</a>
             
             <p class="hero-guarantee">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1508,7 +1508,7 @@
             <button class="product-tab" data-product="night" data-section="final">Notte</button>
         </div>
         
-        <a href="#" class="hero-cta">Scegli la tua crema a 34€</a>
+        <a href="https://buy.stripe.com/3cI6oHcgldsz0064gVbfO01" class="hero-cta cta-acquista">Acquista subito a 34€</a>
         
         <div class="final-benefits">
             <div class="final-benefit">
@@ -1542,7 +1542,7 @@
         </div>
     </section>
 
-    <!-- Lead Magnet -->
+    <!-- Lead Magnet - TODO: implementare più avanti
     <section class="lead-magnet">
         <div class="lead-magnet__content">
             <svg class="lead-magnet__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -1557,14 +1557,18 @@
             <p class="lead-magnet__privacy">Niente spam, solo contenuti utili. <a href="/privacy/">Privacy Policy</a></p>
         </div>
     </section>
+    -->
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Termini e Condizioni</a>
-                <a href="#">Contatti</a>
+                <a href="/chi-siamo/">Chi siamo</a>
+                <a href="/scienza/">Scienza</a>
+                <a href="/contatti/">Contatti</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/cookie/">Cookie</a>
+                <a href="/termini/">Termini</a>
                 <a href="mailto:info@generame.com">info@generame.com</a>
             </div>
             <p class="footer-copy">© 2025 Generame. Tutti i diritti riservati. Via Flavia 23/1, 34148 Trieste, Italia</p>
@@ -1580,6 +1584,13 @@
         const priceDiscount = document.getElementById('price-discount');
         const valuePrice = document.getElementById('value-price');
         const finalPriceOld = document.getElementById('final-price-old');
+        const ctaButtons = document.querySelectorAll('.cta-acquista');
+
+        // Stripe Payment Links
+        const stripeLinks = {
+            day: 'https://buy.stripe.com/3cI6oHcgldsz0064gVbfO01',   // D-Cream PROMO €34
+            night: 'https://buy.stripe.com/fZu14n949fAH9AG14JbfO03'   // N-Cream PROMO €34
+        };
 
         function switchProduct(product) {
             // Aggiorna tutti i tab
@@ -1607,6 +1618,11 @@
                 valuePrice.textContent = '114€';
                 finalPriceOld.textContent = '114€';
             }
+
+            // Update CTA links
+            ctaButtons.forEach(btn => {
+                btn.href = stripeLinks[product];
+            });
         }
 
         allTabs.forEach(tab => {
