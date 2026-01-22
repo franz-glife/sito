@@ -7,7 +7,9 @@ Allow: /
 Sitemap: https://generame.com/sitemap.xml
 
 # LLMs.txt for AI assistants
-# See: https://generame.com/llms.txt
+# https://llmstxt.org/
+LLMsTxt: https://generame.com/llms.txt
+LLMsFullTxt: https://generame.com/llms-full.txt
 
 # Disallow private/checkout areas
 Disallow: /premium-club/

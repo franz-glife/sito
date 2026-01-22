@@ -66,41 +66,6 @@
             margin-bottom: var(--space-xl);
         }
 
-        .order-details {
-            background: var(--color-sand);
-            padding: var(--space-xl);
-            margin-bottom: var(--space-xl);
-            text-align: left;
-        }
-
-        .order-details__title {
-            font-family: var(--font-display);
-            font-size: 20px;
-            color: var(--color-deep);
-            margin-bottom: var(--space-md);
-        }
-
-        .order-details__item {
-            display: flex;
-            justify-content: space-between;
-            padding: var(--space-sm) 0;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-            font-size: 15px;
-        }
-
-        .order-details__item:last-child {
-            border-bottom: none;
-        }
-
-        .order-details__label {
-            color: var(--color-stone);
-        }
-
-        .order-details__value {
-            color: var(--color-deep);
-            font-weight: 500;
-        }
-
         .next-steps {
             background: var(--color-cream);
             border: 1px solid var(--color-sand);
@@ -223,23 +188,7 @@
             </div>
 
             <h1 class="success-title">Grazie per il tuo ordine!</h1>
-            <p class="success-message">Il tuo ordine è stato ricevuto e la spedizione è in preparazione. Riceverai un'email di conferma con i dettagli.</p>
-
-            <div class="order-details">
-                <h2 class="order-details__title">Riepilogo ordine</h2>
-                <div class="order-details__item">
-                    <span class="order-details__label">Numero ordine</span>
-                    <span class="order-details__value" id="order-number">—</span>
-                </div>
-                <div class="order-details__item">
-                    <span class="order-details__label">Data</span>
-                    <span class="order-details__value" id="order-date">—</span>
-                </div>
-                <div class="order-details__item">
-                    <span class="order-details__label">Email di conferma inviata a</span>
-                    <span class="order-details__value" id="order-email">—</span>
-                </div>
-            </div>
+            <p class="success-message">Il tuo ordine è stato ricevuto e la spedizione è in preparazione.<br>Riceverai un'email di conferma da Stripe con tutti i dettagli del tuo acquisto.</p>
 
             <div class="next-steps">
                 <h3 class="next-steps__title">Cosa succede ora?</h3>
@@ -298,18 +247,6 @@
             });
         }
 
-        // Populate order details from URL params (set by Stripe redirect)
-        const urlParams = new URLSearchParams(window.location.search);
-        const orderNumber = urlParams.get('order') || 'GEN-' + Date.now().toString(36).toUpperCase();
-        const orderEmail = urlParams.get('email') || '—';
-
-        document.getElementById('order-number').textContent = orderNumber;
-        document.getElementById('order-email').textContent = orderEmail;
-        document.getElementById('order-date').textContent = new Date().toLocaleDateString('it-IT', {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric'
-        });
     </script>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     <!-- Cookie Banner -->

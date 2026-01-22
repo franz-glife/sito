@@ -532,11 +532,22 @@
         const privacyCheckbox = document.getElementById('privacy-consent');
         const privacyGroup = document.getElementById('privacy-checkbox-group');
 
+        // Mappa oggetti per testo leggibile
+        const subjectLabels = {
+            'info': 'Informazioni prodotti',
+            'ordine': 'Domanda su un ordine',
+            'spedizione': 'Spedizione e tracking',
+            'reso': 'Reso e rimborso',
+            'abbonamento': 'Abbonamento Premium Club',
+            'altro': 'Altro'
+        };
+
         if (form) {
             form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
                 // Validate privacy checkbox
                 if (!privacyCheckbox.checked) {
-                    e.preventDefault();
                     privacyGroup.classList.add('error');
                     privacyCheckbox.focus();
                     return;
@@ -545,11 +556,20 @@
                 // Remove error state if checked
                 privacyGroup.classList.remove('error');
 
-                // For now, just show a message
-                // In production, integrate with Formspree, Netlify Forms, or similar
-                e.preventDefault();
-                alert('Grazie per il tuo messaggio! Ti risponderemo al più presto.');
-                form.reset();
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subjectValue = document.getElementById('subject').value;
+                const subject = subjectLabels[subjectValue] || subjectValue;
+                const message = document.getElementById('message').value;
+
+                // Build mailto link
+                const mailtoSubject = encodeURIComponent(subject);
+                const mailtoBody = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMessaggio:\n${message}`);
+                const mailtoLink = `mailto:info@generame.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+                // Open mail client
+                window.location.href = mailtoLink;
             });
 
             // Remove error state when checkbox is checked
