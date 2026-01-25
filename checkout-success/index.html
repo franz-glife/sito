@@ -13,6 +13,10 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '825180114269499');
     fbq('track', 'PageView');
+    fbq('track', 'Purchase', {
+      value: 34.00,
+      currency: 'EUR'
+    });
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=825180114269499&ev=PageView&noscript=1"
@@ -213,7 +217,7 @@
                 <ul class="next-steps__list">
                     <li>
                         <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        Riceverai un'email di conferma entro pochi minuti
+                        Riceverai un'email di conferma
                     </li>
                     <li>
                         <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>

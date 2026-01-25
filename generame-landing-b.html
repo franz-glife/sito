@@ -13,6 +13,12 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '825180114269499');
     fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {
+      content_name: 'Landing Promo 34€',
+      content_category: 'Crema Viso',
+      value: 34.00,
+      currency: 'EUR'
+    });
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=825180114269499&ev=PageView&noscript=1"
@@ -1858,6 +1864,20 @@
         allTabs.forEach(tab => {
             tab.addEventListener('click', () => {
                 switchProduct(tab.dataset.product);
+            });
+        });
+
+        // Track InitiateCheckout on CTA click
+        ctaButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Get the currently active product tab
+                const activeTab = document.querySelector('.product-tab.active');
+                const product = activeTab ? activeTab.dataset.product : 'day';
+                fbq('track', 'InitiateCheckout', {
+                    content_name: product === 'day' ? 'D-Cream' : 'N-Cream',
+                    value: 34.00,
+                    currency: 'EUR'
+                });
             });
         });
 
