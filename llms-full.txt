@@ -93,9 +93,7 @@ I prodotti Generame sono formulati per:
 D-Cream è una crema viso giorno formulata per proteggere la pelle durante il giorno e supportare i meccanismi di rigenerazione cellulare. Il nome "D" sta per "Day" (giorno).
 
 **Prezzo**
-- Prezzo promozionale: €34
-- Prezzo di listino: €96
-- Contenuto: 50ml
+- €34 | 50ml
 
 **Ingredienti principali**
 1. Licopene Bioliquefatto - Antiossidante ad alta biodisponibilità
@@ -134,9 +132,7 @@ D-Cream è una crema viso giorno formulata per proteggere la pelle durante il gi
 N-Cream, conosciuta anche come "Resurrection", è una crema viso notte che sfrutta le ore di riposo per supportare la rigenerazione cellulare. Il nome "N" sta per "Night" (notte). Contiene estratti di organismi estremofili, capaci di sopravvivere e rigenerarsi in condizioni estreme.
 
 **Prezzo**
-- Prezzo promozionale: €34
-- Prezzo di listino: €114
-- Contenuto: 50ml
+- €34 | 50ml
 
 **Ingredienti principali**
 1. Estratto di Dna-K - Da organismo estremofilo, proteine chaperone
@@ -326,43 +322,20 @@ Age Defence NAD+ è un integratore antiossidante di ultima generazione che conti
 
 ---
 
-### PRODOTTI NON DISPONIBILI
-
-#### FLUIDRAIN - Drenante
-**Status**: Temporaneamente non disponibile
-**Prezzo di listino**: €39
-**Funzione**: Formula drenante per l'eliminazione dei liquidi in eccesso
-
-#### GENERAMEAL - Flora Intestinale
-**Status**: Temporaneamente non disponibile
-**Prezzo di listino**: €39
-**Funzione**: Prima merenda probiotica, supporto alla flora intestinale con Lievito Lattico Probiotico
-
----
-
 ## SEZIONE 4: PREMIUM CLUB (ABBONAMENTO)
 
 ### Cos'è il Premium Club
 
-Il Premium Club è il programma di abbonamento esclusivo Generame che permette di ricevere ogni mese la propria crema preferita a prezzo bloccato.
+Il Premium Club è il programma di abbonamento esclusivo Generame che permette di ricevere ogni mese la propria crema preferita con spedizione gratuita.
 
 **Caratteristiche**
-- Prezzo fisso: €34/mese (invece di €96-114)
 - Spedizione sempre gratuita
 - Possibilità di cambiare prodotto ogni mese (D-Cream o N-Cream)
 - Pausa o cancellazione in qualsiasi momento
 - Nessun vincolo
 
-**Come funziona**
-1. Si sceglie il prodotto iniziale (D-Cream o N-Cream)
-2. Ogni mese si riceve la crema a casa
-3. Si può cambiare prodotto contattando il servizio clienti
-4. Si può mettere in pausa o cancellare quando si vuole
-
 **A chi è rivolto**
-Il Premium Club è disponibile solo per chi ha già acquistato almeno una volta. L'invito viene inviato via email al 25° giorno dopo il primo acquisto.
-
-**Nota**: La pagina Premium Club non è indicizzata pubblicamente (noindex).
+Il Premium Club è disponibile solo per chi ha già acquistato almeno una volta.
 
 ---
 
